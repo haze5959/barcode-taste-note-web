@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Barnote 브랜드 컬러 토큰 (iOS 앱 에셋에서 이식)
+   ============================================================ */
+@theme {
+  /* Accent (브랜드 주색) */
+  --color-accent: #f05a2c;
+  --color-accent-secondary: #ffe0d2;
+
+  /* Background */
+  --color-background-primary: #f7f5f2;
+
+  /* Surface */
+  --color-surface-primary: #ffffff;
+  --color-surface-secondary: #f0edea;
+
+  /* Text */
+  --color-text-primary: #181820;
+  --color-text-secondary: #6f6f78;
+
+  /* Disabled */
+  --color-disabled-button: #dedad5;
+  --color-disabled-text: #7d7a74;
+
+  /* Divider */
+  --color-divider: #e2e2e8;
+}
+
+/* Dark mode 컬러 오버라이드 */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-accent: #ff8654;
+    --color-accent-secondary: #5a2c21;
+    --color-background-primary: #050505;
+    --color-surface-primary: #151518;
+    --color-surface-secondary: #1d1d21;
+    --color-text-primary: #f7f7fa;
+    --color-text-secondary: #a7a9b3;
+    --color-disabled-button: #303033;
+    --color-disabled-text: #b6b6bc;
+    --color-divider: #393940;
+  }
+}
+
+/* ============================================================
+   전역 기본 스타일
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

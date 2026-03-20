@@ -1,0 +1,15 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "バーコード認識とAIラベルスキャンによるテ이스팅ノート",
+    "button": {
+      "save": "保存",
+      "cancel": "キャンセル",
+      "delete": "削除"
+    }
+  },
+  "landing": {
+    "title": "最速のテイスティングノート、Barnote",
+    "subtitle": "バーコードをス캔するだけ。あとはAIにお任せください。"
+  }
+}

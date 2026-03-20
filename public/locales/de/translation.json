@@ -1,0 +1,15 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "Verkostungsnotizen per Barcode-Erkennung und KI-Scan",
+    "button": {
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen"
+    }
+  },
+  "landing": {
+    "title": "Die schnellste Verkostungsnotiz, Barnote",
+    "subtitle": "Einfach den Barcode scannen. Den Rest erledigt die KI."
+  }
+}

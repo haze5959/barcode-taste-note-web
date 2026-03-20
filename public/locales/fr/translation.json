@@ -1,0 +1,15 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "Notes de dégustation via code-barres et scan IA",
+    "button": {
+      "save": "Enregistrer",
+      "cancel": "Annuler",
+      "delete": "Supprimer"
+    }
+  },
+  "landing": {
+    "title": "La note de dégustation la plus rapide, Barnote",
+    "subtitle": "Scannez simplement le code-barres. L'IA s'occupe du reste."
+  }
+}

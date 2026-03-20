@@ -1,0 +1,15 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "Barcode & AI Scan Tasting Notes",
+    "button": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+  "landing": {
+    "title": "The Fastest Tasting Note, Barnote",
+    "subtitle": "Just scan the barcode. AI does the rest."
+  }
+}
