@@ -1,0 +1,15 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "Notas de cata mediante código de barras y escaneo con IA",
+    "button": {
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "delete": "Eliminar"
+    }
+  },
+  "landing": {
+    "title": "La nota de cata más rápida, Barnote",
+    "subtitle": "Simplemente escanea el código de barras. La IA hace el resto."
+  }
+}

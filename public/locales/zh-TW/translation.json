@@ -1,0 +1,15 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "條碼識別和AI標籤掃描品酒筆記",
+    "button": {
+      "save": "保存",
+      "cancel": "取消",
+      "delete": "刪除"
+    }
+  },
+  "landing": {
+    "title": "最快的品酒筆記，Barnote",
+    "subtitle": "只需掃描條碼，其餘的交給AI。"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "common": {
+    "app_name": "Barnote",
+    "description": "바코드 인식 및 AI 라벨 스캔 시음 노트",
+    "button": {
+      "save": "저장",
+      "cancel": "취소",
+      "delete": "삭제"
+    }
+  },
+  "landing": {
+    "title": "가장 빠른 시음 노트, 바노트",
+    "subtitle": "바코드만 찍으세요. 나머지는 AI가 알아서 해줍니다."
+  },
+  "layout": {
+    "promo": {
+      "title": "나만의 시음노트를\n작성하고 공유해보세요!",
+      "comingSoon": "지원예정",
+      "appStore": "App Store",
+      "playStore": "Google Play"
+    }
+  }
+}

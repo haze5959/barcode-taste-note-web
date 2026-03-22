@@ -37,6 +37,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true # 불필요한 경고 메시지 방지
         run: |
-          aws s3 sync ./dist s3://${{ secrets.R2_BUCKET_NAME }}/admin \
+          aws s3 sync ./dist s3://${{ secrets.R2_BUCKET_NAME }} \
             --endpoint-url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com \
             --delete
