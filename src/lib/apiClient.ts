@@ -1,6 +1,7 @@
 import type { ApiResponse } from '@/types'
+import { API_BASE_URL } from './constants'
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL as string
+const BASE_URL = API_BASE_URL
 
 /** snake_case 키를 camelCase로 변환하는 재귀 함수 */
 function toCamelCase(str: string): string {

@@ -176,6 +176,9 @@ export interface FetchImageIdsParams {
 const IMAGE_BASE_URL = 'https://barnote.net/images'
 
 /** 이미지 ID로 전체 이미지 URL 생성 */
-export function getImageUrl(imageId: UUID): string {
+export function getImageUrl(imageId: UUID, isProfile: boolean = false): string {
+  if (isProfile) {
+    return `${IMAGE_BASE_URL}/profile/${imageId}`
+  }
   return `${IMAGE_BASE_URL}/${imageId}`
 }

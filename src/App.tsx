@@ -1,14 +1,21 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MobileLayout from './components/layout/MobileLayout';
+import Home from './pages/Home';
+import UserNoteList from './pages/UserNoteList';
+import NoteDetail from './pages/NoteDetail';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* 페이지 라우트는 추후 각 페이지 컴포넌트 생성 후 추가 */}
-        <Route path="/" element={<div>Barnote Web</div>} />
+        <Route element={<MobileLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/user/:userId" element={<UserNoteList />} />
+          <Route path="/note/:noteId" element={<NoteDetail />} />
+        </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

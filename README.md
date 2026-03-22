@@ -12,7 +12,7 @@ Barnote 웹페이지입니다.
 	- PrivacyPolicy
 		- https://barnote.net/privacy_policy
 	- TermsOfService
-		- https://barnote.net/terms_of_service- 
+		- https://barnote.net/terms_of_service
 
 ## 🤖 AI 에이전트 사용법
 "RULES.md를 먼저 읽고 시작해줘" 한마디 하고 시작!
