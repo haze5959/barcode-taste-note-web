@@ -1,15 +1,98 @@
 {
   "common": {
     "app_name": "Barnote",
-    "description": "Note di degustazione tramite codice a barre e scansione AI",
-    "button": {
-      "save": "Salva",
-      "cancel": "Annulla",
-      "delete": "Elimina"
-    }
+    "back": "Back",
+    "loading": "Loading...",
+    "error": "An error occurred."
   },
-  "landing": {
-    "title": "La nota di degustazione più veloce, Barnote",
-    "subtitle": "Basta scansionare il codice a barre. L'IA fa il resto."
+  "home": {
+    "hero_title1": "Turn every glass into ",
+    "hero_title2": "a perfect memory",
+    "hero_subtitle": "The fastest and most beautiful AI tasting note, Barnote",
+    "hero_btn": "Start Right Now",
+    "counter_title": "Products registered with Barnote",
+    "feat_title": "Focus only on your records",
+    "feat_sub": "Special experiences provided by Barnote",
+    "feat1_title": "Your Own Tasting Notes",
+    "feat1_desc": "Create and share your own tasting notes!",
+    "feat2_title": "AI Scan Engine",
+    "feat2_desc": "Fast tasting notes using barcode recognition and AI label scanning",
+    "feat3_title": "Taste Sharing Community",
+    "feat3_desc": "Follow feature provided, share with users who have similar tastes",
+    "feat4_title": "Enjoy the Moment",
+    "feat4_desc": "Enjoy your drink now! Register it as consumed and we'll remind you to write a note later.",
+    "feat5_title": "Free Web Sharing",
+    "feat5_desc": "Share your tasting notes freely on social media and the web",
+    "feat6_title": "Ad-free Clean Zone",
+    "feat6_desc": "Write and manage your sensuous tasting notes without product sales or ads",
+    "recent_prod_title": "Recently Registered Products",
+    "recent_prod_sub": "Check out the special drinks users just tasted",
+    "recent_note_title": "Recently Written Notes",
+    "recent_note_sub": "Vivid taste records just uploaded"
+  },
+  "user": {
+    "no_intro": "No introduction provided.",
+    "note_count": "Notes",
+    "follower_count": "Followers",
+    "tab_notes": "Written Notes",
+    "tab_favorites": "Favorite Products",
+    "no_notes_title": "No notes written",
+    "no_notes_desc": "This user hasn't written any tasting notes yet.",
+    "no_fav_title": "No favorite products",
+    "no_fav_desc": "This user has no favorite products."
+  },
+  "note": {
+    "detail_title": "Note Detail",
+    "not_found_title": "Note not found",
+    "not_found_desc": "Please try again in a moment.",
+    "public_scope_public": "Public",
+    "public_scope_private": "Private",
+    "tasting_note": "Tasting Note",
+    "no_detail": "No detailed note recorded.",
+    "flavor": "Flavors Felt",
+    "evaluation": "Detailed Evaluation",
+    "feeling": "Feeling",
+    "basic_info": "Basic Info",
+    "author": "Author",
+    "date": "Date"
+  },
+  "policy": {
+    "title": "Informativa sulla privacy",
+    "effective_date": "Effective Date: {{date}}",
+    "section1_title": "1. Purpose of Processing Personal Information",
+    "section1_desc": "Barnote (hereinafter 'Company') processes personal information for the following purposes. It will not be used for other purposes, and prior consent will be sought if the purpose changes.",
+    "s1_item1": "Confirmation of intent to join and provision of membership service",
+    "s1_item2": "Analysis of tasting notes and taste information, provision of customized service",
+    "s1_item3": "Customer inquiry response and complaint handling",
+    "section2_title": "2. Items of Personal Information Collected",
+    "section2_desc": "The Company collects the following personal information for smooth service provision.",
+    "s2_item1": "Required: Email, password, nickname, device info",
+    "s2_item2": "Optional: Profile picture, short introduction",
+    "s2_item3": "Service usage records: Access logs, IP info, tasting notes, follows, etc.",
+    "section3_title": "3. Retention and Use Period of Personal Information",
+    "section3_desc": "In principle, after the purpose of processing personal information is achieved, the information is destroyed without delay. (Unless required to be kept by law)",
+    "section4_title": "4. Rights and Duties of Data Subject",
+    "section4_desc": "Users can query or modify their registered personal information and request withdrawal of consent and cancellation of membership.",
+    "section5_title": "5. Contact",
+    "section5_desc": "For inquiries regarding personal information protection, complaints, etc., please contact below.",
+    "email": "- Email:"
+  },
+  "terms": {
+    "title": "Termini di servizio",
+    "effective_date": "Effective Date: {{date}}",
+    "section1_title": "Article 1 (Purpose)",
+    "section1_desc": "The purpose of these Terms is to define the rights, obligations, and responsibilities of the Company and Users regarding the use of the Barnote service.",
+    "section2_title": "Article 2 (Definition of Terms)",
+    "s2_item1": "'User' means a member who receives services according to these terms.",
+    "s2_item2": "'Member' means a person who can use the service provided by the company.",
+    "s2_item3": "'Content' means information, images, etc. posted by members within the service.",
+    "section3_title": "Article 3 (Effect and Modification of Terms)",
+    "section3_desc": "The Company may revise these Terms within the scope of not violating related laws if reasonable grounds arise.",
+    "section4_title": "Article 4 (Member's Obligations and Deletion Authority)",
+    "section4_desc": "Users must not commit unfair acts such as theft of information or infringement of intellectual property rights; violating this may result in deletion.",
+    "section5_title": "Article 5 (Limitation of Liability)",
+    "section5_desc": "The Company is not liable for free services unless specified by law.",
+    "section6_title": "Article 6 (Jurisdiction)",
+    "section6_desc": "Disputes related to service use shall be resolved by agreement, otherwise filed with a competent court."
   }
 }

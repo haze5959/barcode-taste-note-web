@@ -2,8 +2,10 @@ import { NoteInfo } from '../types';
 import { RatingView } from './RatingView';
 import { OQImageView } from './OQImageView';
 import { Image as ImageIcon } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function NoteRow({ info }: { info?: NoteInfo | null }) {
+  const { t } = useTranslation();
   if (!info) {
     // Skeleton View
     return (
@@ -37,7 +39,7 @@ export function NoteRow({ info }: { info?: NoteInfo | null }) {
         </div>
         
         <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2 mb-2 leading-relaxed h-10">
-          {note.body || '기록된 내용이 없습니다.'}
+          {note.body || t('note.no_detail')}
         </p>
 
         <div className="flex items-center justify-between mt-auto">

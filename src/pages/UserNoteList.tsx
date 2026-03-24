@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { usersApi } from '../lib/api/users';
 import { notesApi } from '../lib/api/notes';
 import { productsApi } from '../lib/api/products';
@@ -8,12 +9,14 @@ import { OQImageView } from '../components/OQImageView';
 import { NoteRow } from '../components/NoteRow';
 import { ProductRow } from '../components/ProductRow';
 import { SkeletonView } from '../components/CommonUI';
+import { SEO } from '../components/SEO';
 
 type Tab = 'notes' | 'favorites';
 
 export default function UserNoteList() {
   const { userId } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const [notes, setNotes] = useState<NoteInfo[]>([]);
@@ -24,7 +27,6 @@ export default function UserNoteList() {
   useEffect(() => {
     if (!userId) return;
     
-    // API Call Mocking/Structure
     const fetchData = async () => {
       setLoading(true);
       try {
@@ -60,8 +62,19 @@ export default function UserNoteList() {
 
   return (
     <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full xl:w-[480px]">
+      <SEO title={t('user.tab_notes')} description={t('user.tab_notes')} url={`https://barnote.net/user/${userId}`} />
+      
+      {userInfo && (
+        <SEO 
+          title={`${userInfo.user.nickName} - ${t('user.tab_notes')}`}
+          description={userInfo.user.intro || `${userInfo.user.nickName} ${t('user.tab_notes')}`}
+          image={userInfo.user.imageId ? `https://barnote.net/images/${userInfo.user.imageId}` : undefined}
+          url={`https://barnote.net/user/${userId}`}
+        />
+      )}
+      
       <div className="flex-1 overflow-y-auto overflow-x-hidden p-0 w-full">
-        {/* 2. Profile Header */}
+        {/* Profile Header */}
         <section className="px-5 py-6">
           {loading && !userInfo ? (
             <SkeletonView className="w-full h-32 rounded-2xl" />
@@ -73,15 +86,15 @@ export default function UserNoteList() {
               <div className="flex flex-col flex-1">
                 <h2 className="text-xl font-extrabold text-[var(--color-text-primary)] mb-1">{userInfo.user.nickName}</h2>
                 <p className="text-[13px] text-[var(--color-text-secondary)] leading-snug line-clamp-2 min-h-10 mb-2">
-                  {userInfo.user.intro || '등록된 소개가 없습니다.'}
+                  {userInfo.user.intro || t('user.no_intro')}
                 </p>
                 <div className="flex items-center gap-5 mt-1">
                   <div className="flex flex-col">
-                    <span className="text-[10px] text-[var(--color-text-secondary)] font-medium mb-0.5">노트</span>
+                    <span className="text-[10px] text-[var(--color-text-secondary)] font-medium mb-0.5">{t('user.note_count')}</span>
                     <span className="text-[15px] font-extrabold text-[var(--color-text-primary)] leading-none">{userInfo.noteCount}</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[10px] text-[var(--color-text-secondary)] font-medium mb-0.5">팔로워</span>
+                    <span className="text-[10px] text-[var(--color-text-secondary)] font-medium mb-0.5">{t('user.follower_count')}</span>
                     <span className="text-[15px] font-extrabold text-[var(--color-text-primary)] leading-none">{userInfo.followerCount || 0}</span>
                   </div>
                 </div>
@@ -92,7 +105,7 @@ export default function UserNoteList() {
 
         <div className="w-full border-t border-[var(--color-divider)] my-2" />
 
-        {/* 3. Tabs */}
+        {/* Tabs */}
         <div className="flex px-5 pt-4 pb-0 bg-[var(--color-background-primary)] relative">
           {(['notes', 'favorites'] as Tab[]).map((tab) => (
              <button
@@ -102,7 +115,7 @@ export default function UserNoteList() {
                   activeTab === tab ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-secondary)] font-medium'
                 }`}
              >
-                {tab === 'notes' ? '작성 노트' : '즐겨찾는 제품'}
+                {tab === 'notes' ? t('user.tab_notes') : t('user.tab_favorites')}
                 {activeTab === tab && (
                   <div className="absolute bottom-0 left-0 right-0 h-[2.5px] bg-[#181820] rounded-t-full" />
                 )}
@@ -112,12 +125,12 @@ export default function UserNoteList() {
 
         <div className="w-full border-t border-[var(--color-divider)] -mt-px mb-4" />
 
-        {/* 4. Tab Content */}
+        {/* Tab Content */}
         <section className="px-5 py-2">
           {activeTab === 'notes' && (
              <div className="flex flex-col gap-4">
                 <div className="flex items-center justify-between mb-1">
-                  <h3 className="font-bold text-[17px] text-[var(--color-text-primary)]">작성 노트</h3>
+                  <h3 className="font-bold text-[17px] text-[var(--color-text-primary)]">{t('user.tab_notes')}</h3>
                 </div>
                 {loading && notes.length === 0 ? (
                   Array.from({ length: 4 }).map((_, i) => <NoteRow key={i} info={null} />)
@@ -132,8 +145,8 @@ export default function UserNoteList() {
                 ) : (
                   <div className="py-20 flex flex-col items-center justify-center text-center px-4">
                     <div className="w-16 h-16 bg-[var(--color-surface-secondary)] rounded-full flex items-center justify-center mb-5 text-2xl text-[var(--color-text-secondary)]">📝</div>
-                    <h4 className="text-[15px] font-bold text-[var(--color-text-primary)] mb-1.5">작성한 노트가 없습니다</h4>
-                    <p className="text-[13px] text-[var(--color-text-secondary)]">이 유저는 아직 테이스팅 노트를 작성하지 않았습니다.</p>
+                    <h4 className="text-[15px] font-bold text-[var(--color-text-primary)] mb-1.5">{t('user.no_notes_title')}</h4>
+                    <p className="text-[13px] text-[var(--color-text-secondary)]">{t('user.no_notes_desc')}</p>
                   </div>
                 )}
              </div>
@@ -144,8 +157,8 @@ export default function UserNoteList() {
                 {favorites.length === 0 && !loading ? (
                    <div className="py-20 flex flex-col items-center justify-center text-center px-4">
                       <div className="w-16 h-16 bg-[var(--color-surface-secondary)] rounded-full flex items-center justify-center mb-5 text-2xl text-[var(--color-text-secondary)]">❤️</div>
-                      <h4 className="text-[15px] font-bold text-[var(--color-text-primary)] mb-1.5">즐겨찾는 제품이 없습니다</h4>
-                      <p className="text-[13px] text-[var(--color-text-secondary)]">이 유저가 즐겨찾기한 제품이 없습니다.</p>
+                      <h4 className="text-[15px] font-bold text-[var(--color-text-primary)] mb-1.5">{t('user.no_fav_title')}</h4>
+                      <p className="text-[13px] text-[var(--color-text-secondary)]">{t('user.no_fav_desc')}</p>
                     </div>
                 ) : (
                   <div className="grid grid-cols-2 gap-3.5">
