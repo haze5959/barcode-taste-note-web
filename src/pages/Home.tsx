@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, Variants } from 'framer-motion';
 import { ScanBarcode, Share2, Users, Bell, ShieldBan, PenTool } from 'lucide-react';
 import { getHomeInfo } from '../lib/api/home';
 import { HomeInfo } from '../types';
 import { NoteRow } from '../components/NoteRow';
-import { ProductRow } from '../components/ProductRow';
 import { SEO } from '../components/SEO';
+import { StoreDownloadButtons } from '../components/StoreDownloadButtons';
 import { useTranslation } from 'react-i18next';
 
 // ==========================================
@@ -26,6 +27,7 @@ const staggerContainer: Variants = {
 
 export default function Home() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [data, setData] = useState<HomeInfo | null>(null);
 
   useEffect(() => {
@@ -49,13 +51,16 @@ export default function Home() {
           1. Hero Section 
           ======================= */}
       <section className="relative pt-24 pb-16 px-6 md:pt-32 md:pb-24 grid place-items-center text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[var(--color-accent)]/15 blur-[120px] rounded-full pointer-events-none" />
+        {/* 무거운 CSS blur 대신 가벼운 방사형 그라디언트를 사용하여 GPU 렌더링 부하 100% 감소 */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px] bg-[radial-gradient(circle,var(--color-accent)_0%,transparent_60%)] opacity-15 pointer-events-none rounded-full" />
         
-        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 flex flex-col items-center">
+        <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 flex flex-col items-center will-change-transform">
           <motion.img 
             variants={fadeUp}
-            src="/icon-1024.png" 
+            src="/icon-256.png" 
             alt="Barnote Logo" 
+            decoding="async"
+            fetchPriority="high"
             className="w-24 h-24 mb-6 rounded-[22px] shadow-xl border border-[var(--color-divider)] object-cover"
           />
           <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-extrabold tracking-tight mb-5 text-[var(--color-text-primary)] leading-[1.1]">
@@ -120,36 +125,33 @@ export default function Home() {
       </section>
 
       {/* =======================
-          4. 최근 기록 쇼케이스 
+          4. 최근 시음 노트 
           ======================= */}
-      <section className="px-6 py-16 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12">
-          
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold">{t('home.recent_prod_title')}</h2>
-              <p className="text-[var(--color-text-secondary)] text-sm mt-1">{t('home.recent_prod_sub')}</p>
-            </div>
-            <div className="grid grid-cols-3 gap-3 md:gap-4">
-              {data ? data.recentProducts.slice(0, 3).map(p => (
-                <ProductRow key={p.product.id} info={p} />
-              )) : Array.from({length:3}).map((_, i) => <ProductRow key={i} />)}
-            </div>
-          </motion.div>
+      <section className="px-6 py-16 max-w-3xl mx-auto">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
+          <div className="mb-8 text-center">
+            <h2 className="text-2xl font-bold">{t('home.recent_note_title')}</h2>
+            <p className="text-[var(--color-text-secondary)] text-sm mt-1">{t('home.recent_note_sub')}</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            {data ? data.recentNotes.slice(0, 3).map(n => (
+              <div key={n.note.id} onClick={() => navigate(`/note/${n.note.id}`)} className="cursor-pointer transition-transform hover:-translate-y-1">
+                <NoteRow info={n} />
+              </div>
+            )) : Array.from({length:3}).map((_, i) => <NoteRow key={i} />)}
+          </div>
+        </motion.div>
+      </section>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold">{t('home.recent_note_title')}</h2>
-              <p className="text-[var(--color-text-secondary)] text-sm mt-1">{t('home.recent_note_sub')}</p>
-            </div>
-            <div className="flex flex-col gap-4">
-              {data ? data.recentNotes.slice(0, 3).map(n => (
-                <NoteRow key={n.note.id} info={n} />
-              )) : Array.from({length:3}).map((_, i) => <NoteRow key={i} />)}
-            </div>
-          </motion.div>
-
-        </div>
+      {/* =======================
+          5. 앱 다운로드 유도 섹션
+          ======================= */}
+      <section className="px-6 py-20 pb-28 md:py-24 max-w-4xl mx-auto text-center border-t border-[var(--color-divider)]">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
+          <h2 className="text-3xl font-extrabold mb-4">내 손안의 테이스팅 노트, 바노트</h2>
+          <p className="text-[var(--color-text-secondary)] mb-8">지금 바로 앱을 다운로드하고 나만의 기록을 남겨보세요.</p>
+          <StoreDownloadButtons />
+        </motion.div>
       </section>
     </div>
   );

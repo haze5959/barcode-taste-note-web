@@ -11,7 +11,7 @@ interface SEOProps {
 export function SEO({
   title = 'Barnote - AI 스캔 시음 노트',
   description = '바코드와 AI 스캔으로 가장 빠른 시음 노트를 작성하고 공유해보세요.',
-  image = 'https://barnote.net/icon-1024.png',
+  image = 'https://barnote.net/icon-512.png',
   url = 'https://barnote.net',
   type = 'website',
 }: SEOProps) {
