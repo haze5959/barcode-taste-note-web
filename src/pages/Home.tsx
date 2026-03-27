@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants, animate } from 'framer-motion';
 import { ScanBarcode, Share2, Users, Bell, ShieldBan, PenTool } from 'lucide-react';
 import { getHomeInfo } from '../lib/api/home';
 import { HomeInfo } from '../types';
@@ -24,6 +24,26 @@ const staggerContainer: Variants = {
     transition: { staggerChildren: 0.1 }
   }
 };
+
+function AnimatedCounter({ value }: { value: number }) {
+  const nodeRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    const node = nodeRef.current;
+    if (node) {
+      const controls = animate(0, value, {
+        duration: 2,
+        ease: "easeOut",
+        onUpdate(v) {
+          node.textContent = Math.round(v).toLocaleString();
+        }
+      });
+      return () => controls.stop();
+    }
+  }, [value]);
+
+  return <span ref={nodeRef} />;
+}
 
 export default function Home() {
   const { t } = useTranslation();
@@ -86,13 +106,26 @@ export default function Home() {
       <section className="px-6 py-12 md:py-20">
         <motion.div 
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
-          className="max-w-4xl mx-auto bg-gradient-to-br from-[var(--color-surface-primary)] to-[var(--color-surface-secondary)] rounded-3xl p-8 md:p-14 text-center shadow-sm border border-[var(--color-divider)]"
+          className="max-w-4xl mx-auto bg-gradient-to-br from-[var(--color-surface-primary)] to-[var(--color-surface-secondary)] rounded-3xl p-8 md:p-14 text-center shadow-sm border border-[var(--color-divider)] min-h-[200px] flex flex-col justify-center"
         >
           <h2 className="text-xl md:text-2xl text-[var(--color-text-secondary)] font-semibold mb-4">{t('home.counter_title')}</h2>
-          <div className="text-6xl md:text-7xl lg:text-8xl font-black text-[var(--color-text-primary)] tracking-tighter tabular-nums flex justify-center items-center gap-2">
-            {data ? data.productCount.toLocaleString() : '···'}
-            <span className="text-4xl md:text-6xl text-[var(--color-accent)]">+</span>
-          </div>
+          
+          {!data ? (
+            <div className="flex flex-col items-center justify-center gap-3.5 py-4 opacity-80">
+              <div className="relative flex items-center justify-center w-10 h-10">
+                <div className="absolute inset-0 rounded-full border-4 border-[var(--color-divider)] opacity-50" />
+                <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-[var(--color-accent)] animate-spin" />
+              </div>
+              <span className="text-sm md:text-base font-semibold text-[var(--color-text-secondary)] tracking-wide animate-pulse">
+                {t('home.fetching_data', { defaultValue: '최신 바코드 데이터 동기화 중...' })}
+              </span>
+            </div>
+          ) : (
+            <div className="text-6xl md:text-7xl lg:text-8xl font-black text-[var(--color-text-primary)] tracking-tighter tabular-nums flex justify-center items-center gap-2">
+              <AnimatedCounter value={data.productCount} />
+              <span className="text-4xl md:text-6xl text-[var(--color-accent)]">+</span>
+            </div>
+          )}
         </motion.div>
       </section>
 
@@ -148,8 +181,8 @@ export default function Home() {
           ======================= */}
       <section className="px-6 py-20 pb-28 md:py-24 max-w-4xl mx-auto text-center border-t border-[var(--color-divider)]">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
-          <h2 className="text-3xl font-extrabold mb-4">내 손안의 테이스팅 노트, 바노트</h2>
-          <p className="text-[var(--color-text-secondary)] mb-8">지금 바로 앱을 다운로드하고 나만의 기록을 남겨보세요.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">{t('home.promo_title')}</h2>
+          <p className="text-[var(--color-text-secondary)] mb-8 text-lg">{t('home.promo_desc')}</p>
           <StoreDownloadButtons />
         </motion.div>
       </section>
