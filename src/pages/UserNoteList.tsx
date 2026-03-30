@@ -63,7 +63,7 @@ export default function UserNoteList() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full">
+    <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative w-full">
       <SEO title={t('user.tab_notes')} description={t('user.tab_notes')} url={`https://barnote.net/user/${userId}`} />
       
       {userInfo && (
@@ -75,7 +75,7 @@ export default function UserNoteList() {
         />
       )}
       
-      <div className="flex-1 overflow-y-auto overflow-x-hidden p-0 w-full">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden p-0 w-full scrollbar-hide">
         {/* Profile Header */}
         <section className="px-5 py-6">
           {loading && !userInfo ? (
