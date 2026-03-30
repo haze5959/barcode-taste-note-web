@@ -1,9 +1,9 @@
-# Barnote Web - Project Rules & Guidelines
+# BarNote Web - Project Rules & Guidelines
 
 ## 📌 Project Overview
-이 프로젝트는 **Barnote** 앱의 공유 기능 웹페이지 및 서비스 운영 페이지(약관, 랜딩 등)를 제공하는 정적 웹 프로젝트입니다.
+이 프로젝트는 **BarNote** 앱의 공유 기능 웹페이지 및 서비스 운영 페이지(약관, 랜딩 등)를 제공하는 정적 웹 프로젝트입니다.
 
-> Barnote는 바코드 인식 및 AI 라벨 스캔을 이용한 빠른 시음 노트 작성 모바일 앱입니다.
+> BarNote는 바코드 인식 및 AI 라벨 스캔을 이용한 빠른 시음 노트 작성 모바일 앱입니다.
 
 AI 어시스턴트는 작업 시작 전 반드시 이 문서를 숙지하고, 아래 명시된 기술 스택과 규칙을 준수하여 코드를 작성해야 합니다.
 

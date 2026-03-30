@@ -7,6 +7,7 @@ import { RatingView } from '../components/RatingView';
 import { OQImageView } from '../components/OQImageView';
 import { InfoTagView, FlavorChip, SkeletonView } from '../components/CommonUI';
 import { SEO } from '../components/SEO';
+import { AppPromotionDialog } from '../components/AppPromotionDialog';
 import { ChevronLeft, Calendar as CalendarIcon, User as UserIcon } from 'lucide-react';
 import { FLAVOR_INFO, NOTE_DETAIL_INFO, FEELING_INFO } from '../lib/mappings';
 
@@ -19,6 +20,7 @@ export default function NoteDetail() {
   const showNavBar = location.state?.fromUserList === true;
   const [info, setInfo] = useState<NoteInfo | null>(null);
   const [loading, setLoading] = useState(true);
+  const [promoDialogOpen, setPromoDialogOpen] = useState(false);
 
   useEffect(() => {
     if (!noteId) return;
@@ -38,7 +40,7 @@ export default function NoteDetail() {
   }, [noteId]);
 
   return (
-    <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full xl:w-[480px]">
+    <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full">
       <SEO title={t('note.detail_title')} description={t('note.tasting_note')} url={`https://barnote.net/note/${noteId}`} />
       {info && (
         <SEO 
@@ -80,7 +82,7 @@ export default function NoteDetail() {
             {/* Hero Section */}
             <div 
               className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-lg border-4 border-[var(--color-surface-secondary)] cursor-pointer group"
-              onClick={() => navigate('/', { state: { showPromo: true } })}
+              onClick={() => setPromoDialogOpen(true)}
             >
               <div className="absolute inset-0 bg-black/10 z-10 transition-colors group-hover:bg-black/30" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
@@ -211,6 +213,16 @@ export default function NoteDetail() {
           </div>
         )}
       </div>
+
+      {/* 앱 프로모션 다이얼로그 */}
+      <AppPromotionDialog
+        open={promoDialogOpen}
+        onClose={() => setPromoDialogOpen(false)}
+        onConfirm={() => {
+          setPromoDialogOpen(false);
+          navigate('/', { state: { showPromo: true } });
+        }}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
-# Barnote Web
+# BarNote Web
 
 ## 💡 개요
-Barnote 웹페이지입니다.
+BarNote 웹페이지입니다.
 - 제공 기능
 	- 노트 리스트
 		- https://barnote.net/user/{id}

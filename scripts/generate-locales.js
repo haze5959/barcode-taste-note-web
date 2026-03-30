@@ -5,7 +5,7 @@ const locales = ['ko', 'en', 'zh-CN', 'zh-TW', 'ja', 'fr', 'de', 'es', 'pt', 'it
 
 // 기본 한국어
 const ko = {
-  common: { app_name: "Barnote", back: "뒤로가기", loading: "로딩 중...", error: "오류가 발생했습니다." },
+  common: { app_name: "BarNote", back: "뒤로가기", loading: "로딩 중...", error: "오류가 발생했습니다." },
   home: {
     hero_title1: "당신의 모든 잔을 ",
     hero_title2: "완벽한 기록으로",
@@ -61,7 +61,7 @@ const ko = {
     title: "개인정보처리방침",
     effective_date: "시행일: {{date}}",
     section1_title: "1. 개인정보의 처리 목적",
-    section1_desc: "Barnote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다.",
+    section1_desc: "BarNote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다.",
     s1_item1: "회원 가입 의사 확인 및 회원제 서비스 제공",
     s1_item2: "시음 노트 및 취향 정보 분석, 맞춤형 서비스 제공",
     s1_item3: "고객 문의 대응 및 민원 처리",
@@ -82,7 +82,7 @@ const ko = {
     title: "서비스 이용약관",
     effective_date: "시행일: {{date}}",
     section1_title: "제1조 (목적)",
-    section1_desc: "본 약관은 Barnote 서비스의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
+    section1_desc: "본 약관은 BarNote 서비스의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
     section2_title: "제2조 (용어의 정의)",
     s2_item1: "'이용자'란 서비스를 받는 회원을 말합니다.",
     s2_item2: "'콘텐츠'란 회원이 서비스 내에 게시한 정보, 이미지 등을 말합니다.",
@@ -98,15 +98,15 @@ const ko = {
 };
 
 const en = {
-  common: { app_name: "Barnote", back: "Back", loading: "Loading...", error: "An error occurred." },
+  common: { app_name: "BarNote", back: "Back", loading: "Loading...", error: "An error occurred." },
   home: {
     hero_title1: "Turn every glass into ",
     hero_title2: "a perfect memory",
-    hero_subtitle: "The fastest and most beautiful AI tasting note, Barnote",
+    hero_subtitle: "The fastest and most beautiful AI tasting note, BarNote",
     hero_btn: "Download App",
-    counter_title: "Products registered with Barnote",
+    counter_title: "Products registered with BarNote",
     feat_title: "Focus only on your records",
-    feat_sub: "Special experiences provided by Barnote",
+    feat_sub: "Special experiences provided by BarNote",
     feat1_title: "Your Own Tasting Notes",
     feat1_desc: "Create and share your own tasting notes!",
     feat2_title: "AI Scan Engine",
@@ -150,7 +150,7 @@ const en = {
     title: "Privacy Policy",
     effective_date: "Effective Date: {{date}}",
     section1_title: "1. Purpose of Processing Personal Information",
-    section1_desc: "Barnote (hereinafter 'Company') processes personal information for the following purposes.",
+    section1_desc: "BarNote (hereinafter 'Company') processes personal information for the following purposes.",
     s1_item1: "Confirmation of intent to join and provision of membership service",
     s1_item2: "Analysis of tasting notes and taste information, provision of customized service",
     s1_item3: "Customer inquiry response and complaint handling",
@@ -171,7 +171,7 @@ const en = {
     title: "Terms of Service",
     effective_date: "Effective Date: {{date}}",
     section1_title: "Article 1 (Purpose)",
-    section1_desc: "The purpose of these Terms is to define the rights, obligations, and responsibilities of the Company and Users regarding the use of the Barnote service.",
+    section1_desc: "The purpose of these Terms is to define the rights, obligations, and responsibilities of the Company and Users regarding the use of the BarNote service.",
     section2_title: "Article 2 (Definition of Terms)",
     s2_item1: "'User' means a member who receives services.",
     s2_item2: "'Content' means information, images, etc. posted by members within the service.",
@@ -187,15 +187,15 @@ const en = {
 };
 
 const zhCN = {
-  common: { app_name: "Barnote", back: "返回", loading: "加载中...", error: "发生错误。" },
+  common: { app_name: "BarNote", back: "返回", loading: "加载中...", error: "发生错误。" },
   home: {
     hero_title1: "将每一杯美酒 ",
     hero_title2: "化作完美记录",
-    hero_subtitle: "最快最美的AI品酒笔记，Barnote",
+    hero_subtitle: "最快最美的AI品酒笔记，BarNote",
     hero_btn: "下载应用",
-    counter_title: "当前在Barnote注册的产品数量",
+    counter_title: "当前在BarNote注册的产品数量",
     feat_title: "让您专注于记录",
-    feat_sub: "Barnote提供的独特体验",
+    feat_sub: "BarNote提供的独特体验",
     feat1_title: "我的品酒笔记",
     feat1_desc: "撰写并分享您独有的品酒笔记！",
     feat2_title: "AI扫描引擎",
@@ -239,7 +239,7 @@ const zhCN = {
     title: "隐私政策",
     effective_date: "生效日期: {{date}}",
     section1_title: "1. 个人信息处理目的",
-    section1_desc: "Barnote（以下简称“公司”）出于以下目的处理个人信息。",
+    section1_desc: "BarNote（以下简称“公司”）出于以下目的处理个人信息。",
     s1_item1: "确认注册意愿及提供会员服务",
     s1_item2: "品酒笔记及口味分析，提供定制化服务",
     s1_item3: "客户咨询响应及投诉处理",
@@ -276,15 +276,15 @@ const zhCN = {
 };
 
 const zhTW = {
-  common: { app_name: "Barnote", back: "返回", loading: "加載中...", error: "發生錯誤。" },
+  common: { app_name: "BarNote", back: "返回", loading: "加載中...", error: "發生錯誤。" },
   home: {
     hero_title1: "將每一杯美酒 ",
     hero_title2: "化作完美記錄",
-    hero_subtitle: "最快最美的AI品酒筆記，Barnote",
+    hero_subtitle: "最快最美的AI品酒筆記，BarNote",
     hero_btn: "下載應用",
-    counter_title: "當前在Barnote註冊的產品數量",
+    counter_title: "當前在BarNote註冊的產品數量",
     feat_title: "讓您專注於記錄",
-    feat_sub: "Barnote提供的獨特體驗",
+    feat_sub: "BarNote提供的獨特體驗",
     feat1_title: "我的品酒筆記",
     feat1_desc: "撰寫並分享您獨有的品酒筆記！",
     feat2_title: "AI掃描引擎",
@@ -329,15 +329,15 @@ const zhTW = {
 };
 
 const ja = {
-  common: { app_name: "Barnote", back: "戻る", loading: "読み込み中...", error: "エラーが発生しました。" },
+  common: { app_name: "BarNote", back: "戻る", loading: "読み込み中...", error: "エラーが発生しました。" },
   home: {
     hero_title1: "すべてのグラスを ",
     hero_title2: "完璧な記録に",
-    hero_subtitle: "最速で美しいAIテイスティングノート、Barnote",
+    hero_subtitle: "最速で美しいAIテイスティングノート、BarNote",
     hero_btn: "アプリをダウンロード",
-    counter_title: "現在Barnoteに登録されている製品数",
+    counter_title: "現在BarNoteに登録されている製品数",
     feat_title: "記録に集中できるように",
-    feat_sub: "Barnoteが提供する特別な体験",
+    feat_sub: "BarNoteが提供する特別な体験",
     feat1_title: "自分だけのテイスティングノート",
     feat1_desc: "自分だけのテイスティングノートを作成・共有しよう！",
     feat2_title: "AIスキャンエンジン",

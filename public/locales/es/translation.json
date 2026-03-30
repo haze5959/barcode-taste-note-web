@@ -1,6 +1,6 @@
 {
   "common": {
-    "app_name": "Barnote",
+    "app_name": "BarNote",
     "back": "Atrás",
     "loading": "Cargando...",
     "error": "Ocurrió un error."
@@ -12,7 +12,7 @@
     "hero_btn": "Empezar Ahora",
     "counter_title": "Productos registrados",
     "feat_title": "Concéntrate en tus registros",
-    "feat_sub": "La experiencia especial de Barnote",
+    "feat_sub": "La experiencia especial de BarNote",
     "feat1_title": "Tus propias notas",
     "feat1_desc": "¡Crea y comparte tus notas!",
     "feat2_title": "Motor de escaneo IA",
@@ -30,7 +30,7 @@
     "recent_note_title": "Notas recientes",
     "recent_note_sub": "Registros recién subidos",
     "fetching_data": "Sincronizando...",
-    "promo_title": "Tus notas en tu mano, Barnote",
+    "promo_title": "Tus notas en tu mano, BarNote",
     "promo_desc": "Descarga la aplicación ahora."
   },
   "layout": {
@@ -67,11 +67,21 @@
     "author": "Autor",
     "date": "Fecha"
   },
+  "app_promo_dialog": {
+    "badge": "BarNote App",
+    "title": "Disfruta más en la aplicación",
+    "desc": "Desde el escaneo de códigos hasta compartir en redes, vive la experiencia completa de cata en BarNote.",
+    "feature1": "Notas rápidas con escaneo IA de códigos y etiquetas",
+    "feature2": "Sigue y comparte con usuarios de gustos similares",
+    "feature3": "Gestión sin anuncios de tus notas de cata",
+    "cancel": "Cerrar",
+    "confirm": "Descargar la app"
+  },
   "policy": {
     "title": "Política de Privacidad",
     "effective_date": "Effective Date: {{date}}",
     "section1_title": "1. 개인정보의 처리 목적",
-    "section1_desc": "Barnote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
+    "section1_desc": "BarNote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
     "s1_item1": "회원 가입 의사 확인 및 회원제 서비스 제공",
     "s1_item2": "시음 노트 및 취향 정보 분석, 맞춤형 서비스 제공",
     "s1_item3": "고객 문의 대응 및 민원 처리",
@@ -92,7 +102,7 @@
     "title": "Términos de Servicio",
     "effective_date": "Effective Date: {{date}}",
     "section1_title": "제1조 (목적)",
-    "section1_desc": "본 약관은 Barnote(이하 '회사')가 제공하는 바노트(Barnote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
+    "section1_desc": "본 약관은 BarNote(이하 '회사')가 제공하는 바노트(BarNote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
     "section2_title": "제2조 (용어의 정의)",
     "s2_item1": "'이용자'란 본 약관에 따라 회사가 제공하는 서비스를 받는 회원을 말합니다.",
     "s2_item2": "'회원'이란 서비스에 가입하여 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.",

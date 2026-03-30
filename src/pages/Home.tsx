@@ -73,12 +73,12 @@ export default function Home() {
       <section className="relative pt-24 pb-16 px-6 md:pt-32 md:pb-24 grid place-items-center text-center">
         {/* 무거운 CSS blur 대신 가벼운 방사형 그라디언트를 사용하여 GPU 렌더링 부하 100% 감소 */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px] bg-[radial-gradient(circle,var(--color-accent)_0%,transparent_60%)] opacity-15 pointer-events-none rounded-full" />
-        
+
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="relative z-10 flex flex-col items-center will-change-transform">
-          <motion.img 
+          <motion.img
             variants={fadeUp}
-            src="/icon-256.png" 
-            alt="Barnote Logo" 
+            src="/icon-256.png"
+            alt="BarNote Logo"
             decoding="async"
             fetchPriority="high"
             className="w-24 h-24 mb-6 rounded-[22px] shadow-xl border border-[var(--color-divider)] object-cover"
@@ -104,12 +104,12 @@ export default function Home() {
           2. 등록된 제품 카운터 
           ======================= */}
       <section className="px-6 py-12 md:py-20">
-        <motion.div 
+        <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeUp}
           className="max-w-4xl mx-auto bg-gradient-to-br from-[var(--color-surface-primary)] to-[var(--color-surface-secondary)] rounded-3xl p-8 md:p-14 text-center shadow-sm border border-[var(--color-divider)] min-h-[200px] flex flex-col justify-center"
         >
           <h2 className="text-xl md:text-2xl text-[var(--color-text-secondary)] font-semibold mb-4">{t('home.counter_title')}</h2>
-          
+
           {!data ? (
             <div className="flex flex-col items-center justify-center gap-3.5 py-4 opacity-80">
               <div className="relative flex items-center justify-center w-10 h-10">
@@ -137,13 +137,13 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('home.feat_title')}</h2>
           <p className="text-[var(--color-text-secondary)] text-lg">{t('home.feat_sub')}</p>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={staggerContainer}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {FEATURES.map((feat, idx) => (
-            <motion.div 
+            <motion.div
               key={idx} variants={fadeUp}
               className="bg-[var(--color-surface-primary)] p-8 rounded-3xl border border-[var(--color-divider)] shadow-sm hover:shadow-md transition-shadow group cursor-default"
             >
@@ -171,7 +171,7 @@ export default function Home() {
               <div key={n.note.id} onClick={() => navigate(`/note/${n.note.id}`)} className="cursor-pointer transition-transform hover:-translate-y-1">
                 <NoteRow info={n} />
               </div>
-            )) : Array.from({length:3}).map((_, i) => <NoteRow key={i} />)}
+            )) : Array.from({ length: 3 }).map((_, i) => <NoteRow key={i} />)}
           </div>
         </motion.div>
       </section>

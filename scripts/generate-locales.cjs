@@ -4,7 +4,7 @@ const path = require('path');
 const locales = ['ko', 'en', 'zh-CN', 'zh-TW', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'ru'];
 
 const ko = {
-  common: { app_name: "Barnote", back: "뒤로가기", loading: "로딩 중...", error: "오류가 발생했습니다." },
+  common: { app_name: "BarNote", back: "뒤로가기", loading: "로딩 중...", error: "오류가 발생했습니다." },
   home: {
     hero_title1: "당신의 모든 잔을 ", hero_title2: "완벽한 기록으로", hero_subtitle: "가장 빠르고 아름다운 AI 시음노트, 바노트", hero_btn: "지금 바로 시작하기",
     counter_title: "현재 바노트와 함께하는 제품 수",
@@ -40,7 +40,7 @@ const ko = {
   },
   policy: {
     title: "개인정보처리방침", effective_date: "시행일: {{date}}",
-    section1_title: "1. 개인정보의 처리 목적", section1_desc: "Barnote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
+    section1_title: "1. 개인정보의 처리 목적", section1_desc: "BarNote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
     s1_item1: "회원 가입 의사 확인 및 회원제 서비스 제공", s1_item2: "시음 노트 및 취향 정보 분석, 맞춤형 서비스 제공", s1_item3: "고객 문의 대응 및 민원 처리",
     section2_title: "2. 수집하는 개인정보 항목", section2_desc: "회사는 원활한 서비스 제공을 위해 다음의 개인정보를 수집하고 있습니다.",
     s2_item1: "필수항목: 이메일, 비밀번호, 닉네임, 기기 정보", s2_item2: "선택항목: 프로필 사진, 한 줄 소개", s2_item3: "서비스 이용 기록: 접속 로그, 접속 IP 정보, 시음 노트, 팔로우 등",
@@ -50,7 +50,7 @@ const ko = {
   },
   terms: {
     title: "서비스 이용약관", effective_date: "시행일: {{date}}",
-    section1_title: "제1조 (목적)", section1_desc: "본 약관은 Barnote(이하 '회사')가 제공하는 바노트(Barnote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
+    section1_title: "제1조 (목적)", section1_desc: "본 약관은 BarNote(이하 '회사')가 제공하는 바노트(BarNote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
     section2_title: "제2조 (용어의 정의)", s2_item1: "'이용자'란 본 약관에 따라 회사가 제공하는 서비스를 받는 회원을 말합니다.", s2_item2: "'회원'이란 서비스에 가입하여 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.", s2_item3: "'콘텐츠'란 회원이 서비스 내에 게시한 부호, 문자, 도형, 색채, 음성, 음향, 이미지 등을 말합니다.",
     section3_title: "제3조 (약관의 효력 및 변경)", section3_desc: "회사는 합리적인 사유가 발생할 경우 관련 법령에 위배되지 않는 범위 내에서 약관을 개정할 수 있습니다.",
     section4_title: "제4조 (회원의 의무 및 삭제 권한)", section4_desc: "회원은 서비스를 이용할 때 타인의 정보 도용이나 지적재산권 침해 등 부당한 행위를 하여서는 안 되며, 위반 시 삭제될 수 있습니다.",
@@ -60,10 +60,10 @@ const ko = {
 };
 
 const en = {
-  common: { app_name: "Barnote", back: "Back", loading: "Loading...", error: "An error occurred." },
+  common: { app_name: "BarNote", back: "Back", loading: "Loading...", error: "An error occurred." },
   home: {
-    hero_title1: "Turn every glass into ", hero_title2: "a perfect memory", hero_subtitle: "The fastest and most beautiful AI tasting note, Barnote", hero_btn: "Start Right Now",
-    counter_title: "Products registered with Barnote", feat_title: "Focus only on your records", feat_sub: "Special experiences provided by Barnote",
+    hero_title1: "Turn every glass into ", hero_title2: "a perfect memory", hero_subtitle: "The fastest and most beautiful AI tasting note, BarNote", hero_btn: "Start Right Now",
+    counter_title: "Products registered with BarNote", feat_title: "Focus only on your records", feat_sub: "Special experiences provided by BarNote",
     feat1_title: "Your Own Tasting Notes", feat1_desc: "Create and share your own tasting notes!",
     feat2_title: "AI Scan Engine", feat2_desc: "Fast tasting notes using barcode recognition and AI label scanning",
     feat3_title: "Taste Sharing Community", feat3_desc: "Follow feature provided, share with users who have similar tastes",
@@ -72,7 +72,7 @@ const en = {
     feat6_title: "Ad-free Clean Zone", feat6_desc: "Write and manage your sensuous tasting notes without product sales or ads",
     recent_prod_title: "Recently Registered Products", recent_prod_sub: "Check out the special drinks users just tasted",
     recent_note_title: "Recently Written Notes", recent_note_sub: "Vivid taste records just uploaded",
-    fetching_data: "Syncing latest barcode data...", promo_title: "Tasting notes in your hand, Barnote", promo_desc: "Download the app now and leave your own records."
+    fetching_data: "Syncing latest barcode data...", promo_title: "Tasting notes in your hand, BarNote", promo_desc: "Download the app now and leave your own records."
   },
   layout: { promo: { title: "The fastest tasting notes\nstarting with a barcode scan", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -89,10 +89,10 @@ const en = {
 };
 
 const zhCN = {
-  common: { app_name: "Barnote", back: "返回", loading: "加载中...", error: "发生错误。" },
+  common: { app_name: "BarNote", back: "返回", loading: "加载中...", error: "发生错误。" },
   home: {
-    hero_title1: "将每一杯美酒 ", hero_title2: "化作完美记录", hero_subtitle: "最快最美观的AI品鉴笔记，Barnote", hero_btn: "立即开始",
-    counter_title: "Barnote 已收录的产品数量", feat_title: "让你专注记录", feat_sub: "Barnote 提供的独特体验",
+    hero_title1: "将每一杯美酒 ", hero_title2: "化作完美记录", hero_subtitle: "最快最美观的AI品鉴笔记，BarNote", hero_btn: "立即开始",
+    counter_title: "BarNote 已收录的产品数量", feat_title: "让你专注记录", feat_sub: "BarNote 提供的独特体验",
     feat1_title: "专属品鉴笔记", feat1_desc: "创建并分享你的专属品鉴笔记！",
     feat2_title: "AI 识别引擎", feat2_desc: "使用条码识别和 AI 标签扫描快速撰写笔记",
     feat3_title: "品味分享社区", feat3_desc: "提供关注功能，与品味相投的用户分享",
@@ -101,7 +101,7 @@ const zhCN = {
     feat6_title: "无广告纯净区", feat6_desc: "无产品推销和广告，专注管理您的感官体验",
     recent_prod_title: "最新收录产品", recent_prod_sub: "看看大家刚品尝了哪些特别的酒",
     recent_note_title: "最新笔记", recent_note_sub: "刚刚上传的生动品鉴记录",
-    fetching_data: "正在同步最新条码数据...", promo_title: "手中的品鉴笔记，Barnote", promo_desc: "立即下载应用，留下你的专属记录。"
+    fetching_data: "正在同步最新条码数据...", promo_title: "手中的品鉴笔记，BarNote", promo_desc: "立即下载应用，留下你的专属记录。"
   },
   layout: { promo: { title: "从条码扫描开始的\n最快品鉴笔记", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -118,10 +118,10 @@ const zhCN = {
 };
 
 const zhTW = {
-  common: { app_name: "Barnote", back: "返回", loading: "載入中...", error: "發生錯誤。" },
+  common: { app_name: "BarNote", back: "返回", loading: "載入中...", error: "發生錯誤。" },
   home: {
-    hero_title1: "將每一杯美酒 ", hero_title2: "化作完美記錄", hero_subtitle: "最快最美觀的AI品鑑筆記，Barnote", hero_btn: "立即開始",
-    counter_title: "Barnote 已收錄的產品數量", feat_title: "讓你專注記錄", feat_sub: "Barnote 提供的獨特體驗",
+    hero_title1: "將每一杯美酒 ", hero_title2: "化作完美記錄", hero_subtitle: "最快最美觀的AI品鑑筆記，BarNote", hero_btn: "立即開始",
+    counter_title: "BarNote 已收錄的產品數量", feat_title: "讓你專注記錄", feat_sub: "BarNote 提供的獨特體驗",
     feat1_title: "專屬品鑑筆記", feat1_desc: "創建並分享你的專屬品鑑筆記！",
     feat2_title: "AI 識別引擎", feat2_desc: "使用條碼識別和 AI 標籤掃描快速撰寫筆記",
     feat3_title: "品味分享社區", feat3_desc: "提供關注功能，與品味相投的用戶分享",
@@ -130,7 +130,7 @@ const zhTW = {
     feat6_title: "無廣告純淨區", feat6_desc: "無產品推銷和廣告，專注管理您的感官體驗",
     recent_prod_title: "最新收錄產品", recent_prod_sub: "看看大家剛品嘗了哪些特別的酒",
     recent_note_title: "最新筆記", recent_note_sub: "剛剛上傳的生動品鑑記錄",
-    fetching_data: "正在同步最新條碼數據...", promo_title: "手中的品鑑筆記，Barnote", promo_desc: "立即下載應用，留下你的專屬記錄。"
+    fetching_data: "正在同步最新條碼數據...", promo_title: "手中的品鑑筆記，BarNote", promo_desc: "立即下載應用，留下你的專屬記錄。"
   },
   layout: { promo: { title: "從條碼掃描開始的\n最快品鑑筆記", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -147,10 +147,10 @@ const zhTW = {
 };
 
 const ja = {
-  common: { app_name: "Barnote", back: "戻る", loading: "読み込み中...", error: "エラーが発生しました。" },
+  common: { app_name: "BarNote", back: "戻る", loading: "読み込み中...", error: "エラーが発生しました。" },
   home: {
-    hero_title1: "すべてのグラスを ", hero_title2: "完璧な記録に", hero_subtitle: "最速で最も美しいAIテイスティングノート、Barnote", hero_btn: "今すぐ始める",
-    counter_title: "Barnoteに登録されている製品数", feat_title: "記録に集中できるように", feat_sub: "Barnoteが提供する特別な体験",
+    hero_title1: "すべてのグラスを ", hero_title2: "完璧な記録に", hero_subtitle: "最速で最も美しいAIテイスティングノート、BarNote", hero_btn: "今すぐ始める",
+    counter_title: "BarNoteに登録されている製品数", feat_title: "記録に集中できるように", feat_sub: "BarNoteが提供する特別な体験",
     feat1_title: "あなた専用のノート", feat1_desc: "自分だけのテイスティングノートを作成して共有しましょう！",
     feat2_title: "AIスキャンエンジン", feat2_desc: "バーコード認識とAIラベルスキャンを使用した高速ノート作成",
     feat3_title: "好みを共有するコミュニティ", feat3_desc: "フォロー機能も提供、趣味が合うユーザーと共有しましょう",
@@ -159,7 +159,7 @@ const ja = {
     feat6_title: "広告なしのクリーンゾーン", feat6_desc: "製品の販売や広告なしに、感覚的なノートだけを管理できます",
     recent_prod_title: "最近登録された製品", recent_prod_sub: "ユーザーがたった今味わった特別なお酒",
     recent_note_title: "最近投稿されたノート", recent_note_sub: "たった今アップロードされた鮮やかな記録",
-    fetching_data: "データを同期中...", promo_title: "あなたの手の中のノート、Barnote", promo_desc: "今すぐアプリをダウンロードして、専用の記録を残しましょう。"
+    fetching_data: "データを同期中...", promo_title: "あなたの手の中のノート、BarNote", promo_desc: "今すぐアプリをダウンロードして、専用の記録を残しましょう。"
   },
   layout: { promo: { title: "バーコードスキャンで始まる\n最速のテイスティングノート", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -176,10 +176,10 @@ const ja = {
 };
 
 const fr = {
-  common: { app_name: "Barnote", back: "Retour", loading: "Chargement...", error: "Une erreur s'est produite." },
+  common: { app_name: "BarNote", back: "Retour", loading: "Chargement...", error: "Une erreur s'est produite." },
   home: {
-    hero_title1: "Transformez chaque verre en ", hero_title2: "un souvenir parfait", hero_subtitle: "La note de dégustation IA la plus rapide, Barnote", hero_btn: "Commencer",
-    counter_title: "Produits enregistrés avec Barnote", feat_title: "Concentrez-vous sur vos notes", feat_sub: "L'expérience spéciale offerte par Barnote",
+    hero_title1: "Transformez chaque verre en ", hero_title2: "un souvenir parfait", hero_subtitle: "La note de dégustation IA la plus rapide, BarNote", hero_btn: "Commencer",
+    counter_title: "Produits enregistrés avec BarNote", feat_title: "Concentrez-vous sur vos notes", feat_sub: "L'expérience spéciale offerte par BarNote",
     feat1_title: "Vos propres notes", feat1_desc: "Créez et partagez vos notes !",
     feat2_title: "Moteur de numérisation IA", feat2_desc: "Notes rapides utilisant la reconnaissance IA",
     feat3_title: "Communauté de partage", feat3_desc: "Partagez avec des utilisateurs partageant vos goûts",
@@ -188,7 +188,7 @@ const fr = {
     feat6_title: "Zone sans publicité", feat6_desc: "Gérez vos notes sans publicité intrusive",
     recent_prod_title: "Produits récents", recent_prod_sub: "Découvrez les boissons récemment testées",
     recent_note_title: "Notes récentes", recent_note_sub: "Notes de dégustation récemment publiées",
-    fetching_data: "Synchronisation des données...", promo_title: "Vos notes de dégustation, Barnote", promo_desc: "Téléchargez l'application maintenant."
+    fetching_data: "Synchronisation des données...", promo_title: "Vos notes de dégustation, BarNote", promo_desc: "Téléchargez l'application maintenant."
   },
   layout: { promo: { title: "Les notes de dégustation\nles plus rapides", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -205,10 +205,10 @@ const fr = {
 };
 
 const de = {
-  common: { app_name: "Barnote", back: "Zurück", loading: "Laden...", error: "Ein Fehler ist aufgetreten." },
+  common: { app_name: "BarNote", back: "Zurück", loading: "Laden...", error: "Ein Fehler ist aufgetreten." },
   home: {
-    hero_title1: "Mach jedes Glas zu ", hero_title2: "einer perfekten Erinnerung", hero_subtitle: "Die schnellste AI-Verkostungsnotiz, Barnote", hero_btn: "Jetzt Beginnen",
-    counter_title: "Registrierte Produkte", feat_title: "Fokus auf deine Notizen", feat_sub: "Das besondere Barnote-Erlebnis",
+    hero_title1: "Mach jedes Glas zu ", hero_title2: "einer perfekten Erinnerung", hero_subtitle: "Die schnellste AI-Verkostungsnotiz, BarNote", hero_btn: "Jetzt Beginnen",
+    counter_title: "Registrierte Produkte", feat_title: "Fokus auf deine Notizen", feat_sub: "Das besondere BarNote-Erlebnis",
     feat1_title: "Deine eigenen Notizen", feat1_desc: "Erstelle und teile sie!",
     feat2_title: "AI-Scan-Engine", feat2_desc: "Schnelle Notizen mit AI-Erkennung",
     feat3_title: "Teilen-Community", feat3_desc: "Folge und teile mit anderen",
@@ -217,7 +217,7 @@ const de = {
     feat6_title: "Werbefrei", feat6_desc: "Keine Werbung, nur deine Notizen",
     recent_prod_title: "Kürzlich registriert", recent_prod_sub: "Entdecke neue Getränke",
     recent_note_title: "Aktuelle Notizen", recent_note_sub: "Frisch hochgeladene Verkostungen",
-    fetching_data: "Daten synchronisieren...", promo_title: "Deine Notizen, Barnote", promo_desc: "Lade die App jetzt herunter."
+    fetching_data: "Daten synchronisieren...", promo_title: "Deine Notizen, BarNote", promo_desc: "Lade die App jetzt herunter."
   },
   layout: { promo: { title: "Die schnellsten Verkostungsnotizen\nmit Barcode-Scan", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -234,10 +234,10 @@ const de = {
 };
 
 const es = {
-  common: { app_name: "Barnote", back: "Atrás", loading: "Cargando...", error: "Ocurrió un error." },
+  common: { app_name: "BarNote", back: "Atrás", loading: "Cargando...", error: "Ocurrió un error." },
   home: {
     hero_title1: "Convierte cada copa en ", hero_title2: "un recuerdo perfecto", hero_subtitle: "La nota de cata IA más rápida y hermosa", hero_btn: "Empezar Ahora",
-    counter_title: "Productos registrados", feat_title: "Concéntrate en tus registros", feat_sub: "La experiencia especial de Barnote",
+    counter_title: "Productos registrados", feat_title: "Concéntrate en tus registros", feat_sub: "La experiencia especial de BarNote",
     feat1_title: "Tus propias notas", feat1_desc: "¡Crea y comparte tus notas!",
     feat2_title: "Motor de escaneo IA", feat2_desc: "Notas rápidas con reconocimiento IA",
     feat3_title: "Comunidad de degustación", feat3_desc: "Comparte con usuarios con gustos similares",
@@ -246,7 +246,7 @@ const es = {
     feat6_title: "Zona sin anuncios", feat6_desc: "Administra tus notas sin publicidad",
     recent_prod_title: "Productos recientes", recent_prod_sub: "Descubre las bebidas recién probadas",
     recent_note_title: "Notas recientes", recent_note_sub: "Registros recién subidos",
-    fetching_data: "Sincronizando...", promo_title: "Tus notas en tu mano, Barnote", promo_desc: "Descarga la aplicación ahora."
+    fetching_data: "Sincronizando...", promo_title: "Tus notas en tu mano, BarNote", promo_desc: "Descarga la aplicación ahora."
   },
   layout: { promo: { title: "Las notas más rápidas\ncon un escáner", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -263,10 +263,10 @@ const es = {
 };
 
 const pt = {
-  common: { app_name: "Barnote", back: "Voltar", loading: "Carregando...", error: "Ocorreu um erro." },
+  common: { app_name: "BarNote", back: "Voltar", loading: "Carregando...", error: "Ocorreu um erro." },
   home: {
-    hero_title1: "Transforme cada taça em ", hero_title2: "uma memória perfeita", hero_subtitle: "A nota de degustação mais rápida, Barnote", hero_btn: "Começar Agora",
-    counter_title: "Produtos registrados", feat_title: "Foque nos seus registros", feat_sub: "O que o Barnote proporciona",
+    hero_title1: "Transforme cada taça em ", hero_title2: "uma memória perfeita", hero_subtitle: "A nota de degustação mais rápida, BarNote", hero_btn: "Começar Agora",
+    counter_title: "Produtos registrados", feat_title: "Foque nos seus registros", feat_sub: "O que o BarNote proporciona",
     feat1_title: "Suas próprias notas", feat1_desc: "Crie e compartilhe suas notas!",
     feat2_title: "Motor de IA", feat2_desc: "Reconhecimento rápido de IA",
     feat3_title: "Comunidade", feat3_desc: "Compartilhe com quem tem gostos similares",
@@ -275,7 +275,7 @@ const pt = {
     feat6_title: "Sem Anúncios", feat6_desc: "Apenas as suas notas, sem poluição",
     recent_prod_title: "Produtos recentes", recent_prod_sub: "Confira as bebidas recentes",
     recent_note_title: "Notas recentes", recent_note_sub: "Registros de degustação recentes",
-    fetching_data: "Sincronizando...", promo_title: "Suas notas na mão, Barnote", promo_desc: "Baixe o aplicativo agora."
+    fetching_data: "Sincronizando...", promo_title: "Suas notas na mão, BarNote", promo_desc: "Baixe o aplicativo agora."
   },
   layout: { promo: { title: "As notas mais rápidas\ncom um toque", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -292,9 +292,9 @@ const pt = {
 };
 
 const it = {
-  common: { app_name: "Barnote", back: "Indietro", loading: "Caricamento...", error: "Errore." },
+  common: { app_name: "BarNote", back: "Indietro", loading: "Caricamento...", error: "Errore." },
   home: {
-    hero_title1: "Rendi ogni bicchiere ", hero_title2: "un ricordo perfetto", hero_subtitle: "Le note IA più veloci, Barnote", hero_btn: "Inizia Ora",
+    hero_title1: "Rendi ogni bicchiere ", hero_title2: "un ricordo perfetto", hero_subtitle: "Le note IA più veloci, BarNote", hero_btn: "Inizia Ora",
     counter_title: "Prodotti registrati", feat_title: "Concentrati sulle note", feat_sub: "L'esperienza speciale",
     feat1_title: "Le tue note", feat1_desc: "Crea e condividi note!",
     feat2_title: "Scansione IA", feat2_desc: "Riconoscimento IA veloce",
@@ -304,7 +304,7 @@ const it = {
     feat6_title: "Senza pubblicità", feat6_desc: "Ambiente pulito senza annunci",
     recent_prod_title: "Prodotti recenti", recent_prod_sub: "Scopri cosa bevono gli altri",
     recent_note_title: "Note recenti", recent_note_sub: "Nuove registrazioni caricate",
-    fetching_data: "Sincronizzazione...", promo_title: "Le tue note libere, Barnote", promo_desc: "Scarica l'app ora."
+    fetching_data: "Sincronizzazione...", promo_title: "Le tue note libere, BarNote", promo_desc: "Scarica l'app ora."
   },
   layout: { promo: { title: "Le note più veloci\ncon lo scanner", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {
@@ -321,10 +321,10 @@ const it = {
 };
 
 const ru = {
-  common: { app_name: "Barnote", back: "Назад", loading: "Загрузка...", error: "Произошла ошибка." },
+  common: { app_name: "BarNote", back: "Назад", loading: "Загрузка...", error: "Произошла ошибка." },
   home: {
     hero_title1: "Превратите каждый бокал в ", hero_title2: "идеальное воспоминание", hero_subtitle: "Самое быстрое и красивое приложение ИИ для дегустаций", hero_btn: "Начать",
-    counter_title: "Зарегистрированные продукты", feat_title: "Сосредоточьтесь на записях", feat_sub: "Особый опыт Barnote",
+    counter_title: "Зарегистрированные продукты", feat_title: "Сосредоточьтесь на записях", feat_sub: "Особый опыт BarNote",
     feat1_title: "Ваши собственные заметки", feat1_desc: "Создавайте и делитесь заметками!",
     feat2_title: "ИИ-сканер", feat2_desc: "Быстрые записи с помощью распознавания штрихкодов",
     feat3_title: "Сообщество", feat3_desc: "Следите за единомышленниками",
@@ -333,7 +333,7 @@ const ru = {
     feat6_title: "Без рекламы", feat6_desc: "Никакой навязчивой рекламы",
     recent_prod_title: "Недавние продукты", recent_prod_sub: "Посмотрите, что пробовали другие",
     recent_note_title: "Недавние заметки", recent_note_sub: "Только что загруженные дегустации",
-    fetching_data: "Синхронизация...", promo_title: "Ваши заметки в ваших руках, Barnote", promo_desc: "Скачайте приложение сейчас."
+    fetching_data: "Синхронизация...", promo_title: "Ваши заметки в ваших руках, BarNote", promo_desc: "Скачайте приложение сейчас."
   },
   layout: { promo: { title: "Самые быстрые заметки\nсо сканером", appStore: "App Store", playStore: "Google Play", comingSoon: "Coming Soon" } },
   user: {

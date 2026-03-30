@@ -1,6 +1,6 @@
 {
   "common": {
-    "app_name": "Barnote",
+    "app_name": "BarNote",
     "back": "返回",
     "loading": "加载中...",
     "error": "发生错误。"
@@ -8,11 +8,11 @@
   "home": {
     "hero_title1": "将每一杯美酒 ",
     "hero_title2": "化作完美记录",
-    "hero_subtitle": "最快最美观的AI品鉴笔记，Barnote",
+    "hero_subtitle": "最快最美观的AI品鉴笔记，BarNote",
     "hero_btn": "立即开始",
-    "counter_title": "Barnote 已收录的产品数量",
+    "counter_title": "BarNote 已收录的产品数量",
     "feat_title": "让你专注记录",
-    "feat_sub": "Barnote 提供的独特体验",
+    "feat_sub": "BarNote 提供的独特体验",
     "feat1_title": "专属品鉴笔记",
     "feat1_desc": "创建并分享你的专属品鉴笔记！",
     "feat2_title": "AI 识别引擎",
@@ -30,7 +30,7 @@
     "recent_note_title": "最新笔记",
     "recent_note_sub": "刚刚上传的生动品鉴记录",
     "fetching_data": "正在同步最新条码数据...",
-    "promo_title": "手中的品鉴笔记，Barnote",
+    "promo_title": "手中的品鉴笔记，BarNote",
     "promo_desc": "立即下载应用，留下你的专属记录。"
   },
   "layout": {
@@ -67,11 +67,21 @@
     "author": "作者",
     "date": "日期"
   },
+  "app_promo_dialog": {
+    "badge": "BarNote 应用",
+    "title": "在应用中享受更多乐趣",
+    "desc": "从扯码扫描到社交分享，在BarNote应用中体验完美的品鉴笔记之旅。",
+    "feature1": "AI条码·标签扫描，快速撰写笔记",
+    "feature2": "关注并分享志趣相投的用户",
+    "feature3": "无广告的清爱品鉴笔记管理",
+    "cancel": "关闭",
+    "confirm": "下载应用"
+  },
   "policy": {
     "title": "隐私政策",
     "effective_date": "Effective Date: {{date}}",
     "section1_title": "1. 개인정보의 처리 목적",
-    "section1_desc": "Barnote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
+    "section1_desc": "BarNote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
     "s1_item1": "회원 가입 의사 확인 및 회원제 서비스 제공",
     "s1_item2": "시음 노트 및 취향 정보 분석, 맞춤형 서비스 제공",
     "s1_item3": "고객 문의 대응 및 민원 처리",
@@ -92,7 +102,7 @@
     "title": "服务条款",
     "effective_date": "Effective Date: {{date}}",
     "section1_title": "제1조 (목적)",
-    "section1_desc": "본 약관은 Barnote(이하 '회사')가 제공하는 바노트(Barnote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
+    "section1_desc": "본 약관은 BarNote(이하 '회사')가 제공하는 바노트(BarNote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
     "section2_title": "제2조 (용어의 정의)",
     "s2_item1": "'이용자'란 본 약관에 따라 회사가 제공하는 서비스를 받는 회원을 말합니다.",
     "s2_item2": "'회원'이란 서비스에 가입하여 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.",

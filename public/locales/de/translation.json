@@ -1,6 +1,6 @@
 {
   "common": {
-    "app_name": "Barnote",
+    "app_name": "BarNote",
     "back": "Zurück",
     "loading": "Laden...",
     "error": "Ein Fehler ist aufgetreten."
@@ -8,11 +8,11 @@
   "home": {
     "hero_title1": "Mach jedes Glas zu ",
     "hero_title2": "einer perfekten Erinnerung",
-    "hero_subtitle": "Die schnellste AI-Verkostungsnotiz, Barnote",
+    "hero_subtitle": "Die schnellste AI-Verkostungsnotiz, BarNote",
     "hero_btn": "Jetzt Beginnen",
     "counter_title": "Registrierte Produkte",
     "feat_title": "Fokus auf deine Notizen",
-    "feat_sub": "Das besondere Barnote-Erlebnis",
+    "feat_sub": "Das besondere BarNote-Erlebnis",
     "feat1_title": "Deine eigenen Notizen",
     "feat1_desc": "Erstelle und teile sie!",
     "feat2_title": "AI-Scan-Engine",
@@ -30,7 +30,7 @@
     "recent_note_title": "Aktuelle Notizen",
     "recent_note_sub": "Frisch hochgeladene Verkostungen",
     "fetching_data": "Daten synchronisieren...",
-    "promo_title": "Deine Notizen, Barnote",
+    "promo_title": "Deine Notizen, BarNote",
     "promo_desc": "Lade die App jetzt herunter."
   },
   "layout": {
@@ -67,11 +67,21 @@
     "author": "Autor",
     "date": "Datum"
   },
+  "app_promo_dialog": {
+    "badge": "BarNote App",
+    "title": "Erlebe mehr in der App",
+    "desc": "Vom Barcode-Scan bis zum Social-Sharing – erlebe das vollständige Verkostungserlebnis mit BarNote.",
+    "feature1": "Schnelle Notizen per AI-Barcode- und Etiketten-Scan",
+    "feature2": "Folge Nutzern mit ähnlichem Geschmack & teile",
+    "feature3": "Werbefreie, saubere Verwaltung deiner Verkostungsnotizen",
+    "cancel": "Schließen",
+    "confirm": "App herunterladen"
+  },
   "policy": {
     "title": "Datenschutzrichtlinie",
     "effective_date": "Effective Date: {{date}}",
     "section1_title": "1. 개인정보의 처리 목적",
-    "section1_desc": "Barnote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
+    "section1_desc": "BarNote(이하 '회사')는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 사전에 동의를 구합니다.",
     "s1_item1": "회원 가입 의사 확인 및 회원제 서비스 제공",
     "s1_item2": "시음 노트 및 취향 정보 분석, 맞춤형 서비스 제공",
     "s1_item3": "고객 문의 대응 및 민원 처리",
@@ -92,7 +102,7 @@
     "title": "Nutzungsbedingungen",
     "effective_date": "Effective Date: {{date}}",
     "section1_title": "제1조 (목적)",
-    "section1_desc": "본 약관은 Barnote(이하 '회사')가 제공하는 바노트(Barnote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
+    "section1_desc": "본 약관은 BarNote(이하 '회사')가 제공하는 바노트(BarNote) 서비스(이하 '서비스')의 이용과 관련하여 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.",
     "section2_title": "제2조 (용어의 정의)",
     "s2_item1": "'이용자'란 본 약관에 따라 회사가 제공하는 서비스를 받는 회원을 말합니다.",
     "s2_item2": "'회원'이란 서비스에 가입하여 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.",

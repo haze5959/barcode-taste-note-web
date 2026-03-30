@@ -10,6 +10,7 @@ import { NoteRow } from '../components/NoteRow';
 import { ProductRow } from '../components/ProductRow';
 import { SkeletonView } from '../components/CommonUI';
 import { SEO } from '../components/SEO';
+import { AppPromotionDialog } from '../components/AppPromotionDialog';
 
 type Tab = 'notes' | 'favorites';
 
@@ -23,6 +24,7 @@ export default function UserNoteList() {
   const [favorites, setFavorites] = useState<ProductInfo[]>([]);
   const [activeTab, setActiveTab] = useState<Tab>('notes');
   const [loading, setLoading] = useState(true);
+  const [promoDialogOpen, setPromoDialogOpen] = useState(false);
 
   useEffect(() => {
     if (!userId) return;
@@ -61,7 +63,7 @@ export default function UserNoteList() {
   };
 
   return (
-    <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full xl:w-[480px]">
+    <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full">
       <SEO title={t('user.tab_notes')} description={t('user.tab_notes')} url={`https://barnote.net/user/${userId}`} />
       
       {userInfo && (
@@ -169,7 +171,7 @@ export default function UserNoteList() {
                         <ProductRow 
                           key={product.product.id} 
                           info={product} 
-                          onClick={() => navigate('/', { state: { showPromo: true } })} 
+                          onClick={() => setPromoDialogOpen(true)} 
                         />
                       ))
                     )}
@@ -179,6 +181,16 @@ export default function UserNoteList() {
           )}
         </section>
       </div>
+
+      {/* 앱 프로모션 다이얼로그 */}
+      <AppPromotionDialog
+        open={promoDialogOpen}
+        onClose={() => setPromoDialogOpen(false)}
+        onConfirm={() => {
+          setPromoDialogOpen(false);
+          navigate('/', { state: { showPromo: true } });
+        }}
+      />
     </div>
   );
 }
