@@ -29,8 +29,8 @@ export type NoteOrderByKey = 'registered' | 'rating'
 /** 제품 정렬 기준 */
 export type ProductOrderByKey = 'registered' | 'rating' | 'note_count'
 
-/** 공개 범위 */
-export type PublicScope = 'public' | 'private'
+/** 공개 범위: 0=Private, 1=FriendsOnly, 2=Public */
+export type PublicScope = 0 | 1 | 2
 
 /** 플레이버 태그 */
 export type Flavor =

@@ -58,6 +58,7 @@
     "not_found_desc": "しばらくしてからもう一度お試しください。",
     "public_scope_public": "全体公開",
     "public_scope_private": "非公開",
+    "public_scope_friends": "友達のみ",
     "tasting_note": "テイスティングノート",
     "no_detail": "詳細なノートが記録されていません。",
     "flavor": "感じた香り・味わい",

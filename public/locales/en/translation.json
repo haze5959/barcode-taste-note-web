@@ -58,6 +58,7 @@
     "not_found_desc": "Please try again in a moment.",
     "public_scope_public": "Public",
     "public_scope_private": "Private",
+    "public_scope_friends": "Friends Only",
     "tasting_note": "Tasting Note",
     "no_detail": "No detailed note recorded.",
     "flavor": "Flavors Felt",

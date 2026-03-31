@@ -58,6 +58,7 @@
     "not_found_desc": "잠시 후 다시 시도해 보세요.",
     "public_scope_public": "전체 공개",
     "public_scope_private": "비공개",
+    "public_scope_friends": "친구 공개",
     "tasting_note": "테이스팅 노트",
     "no_detail": "기록된 상세 노트가 없습니다.",
     "flavor": "느껴진 향미",

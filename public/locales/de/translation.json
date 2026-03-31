@@ -58,6 +58,7 @@
     "not_found_desc": "Bitte versuche es erneut.",
     "public_scope_public": "Öffentlich",
     "public_scope_private": "Privat",
+    "public_scope_friends": "Nur Freunde",
     "tasting_note": "Verkostungsnotiz",
     "no_detail": "Keine Detailnotiz vorhanden.",
     "flavor": "Aromen",

@@ -34,7 +34,7 @@ const ko = {
   },
   note: {
     detail_title: "노트 상세", not_found_title: "노트를 찾을 수 없어요", not_found_desc: "잠시 후 다시 시도해 보세요.",
-    public_scope_public: "전체 공개", public_scope_private: "비공개",
+    public_scope_public: "전체 공개", public_scope_private: "비공개", public_scope_friends: "친구 공개",
     tasting_note: "테이스팅 노트", no_detail: "기록된 상세 노트가 없습니다.",
     flavor: "느껴진 향미", evaluation: "상세 평가", feeling: "감정", basic_info: "기본 정보", author: "작성자", date: "작성일"
   },
@@ -81,7 +81,7 @@ const en = {
   },
   note: {
     detail_title: "Note Detail", not_found_title: "Note not found", not_found_desc: "Please try again in a moment.",
-    public_scope_public: "Public", public_scope_private: "Private", tasting_note: "Tasting Note", no_detail: "No detailed note recorded.",
+    public_scope_public: "Public", public_scope_private: "Private", public_scope_friends: "Friends Only", tasting_note: "Tasting Note", no_detail: "No detailed note recorded.",
     flavor: "Flavors Felt", evaluation: "Detailed Evaluation", feeling: "Feeling", basic_info: "Basic Info", author: "Author", date: "Date"
   },
   policy: { ...ko.policy, title: "Privacy Policy", effective_date: "Effective Date: {{date}}" },
@@ -110,7 +110,7 @@ const zhCN = {
   },
   note: {
     detail_title: "笔记详情", not_found_title: "找不到笔记", not_found_desc: "请稍后重试。",
-    public_scope_public: "公开", public_scope_private: "私密", tasting_note: "品鉴笔记", no_detail: "没有详细记录。",
+    public_scope_public: "公开", public_scope_private: "私密", public_scope_friends: "仅朋友", tasting_note: "品鉴笔记", no_detail: "没有详细记录。",
     flavor: "风味感受", evaluation: "详细评价", feeling: "心情", basic_info: "基本信息", author: "作者", date: "日期"
   },
   policy: { ...en.policy, title: "隐私政策" },
@@ -139,7 +139,7 @@ const zhTW = {
   },
   note: {
     detail_title: "筆記詳情", not_found_title: "找不到筆記", not_found_desc: "請稍後重試。",
-    public_scope_public: "公開", public_scope_private: "私密", tasting_note: "品鑑筆記", no_detail: "沒有詳細記錄。",
+    public_scope_public: "公開", public_scope_private: "私密", public_scope_friends: "僅朋友", tasting_note: "品鑑筆記", no_detail: "沒有詳細記錄。",
     flavor: "風味感受", evaluation: "詳細評價", feeling: "心情", basic_info: "基本信息", author: "作者", date: "日期"
   },
   policy: { ...zhCN.policy, title: "隱私政策" },
@@ -168,7 +168,7 @@ const ja = {
   },
   note: {
     detail_title: "ノート詳細", not_found_title: "ノートが見つかりません", not_found_desc: "しばらくしてからもう一度お試しください。",
-    public_scope_public: "全体公開", public_scope_private: "非公開", tasting_note: "テイスティングノート", no_detail: "詳細なノートが記録されていません。",
+    public_scope_public: "全体公開", public_scope_private: "非公開", public_scope_friends: "友達のみ", tasting_note: "テイスティングノート", no_detail: "詳細なノートが記録されていません。",
     flavor: "感じた香り・味わい", evaluation: "詳細評価", feeling: "感情", basic_info: "基本情報", author: "作成者", date: "作成日"
   },
   policy: { ...en.policy, title: "プライバシーポリシー" },
@@ -197,7 +197,7 @@ const fr = {
   },
   note: {
     detail_title: "Détail de la Note", not_found_title: "Note introuvable", not_found_desc: "Veuillez réessayer.",
-    public_scope_public: "Public", public_scope_private: "Privé", tasting_note: "Note de Dégustation", no_detail: "Aucune note détaillée enregistrée.",
+    public_scope_public: "Public", public_scope_private: "Privé", public_scope_friends: "Amis uniquement", tasting_note: "Note de Dégustation", no_detail: "Aucune note détaillée enregistrée.",
     flavor: "Saveurs", evaluation: "Évaluation", feeling: "Sentiment", basic_info: "Infos", author: "Auteur", date: "Date"
   },
   policy: { ...en.policy, title: "Politique de confidentialité" },
@@ -226,7 +226,7 @@ const de = {
   },
   note: {
     detail_title: "Notiz-Detail", not_found_title: "Nicht gefunden", not_found_desc: "Bitte versuche es erneut.",
-    public_scope_public: "Öffentlich", public_scope_private: "Privat", tasting_note: "Verkostungsnotiz", no_detail: "Keine Detailnotiz vorhanden.",
+    public_scope_public: "Öffentlich", public_scope_private: "Privat", public_scope_friends: "Nur Freunde", tasting_note: "Verkostungsnotiz", no_detail: "Keine Detailnotiz vorhanden.",
     flavor: "Aromen", evaluation: "Bewertung", feeling: "Gefühl", basic_info: "Basis-Infos", author: "Autor", date: "Datum"
   },
   policy: { ...en.policy, title: "Datenschutzrichtlinie" },
@@ -255,7 +255,7 @@ const es = {
   },
   note: {
     detail_title: "Detalle de Nota", not_found_title: "Nota no encontrada", not_found_desc: "Inténtalo de nuevo.",
-    public_scope_public: "Público", public_scope_private: "Privado", tasting_note: "Nota de Cata", no_detail: "No hay detalles registrados.",
+    public_scope_public: "Público", public_scope_private: "Privado", public_scope_friends: "Solo amigos", tasting_note: "Nota de Cata", no_detail: "No hay detalles registrados.",
     flavor: "Sabores", evaluation: "Evaluación", feeling: "Sentimiento", basic_info: "Info Básica", author: "Autor", date: "Fecha"
   },
   policy: { ...en.policy, title: "Política de Privacidad" },
@@ -284,7 +284,7 @@ const pt = {
   },
   note: {
     detail_title: "Detalhe da Nota", not_found_title: "Não encontrado", not_found_desc: "Tente novamente.",
-    public_scope_public: "Público", public_scope_private: "Privado", tasting_note: "Nota de Degustação", no_detail: "Sem detalhes extras.",
+    public_scope_public: "Público", public_scope_private: "Privado", public_scope_friends: "Solo amigos", tasting_note: "Nota de Degustação", no_detail: "Sem detalhes extras.",
     flavor: "Sabores", evaluation: "Avaliação", feeling: "Sentimento", basic_info: "Info", author: "Autor", date: "Data"
   },
   policy: { ...en.policy, title: "Política de Privacidade" },
@@ -313,7 +313,7 @@ const it = {
   },
   note: {
     detail_title: "Dettaglio", not_found_title: "Non trovato", not_found_desc: "Riprova.",
-    public_scope_public: "Pubblico", public_scope_private: "Privato", tasting_note: "Nota di Degustazione", no_detail: "Nessun dettaglio extra.",
+    public_scope_public: "Pubblico", public_scope_private: "Privato", public_scope_friends: "Solo amici", tasting_note: "Nota di Degustazione", no_detail: "Nessun dettaglio extra.",
     flavor: "Sapori", evaluation: "Valutazione", feeling: "Sensazione", basic_info: "Info Base", author: "Autore", date: "Data"
   },
   policy: { ...en.policy, title: "Informativa sulla Privacy" },
@@ -342,7 +342,7 @@ const ru = {
   },
   note: {
     detail_title: "Детали Заметки", not_found_title: "Не найдено", not_found_desc: "Попробуйте позже.",
-    public_scope_public: "Публичная", public_scope_private: "Приватная", tasting_note: "Дегустационная заметка", no_detail: "Нет подробностей.",
+    public_scope_public: "Публичная", public_scope_private: "Приватная", public_scope_friends: "Только друзья", tasting_note: "Дегустационная заметка", no_detail: "Нет подробностей.",
     flavor: "Вкусы", evaluation: "Оценка", feeling: "Ощущение", basic_info: "Информация", author: "Автор", date: "Дата"
   },
   policy: { ...en.policy, title: "Политика конфиденциальности" },

@@ -58,6 +58,7 @@
     "not_found_desc": "Veuillez réessayer.",
     "public_scope_public": "Public",
     "public_scope_private": "Privé",
+    "public_scope_friends": "Amis uniquement",
     "tasting_note": "Note de Dégustation",
     "no_detail": "Aucune note détaillée enregistrée.",
     "flavor": "Saveurs",
