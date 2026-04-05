@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { AppleIcon, PlayStoreIcon } from './icons/StoreIcons';
+import { APPLE_APP_URL } from '../lib/constants';
 
 interface StoreDownloadButtonsProps {
   className?: string;
@@ -14,7 +15,12 @@ export function StoreDownloadButtons({
   return (
     <div className={className}>
       {/* App Store Button */}
-      <a href="#" className={`flex items-center justify-center xl:justify-start gap-3.5 bg-black text-white px-5 py-3 rounded-[14px] hover:bg-gray-800 transition-colors shadow-md ${buttonClassName}`}>
+      <a 
+        href={APPLE_APP_URL} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className={`flex items-center justify-center xl:justify-start gap-3.5 bg-black text-white px-5 py-3 rounded-[14px] hover:bg-gray-800 transition-colors shadow-md ${buttonClassName}`}
+      >
         <AppleIcon className="w-8 h-8 shrink-0" />
         <div className="flex flex-col items-start justify-center">
           <span className="text-[11px] text-gray-300 font-medium tracking-wide mb-0.5">Download on the</span>

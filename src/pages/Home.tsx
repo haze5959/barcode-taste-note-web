@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { motion, Variants, animate } from 'framer-motion';
 import { ScanBarcode, Share2, Users, Bell, ShieldBan, PenTool } from 'lucide-react';
 import { getHomeInfo } from '../lib/api/home';
@@ -48,12 +48,23 @@ function AnimatedCounter({ value }: { value: number }) {
 export default function Home() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   const [data, setData] = useState<HomeInfo | null>(null);
+  const downloadSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     // API 호줄: 홈 정보 가져오기
     getHomeInfo().then(setData).catch(console.error);
-  }, []);
+
+    // showPromo가 있는 경우 다운로드 섹션으로 스크롤
+    if (location.state?.showPromo) {
+      setTimeout(() => {
+        downloadSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 300);
+      // 상태 초기화 (뒤로 가기 시 다시 스크롤되지 않도록)
+      window.history.replaceState({}, document.title);
+    }
+  }, [location.state]);
 
   const FEATURES = [
     { icon: PenTool, title: t('home.feat1_title'), desc: t('home.feat1_desc') },
@@ -179,7 +190,7 @@ export default function Home() {
       {/* =======================
           5. 앱 다운로드 유도 섹션
           ======================= */}
-      <section className="px-6 py-20 pb-28 md:py-24 max-w-4xl mx-auto text-center border-t border-[var(--color-divider)]">
+      <section ref={downloadSectionRef} className="px-6 py-20 pb-28 md:py-24 max-w-4xl mx-auto text-center border-t border-[var(--color-divider)]">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">{t('home.promo_title')}</h2>
           <p className="text-[var(--color-text-secondary)] mb-8 text-lg">{t('home.promo_desc')}</p>
