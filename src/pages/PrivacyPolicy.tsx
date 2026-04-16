@@ -11,8 +11,8 @@ export default function PrivacyPolicy() {
     <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative pb-20 w-full xl:w-[480px]">
       <SEO title={t('policy.title')} description={t('policy.title')} url="https://barnote.net/privacy_policy" />
       
-      <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-[var(--color-divider)] px-4 py-3 flex items-center justify-between">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-black/5 transition-colors text-[var(--color-text-primary)]">
+      <header className="sticky top-0 z-30 bg-[#f7f5f2]/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-[var(--color-divider)] px-4 py-3 flex items-center justify-between">
+        <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-[var(--color-text-primary)]">
           <ChevronLeft className="w-6 h-6" />
         </button>
         <h1 className="text-base font-bold text-[var(--color-text-primary)]">{t('policy.title')}</h1>

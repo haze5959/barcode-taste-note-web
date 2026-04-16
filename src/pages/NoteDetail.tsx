@@ -53,8 +53,8 @@ export default function NoteDetail() {
 
       {/* Header */}
       {showNavBar && (
-        <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-[var(--color-divider)] px-4 py-3 flex items-center justify-between">
-          <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-black/5 transition-colors text-[var(--color-text-primary)]">
+        <header className="sticky top-0 z-30 bg-[#f7f5f2]/80 dark:bg-[#050505]/80 backdrop-blur-md border-b border-[var(--color-divider)] px-4 py-3 flex items-center justify-between">
+          <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-[var(--color-text-primary)]">
             <ChevronLeft className="w-6 h-6" />
           </button>
           <h1 className="text-base font-bold text-[var(--color-text-primary)] line-clamp-1 flex-1 text-center px-4">
@@ -185,7 +185,7 @@ export default function NoteDetail() {
               <div className="flex flex-col gap-0 overflow-hidden p-1">
                 <div onClick={() => {
                   if (info.user) navigate(`/user/${info.user.id}`);
-                }} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/80 transition-colors cursor-pointer group">
+                }} className="flex items-center gap-3 p-3 rounded-xl hover:bg-white/80 dark:hover:bg-white/5 transition-colors cursor-pointer group">
                   <div className="w-10 h-10 rounded-full border border-[var(--color-divider)] bg-[var(--color-surface-secondary)] flex items-center justify-center overflow-hidden shrink-0">
                     {info.user?.imageId ? (
                       <OQImageView imageId={info.user.imageId} isProfile={true} className="w-full h-full object-cover" />
