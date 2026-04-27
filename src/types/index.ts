@@ -14,8 +14,8 @@ export type ISODateString = string
 
 /** 제품 카테고리 */
 export type ProductType =
-  | 'whisky'
   | 'wine'
+  | 'whisky'
   | 'beer'
   | 'coffee'
   | 'cocktail'

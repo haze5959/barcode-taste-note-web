@@ -1,6 +1,6 @@
 export const PRODUCT_TYPE_INFO: Record<string | number, string> = {
-  0: '🥃 Whisky',
-  1: '🍷 Wine',
+  0: '🍷 Wine',
+  1: '🥃 Whisky',
   2: '🍺 Beer',
   3: '🍶 Soju & Sake',
   4: '🍸 Liquor & Spirits',
@@ -8,9 +8,9 @@ export const PRODUCT_TYPE_INFO: Record<string | number, string> = {
   6: '☕️ Coffee',
   7: '🥤 Beverage',
   8: '🍾 Other',
-// 기존 문자열 호환성
-  whisky: '🥃 Whisky',
+  // 기존 문자열 호환성
   wine: '🍷 Wine',
+  whisky: '🥃 Whisky',
   beer: '🍺 Beer',
   soju: '🍶 Soju & Sake',
   liqueur: '🍸 Liquor & Spirits',
@@ -24,7 +24,7 @@ export const PUBLIC_SCOPE_INFO: Record<string | number, string> = {
   0: '비공개',
   1: '친구공개',
   2: '전체공개',
-// 기존 문자열 호환성
+  // 기존 문자열 호환성
   private: '비공개',
   friendsOnly: '친구공개',
   public: '전체공개'
@@ -57,7 +57,7 @@ export const NOTE_DETAIL_INFO: Record<string | number, string> = {
   7: '풍미',
   8: '밸런스',
   9: '감정',
-// 기존 문자열 호환성
+  // 기존 문자열 호환성
   sweetness: '단맛',
   acidity: '신맛',
   bitterness: '쓴맛',

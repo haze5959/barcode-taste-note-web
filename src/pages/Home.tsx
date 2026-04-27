@@ -112,7 +112,50 @@ export default function Home() {
       </section>
 
       {/* =======================
-          2. 등록된 제품 카운터 
+          2. 앱 미리보기 스크린샷 (Horizontal Scroll)
+          ======================= */}
+      <section className="py-16 md:py-24 overflow-hidden w-full bg-gradient-to-b from-transparent to-[var(--color-surface-primary)]">
+        <div className="text-center mb-10 md:mb-16 px-6">
+          <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-3xl md:text-4xl font-extrabold mb-4">
+            {t('home.preview_title', '바노트 미리보기')}
+          </motion.h2>
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-[var(--color-text-secondary)] text-lg font-medium">
+            {t('home.preview_sub', '직관적이고 아름다운 UI로 기록을 남기세요')}
+          </motion.p>
+        </div>
+        
+        {/* 가로 스크롤 컨테이너 */}
+        <div className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory px-6 pb-12 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="snap-start shrink-0 w-2 md:w-[15vw]"></div>
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
+            <motion.div
+              key={num}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "100px" }}
+              variants={{
+                hidden: { opacity: 0, y: 30, scale: 0.95 },
+                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, delay: num * 0.05 } }
+              }}
+              className="snap-center shrink-0 w-[240px] md:w-[280px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/10 border-[8px] border-[var(--color-surface-secondary)] bg-[var(--color-surface-secondary)] relative"
+            >
+              {/* iPhone Notch 모방 디자인 */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[35%] h-[24px] bg-[var(--color-surface-secondary)] rounded-b-2xl z-10"></div>
+              <img
+                src={`/screenshots/screenshot_0${num}.png`}
+                alt={`App Screenshot ${num}`}
+                className="w-full h-auto object-cover relative z-0 transition-transform duration-500 hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+              />
+            </motion.div>
+          ))}
+          <div className="snap-end shrink-0 w-2 md:w-[15vw]"></div>
+        </div>
+      </section>
+
+      {/* =======================
+          3. 등록된 제품 카운터 
           ======================= */}
       <section className="px-6 py-12 md:py-20">
         <motion.div
@@ -141,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* =======================
-          3. 핵심 피처 그리드 
+          4. 핵심 피처 그리드 
           ======================= */}
       <section className="px-6 py-16 md:py-24 max-w-6xl mx-auto">
         <div className="text-center mb-16">
@@ -169,7 +212,7 @@ export default function Home() {
       </section>
 
       {/* =======================
-          4. 최근 시음 노트 
+          5. 최근 시음 노트 
           ======================= */}
       <section className="px-6 py-16 max-w-3xl mx-auto">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
@@ -188,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* =======================
-          5. 앱 다운로드 유도 섹션
+          6. 앱 다운로드 유도 섹션
           ======================= */}
       <section ref={downloadSectionRef} className="px-6 py-20 pb-28 md:py-24 max-w-4xl mx-auto text-center border-t border-[var(--color-divider)]">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={fadeUp}>
