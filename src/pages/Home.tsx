@@ -228,6 +228,7 @@ export default function Home() {
                 className="w-full h-auto object-cover relative z-0 transition-transform duration-500 hover:scale-[1.02]"
                 loading="lazy"
                 decoding="async"
+                draggable={false}
               />
             </motion.div>
           ))}
