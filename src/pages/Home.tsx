@@ -51,6 +51,7 @@ export default function Home() {
   const location = useLocation();
   const [data, setData] = useState<HomeInfo | null>(null);
   const downloadSectionRef = useRef<HTMLElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // API 호줄: 홈 정보 가져오기
@@ -65,6 +66,83 @@ export default function Home() {
       window.history.replaceState({}, document.title);
     }
   }, [location.state]);
+
+  // ==========================================
+  // 스크린샷 컨테이너 마우스 드래그 & 자동 스크롤 로직
+  // ==========================================
+  useEffect(() => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+
+    let isDown = false;
+    let startX: number;
+    let scrollLeft: number;
+    let animationFrameId: number;
+    let isHovered = false;
+
+    const onMouseDown = (e: MouseEvent) => {
+      isDown = true;
+      el.style.cursor = 'grabbing';
+      startX = e.pageX - el.offsetLeft;
+      scrollLeft = el.scrollLeft;
+    };
+
+    const onMouseLeave = () => {
+      isDown = false;
+      isHovered = false;
+      el.style.cursor = 'grab';
+    };
+
+    const onMouseUp = () => {
+      isDown = false;
+      el.style.cursor = 'grab';
+    };
+
+    const onMouseMove = (e: MouseEvent) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - el.offsetLeft;
+      const walk = (x - startX) * 1.5; // 드래그 속도 배율
+      el.scrollLeft = scrollLeft - walk;
+    };
+
+    const onMouseEnter = () => {
+      isHovered = true;
+    };
+
+    el.addEventListener('mousedown', onMouseDown);
+    el.addEventListener('mouseleave', onMouseLeave);
+    el.addEventListener('mouseup', onMouseUp);
+    el.addEventListener('mousemove', onMouseMove);
+    el.addEventListener('mouseenter', onMouseEnter);
+
+    el.style.cursor = 'grab';
+
+    // PC 환경(터치가 아닌 경우)에서 자동 스크롤
+    const startAutoScroll = () => {
+      const isTouch = window.matchMedia("(pointer: coarse)").matches;
+      if (isTouch) return;
+
+      const step = () => {
+        if (!isDown && !isHovered) {
+          el.scrollLeft += 1; // 자동 스크롤 속도
+        }
+        animationFrameId = requestAnimationFrame(step);
+      };
+      animationFrameId = requestAnimationFrame(step);
+    };
+
+    startAutoScroll();
+
+    return () => {
+      el.removeEventListener('mousedown', onMouseDown);
+      el.removeEventListener('mouseleave', onMouseLeave);
+      el.removeEventListener('mouseup', onMouseUp);
+      el.removeEventListener('mousemove', onMouseMove);
+      el.removeEventListener('mouseenter', onMouseEnter);
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, []);
 
   const FEATURES = [
     { icon: PenTool, title: t('home.feat1_title'), desc: t('home.feat1_desc') },
@@ -114,7 +192,7 @@ export default function Home() {
       {/* =======================
           2. 앱 미리보기 스크린샷 (Horizontal Scroll)
           ======================= */}
-      <section className="py-16 md:py-24 overflow-hidden w-full bg-gradient-to-b from-transparent to-[var(--color-surface-primary)]">
+      <section className="py-16 md:py-24 overflow-hidden w-full">
         <div className="text-center mb-10 md:mb-16 px-6">
           <motion.h2 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-3xl md:text-4xl font-extrabold mb-4">
             {t('home.preview_title', '바노트 미리보기')}
@@ -124,18 +202,21 @@ export default function Home() {
           </motion.p>
         </div>
         
-        {/* 가로 스크롤 컨테이너 */}
-        <div className="flex gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory px-6 pb-12 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        {/* 가로 스크롤 컨테이너 (PC: 자동 스크롤 및 마우스 드래그 대응, 모바일: 스냅 터치 스크롤) */}
+        <div 
+          ref={scrollContainerRef}
+          className="flex gap-6 md:gap-8 overflow-x-auto snap-x md:snap-none snap-mandatory px-6 pb-12 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] select-none"
+        >
           <div className="snap-start shrink-0 w-2 md:w-[15vw]"></div>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
             <motion.div
               key={num}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "100px" }}
+              viewport={{ root: scrollContainerRef, once: true, margin: "0px 100px 0px 0px" }} // 화면에 들어올 때 나타남
               variants={{
                 hidden: { opacity: 0, y: 30, scale: 0.95 },
-                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, delay: num * 0.05 } }
+                visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } }
               }}
               className="snap-center shrink-0 w-[240px] md:w-[280px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/10 border-[8px] border-[var(--color-surface-secondary)] bg-[var(--color-surface-secondary)] relative"
             >
