@@ -1,84 +1,141 @@
-export const PRODUCT_TYPE_INFO: Record<string | number, string> = {
-  0: '🍷 Wine',
-  1: '🥃 Whisky',
-  2: '🍺 Beer',
-  3: '🍶 Soju & Sake',
-  4: '🍸 Liquor & Spirits',
-  5: '🍹 Cocktail',
-  6: '☕️ Coffee',
-  7: '🥤 Beverage',
-  8: '🍾 Other',
-  // 기존 문자열 호환성
-  wine: '🍷 Wine',
-  whisky: '🥃 Whisky',
-  beer: '🍺 Beer',
-  soju: '🍶 Soju & Sake',
-  liqueur: '🍸 Liquor & Spirits',
-  cocktail: '🍹 Cocktail',
-  coffee: '☕️ Coffee',
-  beverage: '🥤 Beverage',
-  other: '🍾 Other'
+import type { TFunction } from 'i18next';
+
+// 제품 타입 코드 -> 이모지 (라벨은 i18n: mappings.product_type.{id})
+export const PRODUCT_TYPE_EMOJIS: Record<string | number, string> = {
+  0: '🍷',
+  1: '🥃',
+  2: '🍺',
+  3: '🍶',
+  4: '🍸',
+  5: '🍹',
+  6: '☕️',
+  7: '🥤',
+  8: '🍾',
+  // 기존 문자열 키 호환성
+  wine: '🍷',
+  whisky: '🥃',
+  beer: '🍺',
+  soju: '🍶',
+  liqueur: '🍸',
+  cocktail: '🍹',
+  coffee: '☕️',
+  beverage: '🥤',
+  other: '🍾',
 };
 
-export const PUBLIC_SCOPE_INFO: Record<string | number, string> = {
-  0: '비공개',
-  1: '친구공개',
-  2: '전체공개',
-  // 기존 문자열 호환성
-  private: '비공개',
-  friendsOnly: '친구공개',
-  public: '전체공개'
+// 문자열 키 -> 숫자 키 변환 (i18n 키는 숫자 기준으로 통일)
+const PRODUCT_TYPE_KEY_MAP: Record<string, number> = {
+  wine: 0,
+  whisky: 1,
+  beer: 2,
+  soju: 3,
+  liqueur: 4,
+  cocktail: 5,
+  coffee: 6,
+  beverage: 7,
+  other: 8,
 };
 
-export const FLAVOR_INFO: Record<string | number, string> = {
-  0: '🍎 과일',
-  1: '🍊 시트러스',
-  2: '🌸 플로럴',
-  3: '🍦 바닐라',
-  4: '🪵 우디',
-  5: '🌰 너티',
-  6: '🍫 초콜릿',
-  7: '🍯 허니',
-  8: '🌾 곡물',
-  9: '🌶️ 스파이시',
-  10: '🔥 스모키',
-  11: '🌿 허벌',
-  12: '🪴 어시',
+const PUBLIC_SCOPE_KEY_MAP: Record<string, number> = {
+  private: 0,
+  friendsOnly: 1,
+  public: 2,
 };
 
-export const NOTE_DETAIL_INFO: Record<string | number, string> = {
-  0: '단맛',
-  1: '신맛',
-  2: '쓴맛',
-  3: '바디감',
-  4: '탄닌',
-  5: '알코올',
-  6: '여운',
-  7: '풍미',
-  8: '밸런스',
-  9: '감정',
-  // 기존 문자열 호환성
-  sweetness: '단맛',
-  acidity: '신맛',
-  bitterness: '쓴맛',
-  body: '바디감',
-  tannin: '탄닌',
-  alcoholic: '알코올',
-  finish: '여운',
-  aromatic: '풍미',
-  balance: '밸런스',
-  feeling: '감정'
+const NOTE_DETAIL_KEY_MAP: Record<string, number> = {
+  sweetness: 0,
+  acidity: 1,
+  bitterness: 2,
+  body: 3,
+  tannin: 4,
+  alcoholic: 5,
+  finish: 6,
+  aromatic: 7,
+  balance: 8,
+  feeling: 9,
 };
 
-export const FEELING_INFO: Record<number | string, { emoji: string; desc: string }> = {
-  0: { emoji: '😊', desc: '기분 좋은' },
-  1: { emoji: '😋', desc: '만족스런' },
-  2: { emoji: '😍', desc: '반해버린' },
-  3: { emoji: '😎', desc: '개운한' },
-  4: { emoji: '💪', desc: '활력충전' },
-  5: { emoji: '🤤', desc: '입맛 당기는' },
-  10: { emoji: '🙁', desc: '실망스런' },
-  11: { emoji: '🤢', desc: '더부룩한' },
-  12: { emoji: '🫠', desc: '후회되는' },
-  13: { emoji: '🤕', desc: '상태별로' },
+// 향미 코드 -> 이모지 (Swift Flavor enum 기준)
+export const FLAVOR_EMOJIS: Record<number, string> = {
+  0: '🍎',
+  1: '🍓',
+  2: '🍊',
+  3: '🍍',
+  4: '🌸',
+  5: '🌿',
+  6: '🪴',
+  7: '🍦',
+  8: '🍫',
+  9: '🍯',
+  10: '🌰',
+  11: '🌾',
+  12: '🪵',
+  13: '🌶️',
+  14: '🔥',
+};
+
+// 감정 코드 -> 이모지
+export const FEELING_EMOJIS: Record<number, string> = {
+  0: '😊',
+  1: '😋',
+  2: '😍',
+  3: '😎',
+  4: '💪',
+  5: '🤤',
+  10: '🙁',
+  11: '🤢',
+  12: '🫠',
+  13: '🤕',
+};
+
+// 입력값을 i18n 키 용도의 숫자 ID로 정규화
+const toNumericKey = (id: number | string, stringMap: Record<string, number>): number | null => {
+  if (typeof id === 'number') return id;
+  if (id in stringMap) return stringMap[id];
+  const parsed = Number(id);
+  return Number.isNaN(parsed) ? null : parsed;
+};
+
+export const getProductTypeLabel = (type: number | string, t: TFunction): string => {
+  const numericId = toNumericKey(type, PRODUCT_TYPE_KEY_MAP);
+  const emoji = PRODUCT_TYPE_EMOJIS[type] ?? (numericId !== null ? PRODUCT_TYPE_EMOJIS[numericId] : '');
+  if (numericId === null) return String(type);
+  const label = t(`mappings.product_type.${numericId}`);
+  return emoji ? `${emoji} ${label}` : label;
+};
+
+export const getPublicScopeLabel = (scope: number | string, t: TFunction): string => {
+  const numericId = toNumericKey(scope, PUBLIC_SCOPE_KEY_MAP);
+  if (numericId === null) return String(scope);
+  return t(`mappings.public_scope.${numericId}`);
+};
+
+export const getFlavorLabel = (id: number | string, t: TFunction): string => {
+  const numericId = typeof id === 'number' ? id : Number(id);
+  if (Number.isNaN(numericId)) return String(id);
+  const emoji = FLAVOR_EMOJIS[numericId] ?? '';
+  const label = t(`mappings.flavor.${numericId}`);
+  return emoji ? `${emoji} ${label}` : label;
+};
+
+export const getNoteDetailLabel = (key: number | string, t: TFunction): string => {
+  const numericId = toNumericKey(key, NOTE_DETAIL_KEY_MAP);
+  if (numericId === null) return String(key);
+  return t(`mappings.note_detail.${numericId}`);
+};
+
+export interface FeelingInfo {
+  emoji: string;
+  desc: string;
+}
+
+export const getFeelingInfo = (id: number | string, t: TFunction): FeelingInfo | null => {
+  const numericId = typeof id === 'number' ? id : Number(id);
+  if (Number.isNaN(numericId)) return null;
+  const emoji = FEELING_EMOJIS[numericId];
+  if (!emoji) return null;
+  return {
+    emoji,
+    desc: t(`mappings.feeling.${numericId}`),
+  };
 };

@@ -129,5 +129,64 @@
     "section6_desc": "La Empresa no será responsable de proporcionar el servicio si no puede hacerlo debido a casos fortuitos como desastres naturales, mantenimiento del servicio o culpa del usuario. Además, a menos que se especifique lo contrario en las leyes, la Empresa no es responsable de los daños relacionados con el uso de servicios legalmente gratuitos.",
     "section7_title": "Artículo 7 (Ley Aplicable y Jurisdicción)",
     "section7_desc": "En caso de disputa relacionada con el uso del servicio, se resolverá amigablemente de acuerdo con el principio de buena fe. Si no se puede resolver, se puede presentar una demanda en el tribunal competente, siendo este el tribunal con jurisdicción exclusiva sobre la ubicación de la sede de la Empresa."
+  },
+  "mappings": {
+    "product_type": {
+      "0": "Vino",
+      "1": "Whisky",
+      "2": "Cerveza",
+      "3": "Soju y Sake",
+      "4": "Licores y Destilados",
+      "5": "Cóctel",
+      "6": "Café",
+      "7": "Bebida",
+      "8": "Otro"
+    },
+    "public_scope": {
+      "0": "Privado",
+      "1": "Solo amigos",
+      "2": "Público"
+    },
+    "flavor": {
+      "0": "Frutas de árbol",
+      "1": "Bayas",
+      "2": "Cítricos",
+      "3": "Tropical",
+      "4": "Floral",
+      "5": "Herbal",
+      "6": "Terroso",
+      "7": "Vainilla",
+      "8": "Chocolate",
+      "9": "Miel",
+      "10": "Frutos secos",
+      "11": "Cereales",
+      "12": "Amaderado",
+      "13": "Especiado",
+      "14": "Ahumado"
+    },
+    "note_detail": {
+      "0": "Dulzor",
+      "1": "Acidez",
+      "2": "Amargor",
+      "3": "Cuerpo",
+      "4": "Tanino",
+      "5": "Alcohol",
+      "6": "Final",
+      "7": "Aroma",
+      "8": "Equilibrio",
+      "9": "Sensación"
+    },
+    "feeling": {
+      "0": "Agradable",
+      "1": "Satisfecho",
+      "2": "Encantado",
+      "3": "Refrescado",
+      "4": "Energizado",
+      "5": "Con ganas de más",
+      "10": "Decepcionado",
+      "11": "Hinchado",
+      "12": "Arrepentido",
+      "13": "Con náuseas"
+    }
   }
 }

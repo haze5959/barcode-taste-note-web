@@ -129,5 +129,64 @@
     "section6_desc": "The Company shall not be held liable for providing the service if it is unable to do so due to force majeure events such as natural disasters, service maintenance, or user's fault. Furthermore, unless otherwise specified by relevant laws, the Company is not responsible for any damages related to the use of legally free services.",
     "section7_title": "Article 7 (Governing Law and Jurisdiction)",
     "section7_desc": "In the event of a dispute related to the use of the service, it shall be resolved amicably according to the principle of good faith. If it cannot be resolved, a lawsuit may be filed in the competent court. The competent court shall be the court with exclusive jurisdiction over the location of the Company's headquarters."
+  },
+  "mappings": {
+    "product_type": {
+      "0": "Wine",
+      "1": "Whisky",
+      "2": "Beer",
+      "3": "Soju & Sake",
+      "4": "Liquor & Spirits",
+      "5": "Cocktail",
+      "6": "Coffee",
+      "7": "Beverage",
+      "8": "Other"
+    },
+    "public_scope": {
+      "0": "Private",
+      "1": "Friends only",
+      "2": "Public"
+    },
+    "flavor": {
+      "0": "Tree Fruit",
+      "1": "Berry",
+      "2": "Citrus",
+      "3": "Tropical",
+      "4": "Floral",
+      "5": "Herbal",
+      "6": "Earthy",
+      "7": "Vanilla",
+      "8": "Chocolate",
+      "9": "Honey",
+      "10": "Nutty",
+      "11": "Grainy",
+      "12": "Woody",
+      "13": "Spicy",
+      "14": "Smoky"
+    },
+    "note_detail": {
+      "0": "Sweetness",
+      "1": "Acidity",
+      "2": "Bitterness",
+      "3": "Body",
+      "4": "Tannin",
+      "5": "Alcohol",
+      "6": "Finish",
+      "7": "Aroma",
+      "8": "Balance",
+      "9": "Feeling"
+    },
+    "feeling": {
+      "0": "Pleasant",
+      "1": "Satisfied",
+      "2": "Smitten",
+      "3": "Refreshed",
+      "4": "Energized",
+      "5": "Craving more",
+      "10": "Disappointed",
+      "11": "Bloated",
+      "12": "Regretful",
+      "13": "Nauseous"
+    }
   }
 }

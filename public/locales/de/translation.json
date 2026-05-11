@@ -129,5 +129,64 @@
     "section6_desc": "Das Unternehmen haftet nicht für die Bereitstellung des Dienstes, wenn es dazu aufgrund höherer Gewalt wie Naturkatastrophen, Dienstwartung oder Verschulden des Benutzers nicht in der Lage ist. Darüber hinaus ist das Unternehmen, sofern die einschlägigen Gesetze nichts anderes vorschreiben, nicht für Schäden verantwortlich, die im Zusammenhang mit der Nutzung rechtmäßig kostenloser Dienste entstehen.",
     "section7_title": "Artikel 7 (Geltendes Recht und Gerichtsstand)",
     "section7_desc": "Im Falle einer Streitigkeit im Zusammenhang mit der Nutzung des Dienstes soll diese einvernehmlich nach dem Grundsatz von Treu und Glauben beigelegt werden. Kann sie nicht beigelegt werden, kann eine Klage beim zuständigen Gericht eingereicht werden. Zuständig ist ausschließlich das Gericht am Hauptsitz des Unternehmens."
+  },
+  "mappings": {
+    "product_type": {
+      "0": "Wein",
+      "1": "Whisky",
+      "2": "Bier",
+      "3": "Soju & Sake",
+      "4": "Spirituosen & Liköre",
+      "5": "Cocktail",
+      "6": "Kaffee",
+      "7": "Getränk",
+      "8": "Sonstiges"
+    },
+    "public_scope": {
+      "0": "Privat",
+      "1": "Nur Freunde",
+      "2": "Öffentlich"
+    },
+    "flavor": {
+      "0": "Kernobst",
+      "1": "Beeren",
+      "2": "Zitrus",
+      "3": "Tropisch",
+      "4": "Blumig",
+      "5": "Kräuter",
+      "6": "Erdig",
+      "7": "Vanille",
+      "8": "Schokolade",
+      "9": "Honig",
+      "10": "Nussig",
+      "11": "Getreide",
+      "12": "Holzig",
+      "13": "Würzig",
+      "14": "Rauchig"
+    },
+    "note_detail": {
+      "0": "Süße",
+      "1": "Säure",
+      "2": "Bitterkeit",
+      "3": "Körper",
+      "4": "Tannin",
+      "5": "Alkohol",
+      "6": "Abgang",
+      "7": "Aroma",
+      "8": "Balance",
+      "9": "Gefühl"
+    },
+    "feeling": {
+      "0": "Angenehm",
+      "1": "Zufrieden",
+      "2": "Begeistert",
+      "3": "Erfrischt",
+      "4": "Energiegeladen",
+      "5": "Will mehr",
+      "10": "Enttäuscht",
+      "11": "Aufgebläht",
+      "12": "Bereue es",
+      "13": "Übel"
+    }
   }
 }

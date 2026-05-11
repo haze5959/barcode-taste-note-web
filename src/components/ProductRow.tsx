@@ -2,9 +2,11 @@ import { ProductInfo } from '../types';
 import { RatingView } from './RatingView';
 import { OQImageView } from './OQImageView';
 import { Image as ImageIcon } from 'lucide-react';
-import { PRODUCT_TYPE_INFO } from '../lib/mappings';
+import { useTranslation } from 'react-i18next';
+import { getProductTypeLabel } from '../lib/mappings';
 
 export function ProductRow({ info, onClick }: { info?: ProductInfo | null, onClick?: () => void }) {
+  const { t } = useTranslation();
   if (!info) {
     // Skeleton View
     return (
@@ -30,7 +32,7 @@ export function ProductRow({ info, onClick }: { info?: ProductInfo | null, onCli
         <OQImageView imageId={coverImageId} className="w-full h-full object-cover" fallbackIcon={<ImageIcon className="w-10 h-10 opacity-30" />} />
         {/* 타입 태그 */}
         <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md text-[10px] font-bold tracking-wider text-white shadow-sm uppercase">
-          {PRODUCT_TYPE_INFO[product.type as string] || product.type}
+          {getProductTypeLabel(product.type, t)}
         </div>
       </div>
       

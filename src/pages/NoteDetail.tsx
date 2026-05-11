@@ -9,7 +9,7 @@ import { InfoTagView, FlavorChip, SkeletonView } from '../components/CommonUI';
 import { SEO } from '../components/SEO';
 import { AppPromotionDialog } from '../components/AppPromotionDialog';
 import { ChevronLeft, Calendar as CalendarIcon, User as UserIcon } from 'lucide-react';
-import { FLAVOR_INFO, NOTE_DETAIL_INFO, FEELING_INFO } from '../lib/mappings';
+import { getFlavorLabel, getNoteDetailLabel, getFeelingInfo } from '../lib/mappings';
 
 export default function NoteDetail() {
   const { noteId } = useParams();
@@ -123,7 +123,7 @@ export default function NoteDetail() {
                   <h3 className="text-[13px] font-bold text-[var(--color-text-primary)] mb-3">{t('note.flavor')}</h3>
                   <div className="flex flex-wrap gap-2">
                     {info.flavors.map(f => (
-                      <FlavorChip key={f} label={FLAVOR_INFO[f] || f} active={true} />
+                      <FlavorChip key={f} label={getFlavorLabel(f, t)} active={true} />
                     ))}
                   </div>
                 </>
@@ -136,7 +136,7 @@ export default function NoteDetail() {
                   <div className="flex flex-col gap-3">
                     {Object.entries(info.note.details).map(([key, value]) => {
                       if (key === '9' || key === 'feeling') {
-                        const feeling = FEELING_INFO[value as number];
+                        const feeling = getFeelingInfo(value as number, t);
                         if (!feeling) return null;
                         return (
                           <div key={key} className="flex items-center text-[13px] text-[var(--color-text-secondary)] mt-1">
@@ -153,7 +153,7 @@ export default function NoteDetail() {
 
                       return (
                         <div key={key} className="flex items-center text-[13px] text-[var(--color-text-secondary)]">
-                          <span className="w-16 font-medium text-[var(--color-text-primary)]">{NOTE_DETAIL_INFO[key] || key}</span>
+                          <span className="w-16 font-medium text-[var(--color-text-primary)]">{getNoteDetailLabel(key, t)}</span>
                           <div className="flex-1 flex gap-1 ml-2">
                             {[1, 2, 3, 4, 5].map(step => {
                               const opacities = ['opacity-40', 'opacity-55', 'opacity-70', 'opacity-85', 'opacity-100'];

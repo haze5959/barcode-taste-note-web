@@ -129,5 +129,64 @@
     "section6_desc": "L'Azienda non sarà ritenuta responsabile per la fornitura del servizio qualora non sia in grado di farlo a causa di eventi di forza maggiore quali disastri naturali, manutenzione del servizio o colpa dell'utente. Inoltre, salvo quanto diversamente specificato dalle leggi vigenti, l'Azienda non è responsabile per eventuali danni relativi all'utilizzo di servizi legali gratuiti.",
     "section7_title": "Articolo 7 (Legge applicabile e giurisdizione)",
     "section7_desc": "In caso di controversie relative all'utilizzo del servizio, queste saranno risolte amichevolmente secondo il principio di buona fede. Se non può essere risolto, una causa può essere intentata presso il tribunale competente avente giurisdizione esclusiva sulla sede dell'Azienda."
+  },
+  "mappings": {
+    "product_type": {
+      "0": "Vino",
+      "1": "Whisky",
+      "2": "Birra",
+      "3": "Soju e Sake",
+      "4": "Liquori e Distillati",
+      "5": "Cocktail",
+      "6": "Caffè",
+      "7": "Bevanda",
+      "8": "Altro"
+    },
+    "public_scope": {
+      "0": "Privato",
+      "1": "Solo amici",
+      "2": "Pubblico"
+    },
+    "flavor": {
+      "0": "Frutti d'albero",
+      "1": "Bacche",
+      "2": "Agrumi",
+      "3": "Tropicale",
+      "4": "Floreale",
+      "5": "Erbaceo",
+      "6": "Terroso",
+      "7": "Vaniglia",
+      "8": "Cioccolato",
+      "9": "Miele",
+      "10": "Frutta secca",
+      "11": "Cereali",
+      "12": "Legnoso",
+      "13": "Speziato",
+      "14": "Affumicato"
+    },
+    "note_detail": {
+      "0": "Dolcezza",
+      "1": "Acidità",
+      "2": "Amaro",
+      "3": "Corpo",
+      "4": "Tannino",
+      "5": "Alcol",
+      "6": "Finale",
+      "7": "Aroma",
+      "8": "Equilibrio",
+      "9": "Sensazione"
+    },
+    "feeling": {
+      "0": "Piacevole",
+      "1": "Soddisfatto",
+      "2": "Conquistato",
+      "3": "Rinfrescato",
+      "4": "Energico",
+      "5": "Voglia di altro",
+      "10": "Deluso",
+      "11": "Gonfio",
+      "12": "Pentito",
+      "13": "Nauseato"
+    }
   }
 }

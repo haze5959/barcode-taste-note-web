@@ -54,18 +54,9 @@ export async function fetchFavoriteProducts({
   })
 }
 
-/**
- * 바코드로 제품 검색
- * GET /products/barcode/{barcode}
- */
-export async function findProductByBarcode(barcode: string): Promise<ProductInfo> {
-  return apiClient.get<ProductInfo>(`/products/barcode/${barcode}`)
-}
-
 export const productsApi = {
   getProductDetail,
   fetchProducts,
   fetchFavoriteProducts,
-  findProductByBarcode,
   DEFAULT_PER,
 }

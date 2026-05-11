@@ -129,5 +129,64 @@
     "section6_desc": "A Empresa não se responsabiliza pelo fornecimento do serviço se não puder fazê-lo devido a eventos de força maior, como desastres naturais, manutenção do serviço ou culpa do usuário. Além disso, a menos que especificado de outra forma pela lei, a Empresa não é responsável por danos relacionados ao uso de serviços legalmente gratuitos.",
     "section7_title": "Artigo 7 (Lei Aplicável e Jurisdição)",
     "section7_desc": "Em caso de disputa relacionada ao uso do serviço, ela será resolvida de forma amigável de acordo com o princípio da boa fé. Se não puder ser resolvida de forma amigável, um processo pode ser aberto no tribunal competente que tenha jurisdição exclusiva sobre a sede da Empresa."
+  },
+  "mappings": {
+    "product_type": {
+      "0": "Vinho",
+      "1": "Whisky",
+      "2": "Cerveja",
+      "3": "Soju e Sake",
+      "4": "Destilados e Licores",
+      "5": "Coquetel",
+      "6": "Café",
+      "7": "Bebida",
+      "8": "Outro"
+    },
+    "public_scope": {
+      "0": "Privado",
+      "1": "Apenas amigos",
+      "2": "Público"
+    },
+    "flavor": {
+      "0": "Frutas de árvore",
+      "1": "Frutas vermelhas",
+      "2": "Cítricos",
+      "3": "Tropical",
+      "4": "Floral",
+      "5": "Herbáceo",
+      "6": "Terroso",
+      "7": "Baunilha",
+      "8": "Chocolate",
+      "9": "Mel",
+      "10": "Nozes",
+      "11": "Cereais",
+      "12": "Amadeirado",
+      "13": "Picante",
+      "14": "Defumado"
+    },
+    "note_detail": {
+      "0": "Doçura",
+      "1": "Acidez",
+      "2": "Amargor",
+      "3": "Corpo",
+      "4": "Tanino",
+      "5": "Álcool",
+      "6": "Final",
+      "7": "Aroma",
+      "8": "Equilíbrio",
+      "9": "Sensação"
+    },
+    "feeling": {
+      "0": "Agradável",
+      "1": "Satisfeito",
+      "2": "Encantado",
+      "3": "Refrescado",
+      "4": "Energizado",
+      "5": "Querendo mais",
+      "10": "Decepcionado",
+      "11": "Inchado",
+      "12": "Arrependido",
+      "13": "Enjoado"
+    }
   }
 }

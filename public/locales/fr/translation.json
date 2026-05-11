@@ -129,5 +129,64 @@
     "section6_desc": "La Société ne sera pas tenue responsable de fournir le service si elle en est incapable en raison de cas de force majeure tels que catastrophes naturelles, maintenance du service ou faute de l'utilisateur. De plus, sauf disposition contraire des lois applicables, la Société n'est pas responsable des dommages liés à l'utilisation de services légalement gratuits.",
     "section7_title": "Article 7 (Droit applicable et Juridiction)",
     "section7_desc": "En cas de litige lié à l'utilisation du service, il sera résolu à l'amiable selon le principe de bonne foi. S'il ne peut être résolu, une action en justice peut être intentée devant le tribunal compétent ayant compétence exclusive sur le siège social de la Société."
+  },
+  "mappings": {
+    "product_type": {
+      "0": "Vin",
+      "1": "Whisky",
+      "2": "Bière",
+      "3": "Soju & Saké",
+      "4": "Spiritueux & Liqueurs",
+      "5": "Cocktail",
+      "6": "Café",
+      "7": "Boisson",
+      "8": "Autre"
+    },
+    "public_scope": {
+      "0": "Privé",
+      "1": "Amis uniquement",
+      "2": "Public"
+    },
+    "flavor": {
+      "0": "Fruits à pépins",
+      "1": "Baies",
+      "2": "Agrumes",
+      "3": "Tropical",
+      "4": "Floral",
+      "5": "Herbacé",
+      "6": "Terreux",
+      "7": "Vanille",
+      "8": "Chocolat",
+      "9": "Miel",
+      "10": "Fruits secs",
+      "11": "Céréales",
+      "12": "Boisé",
+      "13": "Épicé",
+      "14": "Fumé"
+    },
+    "note_detail": {
+      "0": "Sucré",
+      "1": "Acidité",
+      "2": "Amertume",
+      "3": "Corps",
+      "4": "Tanin",
+      "5": "Alcool",
+      "6": "Finale",
+      "7": "Arôme",
+      "8": "Équilibre",
+      "9": "Ressenti"
+    },
+    "feeling": {
+      "0": "Agréable",
+      "1": "Satisfait",
+      "2": "Conquis",
+      "3": "Rafraîchi",
+      "4": "Plein d'énergie",
+      "5": "En redemande",
+      "10": "Déçu",
+      "11": "Ballonné",
+      "12": "Plein de regrets",
+      "13": "Nauséeux"
+    }
   }
 }
