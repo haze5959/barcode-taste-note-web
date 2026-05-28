@@ -5,6 +5,7 @@ const locales = ['ko', 'en', 'zh-CN', 'zh-TW', 'ja', 'fr', 'de', 'es', 'pt', 'it
 
 const ko = {
   common: { app_name: "BarNote", back: "뒤로가기", loading: "로딩 중...", error: "오류가 발생했습니다." },
+  seo: { default_title: "BarNote - 와인, 맥주, 위스키 시음 노트", default_description: "AI 스캔 & 시음노트 공유" },
   home: {
     hero_title1: "당신의 모든 잔을 ", hero_title2: "완벽한 기록으로", hero_subtitle: "가장 빠르고 아름다운 AI 시음노트, 바노트", hero_btn: "지금 바로 시작하기",
     counter_title: "현재 바노트와 함께하는 제품 수",
@@ -61,6 +62,7 @@ const ko = {
 
 const en = {
   common: { app_name: "BarNote", back: "Back", loading: "Loading...", error: "An error occurred." },
+  seo: { default_title: "BarNote - Wine, Beer & Whiskey", default_description: "AI Scan & Tasting Note Sharing" },
   home: {
     hero_title1: "Turn every glass into ", hero_title2: "a perfect memory", hero_subtitle: "The fastest and most beautiful AI tasting note, BarNote", hero_btn: "Start Right Now",
     counter_title: "Products registered with BarNote", feat_title: "Focus only on your records", feat_sub: "Special experiences provided by BarNote",
@@ -90,6 +92,7 @@ const en = {
 
 const zhCN = {
   common: { app_name: "BarNote", back: "返回", loading: "加载中...", error: "发生错误。" },
+  seo: { default_title: "BarNote - 葡萄酒、啤酒和威士忌品鉴笔记", default_description: "AI 扫描与品鉴笔记分享" },
   home: {
     hero_title1: "将每一杯美酒 ", hero_title2: "化作完美记录", hero_subtitle: "最快最美观的AI品鉴笔记，BarNote", hero_btn: "立即开始",
     counter_title: "BarNote 已收录的产品数量", feat_title: "让你专注记录", feat_sub: "BarNote 提供的独特体验",
@@ -119,6 +122,7 @@ const zhCN = {
 
 const zhTW = {
   common: { app_name: "BarNote", back: "返回", loading: "載入中...", error: "發生錯誤。" },
+  seo: { default_title: "BarNote - 葡萄酒、啤酒和威士忌品鑑筆記", default_description: "AI 掃描與品鑑筆記分享" },
   home: {
     hero_title1: "將每一杯美酒 ", hero_title2: "化作完美記錄", hero_subtitle: "最快最美觀的AI品鑑筆記，BarNote", hero_btn: "立即開始",
     counter_title: "BarNote 已收錄的產品數量", feat_title: "讓你專注記錄", feat_sub: "BarNote 提供的獨特體驗",
@@ -148,6 +152,7 @@ const zhTW = {
 
 const ja = {
   common: { app_name: "BarNote", back: "戻る", loading: "読み込み中...", error: "エラーが発生しました。" },
+  seo: { default_title: "BarNote - ワイン、ビール、ウイスキー", default_description: "AIスキャン＆テイスティングノート共有" },
   home: {
     hero_title1: "すべてのグラスを ", hero_title2: "完璧な記録に", hero_subtitle: "最速で最も美しいAIテイスティングノート、BarNote", hero_btn: "今すぐ始める",
     counter_title: "BarNoteに登録されている製品数", feat_title: "記録に集中できるように", feat_sub: "BarNoteが提供する特別な体験",
@@ -177,6 +182,7 @@ const ja = {
 
 const fr = {
   common: { app_name: "BarNote", back: "Retour", loading: "Chargement...", error: "Une erreur s'est produite." },
+  seo: { default_title: "BarNote - Vin, bière & whisky", default_description: "Numérisation IA & partage de notes de dégustation" },
   home: {
     hero_title1: "Transformez chaque verre en ", hero_title2: "un souvenir parfait", hero_subtitle: "La note de dégustation IA la plus rapide, BarNote", hero_btn: "Commencer",
     counter_title: "Produits enregistrés avec BarNote", feat_title: "Concentrez-vous sur vos notes", feat_sub: "L'expérience spéciale offerte par BarNote",
@@ -206,6 +212,7 @@ const fr = {
 
 const de = {
   common: { app_name: "BarNote", back: "Zurück", loading: "Laden...", error: "Ein Fehler ist aufgetreten." },
+  seo: { default_title: "BarNote - Wein, Bier & Whiskey", default_description: "KI-Scan & Teilen von Verkostungsnotizen" },
   home: {
     hero_title1: "Mach jedes Glas zu ", hero_title2: "einer perfekten Erinnerung", hero_subtitle: "Die schnellste AI-Verkostungsnotiz, BarNote", hero_btn: "Jetzt Beginnen",
     counter_title: "Registrierte Produkte", feat_title: "Fokus auf deine Notizen", feat_sub: "Das besondere BarNote-Erlebnis",
@@ -235,6 +242,7 @@ const de = {
 
 const es = {
   common: { app_name: "BarNote", back: "Atrás", loading: "Cargando...", error: "Ocurrió un error." },
+  seo: { default_title: "BarNote - Vino, cerveza y whisky", default_description: "Escaneo con IA y uso compartido de notas de cata" },
   home: {
     hero_title1: "Convierte cada copa en ", hero_title2: "un recuerdo perfecto", hero_subtitle: "La nota de cata IA más rápida y hermosa", hero_btn: "Empezar Ahora",
     counter_title: "Productos registrados", feat_title: "Concéntrate en tus registros", feat_sub: "La experiencia especial de BarNote",
@@ -264,6 +272,7 @@ const es = {
 
 const pt = {
   common: { app_name: "BarNote", back: "Voltar", loading: "Carregando...", error: "Ocorreu um erro." },
+  seo: { default_title: "BarNote - Vinho, cerveja e uísque", default_description: "Escaneamento por IA e compartilhamento de notas de degustação" },
   home: {
     hero_title1: "Transforme cada taça em ", hero_title2: "uma memória perfeita", hero_subtitle: "A nota de degustação mais rápida, BarNote", hero_btn: "Começar Agora",
     counter_title: "Produtos registrados", feat_title: "Foque nos seus registros", feat_sub: "O que o BarNote proporciona",
@@ -293,6 +302,7 @@ const pt = {
 
 const it = {
   common: { app_name: "BarNote", back: "Indietro", loading: "Caricamento...", error: "Errore." },
+  seo: { default_title: "BarNote - Vino, birra e whisky", default_description: "Scansione IA e condivisione di note di degustazione" },
   home: {
     hero_title1: "Rendi ogni bicchiere ", hero_title2: "un ricordo perfetto", hero_subtitle: "Le note IA più veloci, BarNote", hero_btn: "Inizia Ora",
     counter_title: "Prodotti registrati", feat_title: "Concentrati sulle note", feat_sub: "L'esperienza speciale",
@@ -322,6 +332,7 @@ const it = {
 
 const ru = {
   common: { app_name: "BarNote", back: "Назад", loading: "Загрузка...", error: "Произошла ошибка." },
+  seo: { default_title: "BarNote - Вино, пиво и виски", default_description: "Сканирование ИИ и отправка дегустационных заметок" },
   home: {
     hero_title1: "Превратите каждый бокал в ", hero_title2: "идеальное воспоминание", hero_subtitle: "Самое быстрое и красивое приложение ИИ для дегустаций", hero_btn: "Начать",
     counter_title: "Зарегистрированные продукты", feat_title: "Сосредоточьтесь на записях", feat_sub: "Особый опыт BarNote",

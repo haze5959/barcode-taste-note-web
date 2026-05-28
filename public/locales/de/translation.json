@@ -188,5 +188,9 @@
       "12": "Bereue es",
       "13": "Übel"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - Wein, Bier & Whiskey",
+    "default_description": "KI-Scan & Teilen von Verkostungsnotizen"
   }
 }

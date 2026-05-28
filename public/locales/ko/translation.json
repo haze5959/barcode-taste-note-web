@@ -188,5 +188,9 @@
       "12": "후회되는",
       "13": "속이 울렁거리는"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - 와인, 맥주, 위스키 시음 노트",
+    "default_description": "AI 스캔 & 시음노트 공유"
   }
 }

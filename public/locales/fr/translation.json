@@ -188,5 +188,9 @@
       "12": "Plein de regrets",
       "13": "Nauséeux"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - Vin, bière & whisky",
+    "default_description": "Numérisation IA & partage de notes de dégustation"
   }
 }

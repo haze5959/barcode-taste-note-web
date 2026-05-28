@@ -188,5 +188,9 @@
       "12": "Arrependido",
       "13": "Enjoado"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - Vinho, cerveja e uísque",
+    "default_description": "Escaneamento por IA e compartilhamento de notas de degustação"
   }
 }

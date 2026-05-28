@@ -188,5 +188,9 @@
       "12": "后悔",
       "13": "反胃"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - 葡萄酒、啤酒和威士忌品鉴笔记",
+    "default_description": "AI 扫描与品鉴笔记分享"
   }
 }
