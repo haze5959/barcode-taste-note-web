@@ -1,112 +1,98 @@
 # BarNote Web - Project Rules & Guidelines
 
-## 📌 Project Overview
-이 프로젝트는 **BarNote** 앱의 공유 기능 웹페이지 및 서비스 운영 페이지(약관, 랜딩 등)를 제공하는 정적 웹 프로젝트입니다.
+## 📌 1. Project Overview
+This project provides the web sharing pages and operational pages (Terms of Service, Landing, etc.) for the **BarNote** app.
+> **BarNote** is a mobile app for writing quick tasting notes using barcode recognition and AI label scanning.
 
-> BarNote는 바코드 인식 및 AI 라벨 스캔을 이용한 빠른 시음 노트 작성 모바일 앱입니다.
-
-AI 어시스턴트는 작업 시작 전 반드시 이 문서를 숙지하고, 아래 명시된 기술 스택과 규칙을 준수하여 코드를 작성해야 합니다.
+**CRITICAL:** The AI assistant MUST read and understand this document before starting any task. Always adhere to the tech stack and guidelines specified below.
 
 ---
 
-## 🛠 Tech Stack
-
-| 항목 | 기술 |
+## 🛠 2. Tech Stack
+| Category | Technology |
 |---|---|
-| **Language** | TypeScript |
-| **Frontend Framework** | React (with Vite) |
-| **UI Component Library** | shadcn/ui |
-| **Styling** | Tailwind CSS |
-| **Routing** | React Router v6 |
-| **Package Manager** | npm (`--legacy-peer-deps` 필수) |
-| **Build Tool** | Vite |
-| **Deployment** | Cloudflare R2 (정적 호스팅) |
-| **CI/CD** | GitHub Actions (main 브랜치 push 시 자동 배포) |
+| **Language** | TypeScript (Strict mode, no `any`) |
+| **Framework** | React 19 + Vite 6 |
+| **Routing** | React Router v7 |
+| **Styling** | Tailwind CSS v4 + Custom CSS Variables |
+| **Animations** | Framer Motion |
 | **i18n** | i18next / react-i18next |
+| **Backend/Services** | Custom API (`src/lib/api`) + Firebase (Analytics/Config) |
+| **Package Manager** | npm (Use `--legacy-peer-deps` if needed) |
+| **Deployment** | Cloudflare R2 (Static Hosting via GitHub Actions) |
 
 ---
 
-## 🚀 Core Features (제공 페이지)
-
-| 페이지 | URL | 설명 |
+## 🚀 3. Core Features & Routes
+| Page | Route | Description |
 |---|---|---|
-| 랜딩 | `https://barnote.net` | 서비스 소개 및 앱 다운로드 유도 |
-| 유저 노트 리스트 | `https://barnote.net/user/{user_id}` | 특정 유저의 시음 노트 목록 |
-| 노트 디테일 | `https://barnote.net/note/{note_id}` | 개별 시음 노트 상세 보기 |
-| 개인정보처리방침 | `https://barnote.net/privacy_policy` | Privacy Policy |
-| 이용약관 | `https://barnote.net/terms_of_service` | Terms of Service |
+| **Landing (Home)** | `/` | Service introduction & App download promotion |
+| **User Note List** | `/user/:user_id` | Displays a specific user's tasting notes |
+| **Note Detail** | `/note/:note_id` | Detailed view of a single tasting note |
+| **Privacy Policy** | `/privacy_policy` | Privacy Policy |
+| **Terms of Service** | `/terms_of_service` | Terms of Service |
 
 ---
 
-## 📁 Folder Structure (폴더 구조)
-
-```
+## 📁 4. Folder Structure
+```text
 src/
-├── assets/          # 이미지, 폰트 등 정적 자원
-├── components/      # 재사용 가능한 공통 UI 컴포넌트
-│   └── ui/          # shadcn/ui 생성 컴포넌트 (수동 편집 지양)
-├── pages/           # 라우트별 페이지 컴포넌트
-│   ├── Home/
-│   ├── UserNoteList/
-│   ├── NoteDetail/
-│   ├── PrivacyPolicy/
-│   └── TermsOfService/
-├── hooks/           # 커스텀 React 훅
-├── types/           # TypeScript 인터페이스 및 타입 정의
-├── lib/             # 유틸리티 함수 및 shadcn/ui 설정(utils.ts)
-├── App.tsx          # 라우팅 설정
-└── main.tsx         # 앱 진입점
+├── assets/          # Static assets (images, fonts)
+├── components/      # Reusable UI components
+│   ├── layout/      # Layout components (Header, Footer)
+│   ├── icons/       # Custom SVG icons
+│   └── ...          # Domain components (NoteRow, ProductRow, SEO, etc.)
+├── pages/           # Route-level components (Home, NoteDetail, etc.)
+├── lib/             # Utilities, API client (`apiClient.ts`), i18n, Firebase
+│   └── api/         # API endpoint functions
+├── types/           # Global TypeScript interfaces & types
+├── index.css        # Global CSS & Tailwind configuration (CSS Variables)
+├── App.tsx          # Router configuration
+└── main.tsx         # Application entry point
+public/
+├── locales/         # i18n JSON translation files (11 languages supported)
+└── screenshots/     # App preview screenshots
 ```
 
 ---
 
-## 🎨 UI & Styling 규칙
-
-1. **shadcn/ui 우선:** UI 컴포넌트는 shadcn/ui에서 제공하는 컴포넌트를 우선적으로 사용합니다.
-   - 컴포넌트 추가 시 `npx shadcn@latest add [component]` 명령어를 사용하세요.
-   - `src/components/ui/` 하위 파일은 가급적 직접 편집하지 않습니다.
-2. **Tailwind CSS 활용:** 레이아웃, 간격, 색상 등은 Tailwind 유틸리티 클래스를 사용합니다. 인라인 `style` 속성은 최소화합니다.
-3. **브랜드 일관성:** 바노트 앱의 디자인 언어(색상, 폰트 등)와 일관성을 유지합니다. 브랜드 색상 등 디자인 토큰은 `tailwind.config.js`에 정의합니다.
-4. **반응형 디자인:** 모바일 앱 연동 서비스 특성상 모바일 퍼스트(Mobile-First)로 개발합니다.
+## 🎨 5. UI & Styling Rules
+1. **Tailwind CSS v4:** Use Tailwind utility classes for layout, spacing, and typography. Avoid inline `style` attributes unless dynamic values are required.
+2. **Custom Theming:** The project uses custom CSS variables (e.g., `var(--color-background-primary)`, `var(--color-accent)`) defined in `index.css`. Always use these variables for colors to maintain brand consistency and dark mode support.
+3. **Mobile-First Responsive Design:** The web pages are closely tied to a mobile app. Design for mobile first, then enhance for desktop (`md:`, `lg:` prefixes).
+4. **Animations:** Use `framer-motion` for smooth, modern UI transitions (e.g., fade-ups, scroll animations).
 
 ---
 
-## 🌐 i18n (다국어 처리) 규칙
-
-1. **i18next 사용:** 다국어 처리는 `i18next` 및 `react-i18next`를 사용합니다.
-2. **JSON 기반 번역 파일:** `public/locales/{lang}/translation.json` 형식으로 번역 파일을 관리합니다.
-3. **키 네이밍:** 의미가 명확한 계층형 키를 사용합니다. (예: `common.button.save`, `page.noteDetail.title`)
-4. **Hardcoded Text 금지:** 모든 사용자 노출 텍스트는 번역 함수(`t()`)를 통해 출력합니다.
-5. **언어 감지:** 브라우저 언어 감지(`i18next-browser-languagedetector`)를 기본으로 하며, 필요한 경우 유저가 수동으로 변경할 수 있도록 합니다.
+## 🌐 6. i18n (Internationalization) Rules
+1. **No Hardcoded Text:** ALL user-facing text MUST be output using the translation function (`t('key')`).
+2. **Translation Files:** Manage translations in `public/locales/{lang}/translation.json`. Currently, 11 languages are supported.
+3. **Key Naming:** Use clear, hierarchical keys (e.g., `home.preview_title`, `note.detail_title`).
+4. **Updating Translations:** When adding new text, ALWAYS update the corresponding keys in all supported language JSON files.
 
 ---
 
-## ⚙️ Coding Conventions (코딩 규칙)
-
-1. **TypeScript 엄격 모드:** `any` 타입 사용을 금지하며, 명확한 인터페이스와 타입을 정의합니다.
-2. **컴포넌트:** 함수형 컴포넌트만 사용합니다. 파일명과 컴포넌트명은 PascalCase를 따릅니다.
-3. **훅:** 커스텀 훅은 `use` 접두사를 사용하고 `src/hooks/`에 위치합니다.
-4. **타입 정의:** 공유되는 타입은 `src/types/`에 별도 파일로 관리합니다.
-5. **모듈화:** 재사용 가능한 로직과 UI는 컴포넌트 및 훅으로 분리하여 유지보수성을 높입니다.
-6. **Language:** 코드 내 주석, 커밋 메시지, Implementation Plan은 **한글(Korean)**로 작성합니다.
+## ⚙️ 7. Coding Conventions
+1. **TypeScript Strictness:** Do NOT use `any`. Always define clear interfaces or types in `src/types/` before implementing new data structures.
+2. **Functional Components:** Use functional components exclusively. File and component names must follow `PascalCase`.
+3. **Separation of Concerns:** Extract reusable logic into custom hooks (`src/hooks/`) or utility functions (`src/lib/`).
+4. **SEO & Meta Tags:** Use the `SEO` component for updating meta tags, titles, and Open Graph data per page.
+5. **Language:** Keep code comments, commit messages, and Implementation Plans in **Korean (한국어)** as requested by the user, although this RULES.md is in English.
 
 ---
 
-## 🚢 Build & Deployment (빌드 및 배포)
-
-- **로컬 개발:** `npm run dev`
-- **프로덕션 빌드:** `npm run build` (내부적으로 `tsc` 검증 포함)
-- **배포:** `main` 브랜치에 push 시 GitHub Actions가 자동으로 Cloudflare R2에 배포합니다.
-- **환경변수:** API URL 등 환경별 값은 `.env` 파일로 관리하며, 시크릿은 GitHub Repository Secrets에 등록합니다. `.env` 파일은 절대 커밋하지 않습니다.
-- **SPA 라우팅:** Cloudflare R2 정적 호스팅에서 클라이언트 사이드 라우팅이 동작하도록 404 리다이렉트 설정이 필요합니다.
+## 🚢 8. Build & Deployment
+- **Local Dev:** `npm run dev`
+- **Production Build:** `npm run build` (Includes `tsc -b` validation)
+- **Deployment:** Automatically deployed to Cloudflare R2 via GitHub Actions on push to the `main` branch.
+- **Environment Variables:** Managed via `.env` files (e.g., API URLs). Secrets are stored in GitHub Repository Secrets and must NEVER be hardcoded.
+- **SPA Routing:** Ensure 404 redirects are configured in Cloudflare to support client-side routing.
 
 ---
 
-## 🤖 AI Assistant Guidelines (AI 작업 규칙)
-
-1. **이 문서 우선:** 작업 시작 전 반드시 이 RULES.md를 읽고 기술 스택과 폴더 구조를 숙지합니다.
-2. **기존 컴포넌트 재사용:** 새 UI를 만들기 전에 `src/components/`와 `src/components/ui/`에 이미 존재하는 컴포넌트를 확인합니다.
-3. **점진적 작업:** 큰 변경 사항은 Implementation Plan을 먼저 작성하고 사용자에게 확인을 받은 후 진행합니다.
-4. **타입 안전성:** 새로운 데이터 구조 도입 시 반드시 `src/types/`에 타입을 먼저 정의합니다.
-5. **패키지 설치 시:** `npm install --legacy-peer-deps` 옵션을 반드시 사용합니다.
-6. **환경변수 주의:** 시크릿이나 비공개 키는 코드에 하드코딩하지 않습니다.
+## 🤖 9. AI Assistant Guidelines (CRITICAL)
+1. **Context First:** Always review this `RULES.md` and check existing components in `src/components/` before creating new ones to prevent duplication.
+2. **Step-by-Step Execution:** For major changes, write an Implementation Plan in Korean and ask for the user's approval before writing code.
+3. **Tool Usage:** Use specific tools (e.g., `multi_replace_file_content`, `grep_search`) rather than bash commands whenever possible.
+4. **Translation Updates:** When instructed to add or change text, remember to apply the changes across all 11 locale files in `public/locales/`.
+5. **Clean Code:** Remove unused imports, format code properly, and maintain the aesthetic quality of the UI (smooth interactions, proper padding, gradients).

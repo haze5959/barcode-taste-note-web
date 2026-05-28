@@ -188,5 +188,9 @@
       "12": "Arrepentido",
       "13": "Con náuseas"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - Vino, cerveza y whisky",
+    "default_description": "Escaneo con IA y uso compartido de notas de cata"
   }
 }

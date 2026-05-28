@@ -188,5 +188,9 @@
       "12": "Regretful",
       "13": "Nauseous"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - Wine, Beer & Whiskey",
+    "default_description": "AI Scan & Tasting Note Sharing"
   }
 }

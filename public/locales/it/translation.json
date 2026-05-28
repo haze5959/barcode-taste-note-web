@@ -188,5 +188,9 @@
       "12": "Pentito",
       "13": "Nauseato"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - Vino, birra e whisky",
+    "default_description": "Scansione IA e condivisione di note di degustazione"
   }
 }

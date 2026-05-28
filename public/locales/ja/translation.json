@@ -188,5 +188,9 @@
       "12": "後悔",
       "13": "気持ち悪い"
     }
+  },
+  "seo": {
+    "default_title": "BarNote - ワイン、ビール、ウイスキー",
+    "default_description": "AIスキャン＆テイスティングノート共有"
   }
 }
