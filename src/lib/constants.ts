@@ -6,3 +6,8 @@ export const API_BASE_URL = import.meta.env.DEV ? '/api' : 'https://api.barnote.
 export const APPLE_APP_ID = '6761252335';
 export const APPLE_APP_URL = `https://apps.apple.com/app/id${APPLE_APP_ID}`;
 
+// 지원하는 11개 언어 코드 (public/locales 및 public/screenshots 폴더명과 일치)
+export const SUPPORTED_LANGUAGES = ['ko', 'en', 'zh-CN', 'zh-TW', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'ru'] as const;
+
+export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
+

@@ -86,7 +86,27 @@ const en = {
     public_scope_public: "Public", public_scope_private: "Private", public_scope_friends: "Friends Only", tasting_note: "Tasting Note", no_detail: "No detailed note recorded.",
     flavor: "Flavors Felt", evaluation: "Detailed Evaluation", feeling: "Feeling", basic_info: "Basic Info", author: "Author", date: "Date"
   },
-  policy: { ...ko.policy, title: "Privacy Policy", effective_date: "Effective Date: {{date}}" },
+  policy: {
+    title: "Privacy Policy",
+    effective_date: "Effective Date: {{date}}",
+    section1_title: "1. Purpose of Processing Personal Information",
+    section1_desc: "BarNote (hereinafter 'Company') processes personal information for the following purposes. The personal information being processed will not be used for purposes other than the following, and if the purpose of use is changed, prior consent will be obtained.",
+    s1_item1: "Verification of membership registration intent and provision of member services",
+    s1_item2: "Analysis of tasting notes and taste preferences, and provision of customized services",
+    s1_item3: "Handling customer inquiries and complaints",
+    section2_title: "2. Items of Personal Information Collected",
+    section2_desc: "The Company collects the following personal information to provide smooth services.",
+    s2_item1: "Required items: Email, password, nickname, device information",
+    s2_item2: "Optional items: Profile picture, short introduction",
+    s2_item3: "Service usage records: Access logs, IP address, tasting notes, follow records, etc.",
+    section3_title: "3. Retention and Use Period of Personal Information",
+    section3_desc: "In principle, after the purpose of processing personal information is achieved, the information is destroyed without delay. (However, if it is necessary to preserve it in accordance with relevant laws and regulations, it will be preserved for the period specified by the relevant laws and regulations.)",
+    section4_title: "4. Rights, Duties of Data Subjects and How to Exercise Them",
+    section4_desc: "Users can view or modify their registered personal information at any time, and may request withdrawal of consent and cancellation of membership.",
+    section5_title: "5. Contact Information",
+    section5_desc: "For inquiries, complaints, or damage relief related to personal information protection, please contact us at the email address below.",
+    email: "- Email:"
+  },
   terms: { ...ko.terms, title: "Terms of Service", effective_date: "Effective Date: {{date}}" }
 };
 
@@ -116,7 +136,27 @@ const zhCN = {
     public_scope_public: "公开", public_scope_private: "私密", public_scope_friends: "仅朋友", tasting_note: "品鉴笔记", no_detail: "没有详细记录。",
     flavor: "风味感受", evaluation: "详细评价", feeling: "心情", basic_info: "基本信息", author: "作者", date: "日期"
   },
-  policy: { ...en.policy, title: "隐私政策" },
+  policy: {
+    title: "隐私政策",
+    effective_date: "生效日期: {{date}}",
+    section1_title: "1. 个人信息处理目的",
+    section1_desc: "BarNote（以下简称“公司”）出于以下目的处理个人信息。所处理的个人信息不会用于以下目的之外的其他用途，如使用目的发生变更，将事先征得您的同意。",
+    s1_item1: "确认会员加入意愿并提供会员制服务",
+    s1_item2: "分析品鉴笔记及口味偏好，并提供个性化服务",
+    s1_item3: "处理客户咨询及投诉",
+    section2_title: "2. 收集的个人信息项目",
+    section2_desc: "公司为提供顺畅的服务，收集以下个人信息。",
+    s2_item1: "必填项目：电子邮件、密码、昵称、设备信息",
+    s2_item2: "选填项目：个人头像、一句话介绍",
+    s2_item3: "服务使用记录：访问日志、IP 地址、品鉴笔记、关注记录等",
+    section3_title: "3. 个人信息的保留及使用期限",
+    section3_desc: "原则上，在达成个人信息处理目的后，将立即销毁该信息。（但如果根据相关法律法规有必要保留，则将在相关法律法规规定的期限内予以保留。）",
+    section4_title: "4. 信息主体的权利、义务及行使方式",
+    section4_desc: "用户可随时查询或修改自己登记的个人信息，并可要求撤回同意及注销账户。",
+    section5_title: "5. 联系方式",
+    section5_desc: "关于个人信息保护的咨询、投诉处理、损害救济等事项，请通过以下电子邮件与我们联系。",
+    email: "- 邮箱:"
+  },
   terms: { ...en.terms, title: "服务条款" }
 };
 
@@ -146,7 +186,27 @@ const zhTW = {
     public_scope_public: "公開", public_scope_private: "私密", public_scope_friends: "僅朋友", tasting_note: "品鑑筆記", no_detail: "沒有詳細記錄。",
     flavor: "風味感受", evaluation: "詳細評價", feeling: "心情", basic_info: "基本信息", author: "作者", date: "日期"
   },
-  policy: { ...zhCN.policy, title: "隱私政策" },
+  policy: {
+    title: "隱私政策",
+    effective_date: "生效日期: {{date}}",
+    section1_title: "1. 個人資料處理目的",
+    section1_desc: "BarNote（以下簡稱“公司”）出於以下目的處理個人資料。所處理的個人資料不會用於以下目的之外的其他用途，如使用目的發生變更，將事先征得您的同意。",
+    s1_item1: "確認會員加入意願並提供會員制服務",
+    s1_item2: "分析品鑑筆記及口味偏好，並提供個性化服務",
+    s1_item3: "處理客戶諮詢及投訴",
+    section2_title: "2. 收集的個人資料項目",
+    section2_desc: "公司為提供順暢的服務，收集以下個人資料。",
+    s2_item1: "必填項目：電子郵件、密碼、暱稱、設備資訊",
+    s2_item2: "選填項目：個人頭像、一句话介紹",
+    s2_item3: "服務使用記錄：訪問日誌、IP 地址、品鑑筆記、關注記錄等",
+    section3_title: "3. 個人資料的保留及使用期限",
+    section3_desc: "原則上，在達成個人資料處理目的後，將立即銷毀該資訊。（但如果根據相關法律法規有必要保留，則將在相關法律法規規定的期限內予以保留。）",
+    section4_title: "4. 資訊主體的權利、義務及行使方式",
+    section4_desc: "使用者可隨時查詢或修改自己登記的個人資料，並可要求撤銷同意及註銷帳戶。",
+    section5_title: "5. 聯絡方式",
+    section5_desc: "關於個人資料保護的諮詢、投訴處理、損害救濟等事項，請透過以下電子郵件與我們聯絡。",
+    email: "- 電子郵件："
+  },
   terms: { ...zhCN.terms, title: "服務條款" }
 };
 
@@ -176,7 +236,27 @@ const ja = {
     public_scope_public: "全体公開", public_scope_private: "非公開", public_scope_friends: "友達のみ", tasting_note: "テイスティングノート", no_detail: "詳細なノートが記録されていません。",
     flavor: "感じた香り・味わい", evaluation: "詳細評価", feeling: "感情", basic_info: "基本情報", author: "作成者", date: "作成日"
   },
-  policy: { ...en.policy, title: "プライバシーポリシー" },
+  policy: {
+    title: "プライバシーポリシー",
+    effective_date: "施行日: {{date}}",
+    section1_title: "1. 個人情報の処理目的",
+    section1_desc: "BarNote（以下「会社」）は、以下の目的のために個人情報を処理します。処理されている個人情報は、以下の目的以外の用途には利用されず、利用目的が変更される場合は、事前に同意を得ます。",
+    s1_item1: "会員登録の意思確認および会員制サービスの提供",
+    s1_item2: "テイスティングノートおよび好みの分析、パーソナライズされたサービスの提供",
+    s1_item3: "カスタマーサポートおよび苦情処理",
+    section2_title: "2. 収集する個人情報の項目",
+    section2_desc: "会社は、円滑なサービス提供のために、以下の個人情報を収集しています。",
+    s2_item1: "必須項目: メールアドレス、パスワード、ニックネーム、端末情報",
+    s2_item2: "選択項目: プロフィール写真、自己紹介",
+    s2_item3: "サービス利用記録: アクセスログ、IPアドレス、テイスティングノート、フォロー履歴など",
+    section3_title: "3. 個人情報の保有および利用期間",
+    section3_desc: "原則として、個人情報の処理目的が達成された後は、当該情報を遅滞なく破棄します。（ただし、関連法令により保存する必要がある場合は、当該法令で定められた期間保存します）",
+    section4_title: "4. 情報主体の権利・義務およびその行使方法",
+    section4_desc: "利用者は、登録されている自身の個人情報をいつでも閲覧または修正することができ、同意の撤回および会員退会を要請することができます。",
+    section5_title: "5. お問い合わせ先",
+    section5_desc: "個人情報保護に関するお問い合わせ、苦情処理、被害救済などに関する事項は、以下のメールアドレスまでお問い合わせください。",
+    email: "- メールアドレス:"
+  },
   terms: { ...en.terms, title: "利用規約" }
 };
 
@@ -206,7 +286,27 @@ const fr = {
     public_scope_public: "Public", public_scope_private: "Privé", public_scope_friends: "Amis uniquement", tasting_note: "Note de Dégustation", no_detail: "Aucune note détaillée enregistrée.",
     flavor: "Saveurs", evaluation: "Évaluation", feeling: "Sentiment", basic_info: "Infos", author: "Auteur", date: "Date"
   },
-  policy: { ...en.policy, title: "Politique de confidentialité" },
+  policy: {
+    title: "Politique de confidentialité",
+    effective_date: "Date d'effet : {{date}}",
+    section1_title: "1. But du traitement des données personnelles",
+    section1_desc: "BarNote (ci-après la 'Société') traite les données personnelles aux fins suivantes. Les données personnelles traitées ne seront pas utilisées à des fins autres que les suivantes, et si le but de l'utilisation est modifié, un consentement préalable sera obtenu.",
+    s1_item1: "Vérification de l'intention d'inscription et fourniture de services aux membres",
+    s1_item2: "Analyse des notes de dégustation et des préférences de goût, et fourniture de services personnalisés",
+    s1_item3: "Traitement des demandes et plaintes des clients",
+    section2_title: "2. Éléments de données personnelles collectées",
+    section2_desc: "La Société collecte les données personnelles suivantes pour assurer le bon fonctionnement des services.",
+    s2_item1: "Éléments obligatoires : E-mail, mot de passe, pseudo, informations sur l'appareil",
+    s2_item2: "Éléments facultatifs : Photo de profil, courte présentation",
+    s2_item3: "Historique d'utilisation du service : Logs de connexion, adresse IP, notes de dégustation, abonnements, etc.",
+    section3_title: "3. Période de conservation et d'utilisation des données personnelles",
+    section3_desc: "En principe, une fois le but du traitement atteint, les données personnelles sont détruites sans délai. (Toutefois, si la conservation est nécessaire conformément aux lois et réglementations en vigueur, elles seront conservées pendant la période spécifiée par celles-ci.)",
+    section4_title: "4. Droits et devoirs des personnes concernées et modalités d'exercice",
+    section4_desc: "Les utilisateurs peuvent consulter ou modifier leurs données personnelles enregistrées à tout moment, et demander le retrait du consentement et la résiliation de l'adhésion.",
+    section5_title: "5. Informations de contact",
+    section5_desc: "Pour toute demande, plainte ou réclamation liée à la protection des données personnelles, veuillez nous contacter à l'adresse e-mail ci-dessous.",
+    email: "- E-mail :"
+  },
   terms: { ...en.terms, title: "Conditions d'utilisation" }
 };
 
@@ -236,7 +336,27 @@ const de = {
     public_scope_public: "Öffentlich", public_scope_private: "Privat", public_scope_friends: "Nur Freunde", tasting_note: "Verkostungsnotiz", no_detail: "Keine Detailnotiz vorhanden.",
     flavor: "Aromen", evaluation: "Bewertung", feeling: "Gefühl", basic_info: "Basis-Infos", author: "Autor", date: "Datum"
   },
-  policy: { ...en.policy, title: "Datenschutzrichtlinie" },
+  policy: {
+    title: "Datenschutzrichtlinie",
+    effective_date: "Inkrafttreten: {{date}}",
+    section1_title: "1. Zweck der Verarbeitung personenbezogener Daten",
+    section1_desc: "BarNote (nachfolgend 'Unternehmen') verarbeitet personenbezogene Daten für die folgenden Zwecke. Die verarbeiteten personenbezogenen Daten werden nicht für andere als die folgenden Zwecke verwendet. Bei einer Änderung des Nutzungszwecks wird vorab eine Einwilligung eingeholt.",
+    s1_item1: "Überprüfung der Registrierungsabsicht und Bereitstellung von Mitgliederdiensten",
+    s1_item2: "Analyse von Verkostungsnotizen und Geschmackspräferenzen sowie Bereitstellung personalisierter Dienste",
+    s1_item3: "Bearbeitung von Kundenanfragen und Beschwerden",
+    section2_title: "2. Erhobene personenbezogene Daten",
+    section2_desc: "Das Unternehmen erhebt die folgenden personenbezogenen Daten, um eine reibungslose Bereitstellung der Dienste zu gewährleisten.",
+    s2_item1: "Erforderliche Daten: E-Mail, Passwort, Spitzname, Geräteinformationen",
+    s2_item2: "Optionale Daten: Profilbild, Kurzbeschreibung",
+    s2_item3: "Nutzungsverlauf des Dienstes: Verbindungsprotokolle, IP-Adresse, Verkostungsnotizen, Abonnements usw.",
+    section3_title: "3. Aufbewahrungs- und Nutzungsdauer personenbezogener Daten",
+    section3_desc: "Nach Erreichen des Zwecks der Datenverarbeitung werden die personenbezogenen Daten unverzüglich gelöscht. (Falls eine Aufbewahrung nach geltendem Recht erforderlich ist, werden sie für den gesetzlich vorgeschriebenen Zeitraum aufbewahrt.)",
+    section4_title: "4. Rechte und Pflichten der betroffenen Personen und deren Ausübung",
+    section4_desc: "Nutzer können ihre registrierten personenbezogenen Daten jederzeit einsehen oder ändern sowie die Einwilligung widerrufen und die Mitgliedschaft kündigen.",
+    section5_title: "5. Kontaktinformationen",
+    section5_desc: "Bei Fragen, Beschwerden oder Schadensersatzansprüchen im Zusammenhang mit dem Datenschutz kontaktieren Sie uns bitte unter der unten angegebenen E-Mail-Adresse.",
+    email: "- E-Mail:"
+  },
   terms: { ...en.terms, title: "Nutzungsbedingungen" }
 };
 
@@ -266,7 +386,27 @@ const es = {
     public_scope_public: "Público", public_scope_private: "Privado", public_scope_friends: "Solo amigos", tasting_note: "Nota de Cata", no_detail: "No hay detalles registrados.",
     flavor: "Sabores", evaluation: "Evaluación", feeling: "Sentimiento", basic_info: "Info Básica", author: "Autor", date: "Fecha"
   },
-  policy: { ...en.policy, title: "Política de Privacidad" },
+  policy: {
+    title: "Política de privacidad",
+    effective_date: "Fecha de entrada en vigor: {{date}}",
+    section1_title: "1. Finalidad del tratamiento de datos personales",
+    section1_desc: "BarNote (en adelante la 'Empresa') trata los datos personales para los siguientes fines. Los datos personales tratados no se utilizarán para fines distintos de los siguientes, y si cambia la finalidad del uso, se obtendrá el consentimiento previo.",
+    s1_item1: "Verificación de la intención de registro y prestación de servicios a miembros",
+    s1_item2: "Análisis de notas de cata y preferencias de gusto, y prestación de servicios personalizados",
+    s1_item3: "Atención de consultas y quejas de los clientes",
+    section2_title: "2. Datos personales recopilados",
+    section2_desc: "La Empresa recopila los siguientes datos personales para garantizar una prestación fluida de los servicios.",
+    s2_item1: "Datos obligatorios: Correo electrónico, contraseña, apodo, información del dispositivo",
+    s2_item2: "Datos opcionales: Foto de perfil, breve introducción",
+    s2_item3: "Historial de uso del servicio: Registros de acceso, dirección IP, notas de cata, seguimiento de usuarios, etc.",
+    section3_title: "3. Período de conservación y uso de datos personales",
+    section3_desc: "En principio, una vez alcanzada la finalidad del tratamiento de los datos personales, la información se destruye sin demora. (Sin embargo, si es necesario conservarla de acuerdo con las leyes y reglamentos aplicables, se conservará durante el período especificado por los mismos).",
+    section4_title: "4. Derechos y deberes de los titulares de los datos y cómo ejercerlos",
+    section4_desc: "Los usuarios pueden ver o modificar sus datos personales registrados en cualquier momento, y pueden solicitar la retirada del consentimiento y la cancelación de su cuenta.",
+    section5_title: "5. Información de contacto",
+    section5_desc: "Para consultas, quejas o reclamaciones relacionadas con la protección de datos personales, póngase en contacto con nosotros en la dirección de correo electrónico indicada a continuación.",
+    email: "- Correo electrónico:"
+  },
   terms: { ...en.terms, title: "Términos de Servicio" }
 };
 
@@ -296,7 +436,27 @@ const pt = {
     public_scope_public: "Público", public_scope_private: "Privado", public_scope_friends: "Solo amigos", tasting_note: "Nota de Degustação", no_detail: "Sem detalhes extras.",
     flavor: "Sabores", evaluation: "Avaliação", feeling: "Sentimento", basic_info: "Info", author: "Autor", date: "Data"
   },
-  policy: { ...en.policy, title: "Política de Privacidade" },
+  policy: {
+    title: "Política de Privacidade",
+    effective_date: "Data de vigência: {{date}}",
+    section1_title: "1. Finalidade do Tratamento de Dados Pessoais",
+    section1_desc: "A BarNote (doravante denominada 'Empresa') trata os dados pessoais para as seguintes finalidades. Os dados pessoais tratados não serão utilizados para fins diferentes dos seguintes e, caso a finalidade de utilização seja alterada, será obtido o consentimento prévio.",
+    s1_item1: "Verificação da intenção de registro de associação e fornecimento de serviços aos membros",
+    s1_item2: "Análise de notas de degustação e preferências de sabor, e fornecimento de serviços personalizados",
+    s1_item3: "Tratamento de dúvidas e reclamações dos clientes",
+    section2_title: "2. Itens de Dados Pessoais Coletados",
+    section2_desc: "A Empresa coleta os seguintes dados pessoais para garantir uma prestação de serviços sem problemas.",
+    s2_item1: "Itens obrigatórios: E-mail, senha, apelido, informações do dispositivo",
+    s2_item2: "Itens opcionais: Foto de perfil, breve introdução",
+    s2_item3: "Histórico de uso do serviço: Logs de acesso, endereço IP, notas de degustação, registros de seguidores, etc.",
+    section3_title: "3. Período de Retenção e Uso de Dados Pessoais",
+    section3_desc: "Em princípio, após a consecução da finalidade do tratamento dos dados pessoais, as informações são destruídas sem demora. (No entanto, se for necessário preservá-las de acordo com as leis e regulamentos aplicáveis, elas serão preservadas pelo período especificado por eles.)",
+    section4_title: "4. Direitos, Deveres dos Titulares dos Dados e Como Exercê-los",
+    section4_desc: "Os usuários podem visualizar ou modificar seus dados pessoais registrados a qualquer momento e podem solicitar a retirada do consentimento e o cancelamento da assinatura.",
+    section5_title: "5. Informações de Contato",
+    section5_desc: "Para dúvidas, reclamações ou resolução de problemas relacionados à proteção de dados pessoais, entre em contato conosco no endereço de e-mail abaixo.",
+    email: "- E-mail:"
+  },
   terms: { ...en.terms, title: "Termos de Serviço" }
 };
 
@@ -326,7 +486,27 @@ const it = {
     public_scope_public: "Pubblico", public_scope_private: "Privato", public_scope_friends: "Solo amici", tasting_note: "Nota di Degustazione", no_detail: "Nessun dettaglio extra.",
     flavor: "Sapori", evaluation: "Valutazione", feeling: "Sensazione", basic_info: "Info Base", author: "Autore", date: "Data"
   },
-  policy: { ...en.policy, title: "Informativa sulla Privacy" },
+  policy: {
+    title: "Informativa sulla privacy",
+    effective_date: "Data di decorrenza: {{date}}",
+    section1_title: "1. Finalità del trattamento dei dati personali",
+    section1_desc: "BarNote (di seguito la 'Società') tratta i dati personali per le seguenti finalità. I dati personali in corso di trattamento non saranno utilizzati per scopi diversi dai seguenti e, in caso di modifica della finalità d'uso, verrà richiesto il preventivo consenso.",
+    s1_item1: "Verifica dell'intenzione di registrazione e fornitura di servizi per i membri",
+    s1_item2: "Analisi delle note di degustazione e delle preferenze di gusto, e fornitura di servizi personalizzati",
+    s1_item3: "Gestione delle richieste e dei reclami dei clienti",
+    section2_title: "2. Dati personali raccolti",
+    section2_desc: "La Società raccoglie i seguenti dati personali per garantire una corretta erogazione dei servizi.",
+    s2_item1: "Dati obbligatori: E-mail, password, nickname, informazioni sul dispositivo",
+    s2_item2: "Dati opzionali: Foto del profilo, breve introduzione",
+    s2_item3: "Cronologia di utilizzo del servizio: Log di accesso, indirizzo IP, note di degustazione, follower, ecc.",
+    section3_title: "3. Periodo di conservazione e utilizzo dei dati personali",
+    section3_desc: "In linea di principio, una volta raggiunta la finalità del trattamento, i dati personali vengono distrutti senza indugio. (Tuttavia, se è necessario conservarli in conformità con le leggi e i regolamenti applicabili, saranno conservati per il periodo specificato da tali leggi e regolamenti.)",
+    section4_title: "4. Diritti e doveri degli interessati e modalità di esercizio",
+    section4_desc: "Gli utenti possono visualizzare o modificare i propri dati personali registrati in qualsiasi momento, e possono richiedere la revoca del consenso e la cancellazione dell'account.",
+    section5_title: "5. Contatti",
+    section5_desc: "Per richieste, reclami o risoluzione di problemi relativi alla tutela dei dati personali, vi preghiamo di contattarci all'indirizzo e-mail riportato di seguito.",
+    email: "- E-mail:"
+  },
   terms: { ...en.terms, title: "Termini di Servizio" }
 };
 
@@ -356,7 +536,27 @@ const ru = {
     public_scope_public: "Публичная", public_scope_private: "Приватная", public_scope_friends: "Только друзья", tasting_note: "Дегустационная заметка", no_detail: "Нет подробностей.",
     flavor: "Вкусы", evaluation: "Оценка", feeling: "Ощущение", basic_info: "Информация", author: "Автор", date: "Дата"
   },
-  policy: { ...en.policy, title: "Политика конфиденциальности" },
+  policy: {
+    title: "Политика конфиденциальности",
+    effective_date: "Дата вступления в силу: {{date}}",
+    section1_title: "1. Цель обработки персональных данных",
+    section1_desc: "BarNote (далее «Компания») обрабатывает персональные данные для следующих целей. Обрабатываемые персональные данные не будут использоваться для целей, отличных от следующих, и в случае изменения цели использования будет получено предварительное согласие.",
+    s1_item1: "Подтверждение намерения регистрации членства и предоставление услуг членам",
+    s1_item2: "Анализ дегустационных заметок и вкусовых предпочтений, а также предоставление персонализированных услуг",
+    s1_item3: "Обработка запросов и жалоб клиентов",
+    section2_title: "2. Собираемые элементы персональных данных",
+    section2_desc: "Компания собирает следующие персональные данные для обеспечения бесперебойного предоставления услуг.",
+    s2_item1: "Обязательные элементы: Электронная почта, пароль, никнейм, информация об устройстве",
+    s2_item2: "Необязательные элементы: Фото профиля, краткое описание",
+    s2_item3: "История использования службы: Логи доступа, IP-адрес, дегустационные заметки, подписки и т. д.",
+    section3_title: "3. Срок хранения и использования персональных данных",
+    section3_desc: "Как правило, после достижения цели обработки персональных данных информация уничтожается без промедления. (Однако, если необходимо сохранить ее в соответствии с действующим законодательством, она будет сохраняться в течение периода, указанного действующим законодательством.)",
+    section4_title: "4. Права, обязанности субъектов данных и способы их реализации",
+    section4_desc: "Пользователи могут просматривать или изменять свои зарегистрированные персональные данные в любое время, а также могут запросить отзыв согласия и аннулирование членства.",
+    section5_title: "5. Контактная информация",
+    section5_desc: "Для запросов, жалоб или возмещения ущерба, связанных с защитой персональных данных, свяжитесь с нами по адресу электронной почты, указанному ниже.",
+    email: "- Электронная почта:"
+  },
   terms: { ...en.terms, title: "Условия использования" }
 };
 
