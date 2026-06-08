@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { SUPPORTED_LANGUAGES } from '../lib/constants';
 
 interface SEOProps {
   title?: string;
@@ -8,8 +9,6 @@ interface SEOProps {
   url?: string;
   type?: string;
 }
-
-const LANGUAGES = ['ko', 'en', 'zh-CN', 'zh-TW', 'ja', 'fr', 'de', 'es', 'pt', 'it', 'ru'];
 
 const getLocalizedUrl = (baseUrl: string, lang: string) => {
   try {
@@ -54,7 +53,7 @@ export function SEO({
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Alternate Language Links for Global SEO */}
-      {LANGUAGES.map((lang) => (
+      {SUPPORTED_LANGUAGES.map((lang) => (
         <link
           key={lang}
           rel="alternate"

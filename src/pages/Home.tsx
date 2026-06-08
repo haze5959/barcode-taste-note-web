@@ -8,6 +8,7 @@ import { NoteRow } from '../components/NoteRow';
 import { SEO } from '../components/SEO';
 import { StoreDownloadButtons } from '../components/StoreDownloadButtons';
 import { useTranslation } from 'react-i18next';
+import { resolveScreenshotLang, SCREENSHOT_FALLBACK_LANG } from '../lib/i18n';
 
 // ==========================================
 // 애니메이션 프리셋 (Framer Motion)
@@ -46,7 +47,9 @@ function AnimatedCounter({ value }: { value: number }) {
 }
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  // 현재 언어를 스크린샷 폴더명으로 정규화 (미지원 언어는 'en')
+  const screenshotLang = resolveScreenshotLang(i18n.language);
   const navigate = useNavigate();
   const location = useLocation();
   const [data, setData] = useState<HomeInfo | null>(null);
@@ -208,6 +211,28 @@ export default function Home() {
           className="flex gap-6 md:gap-8 overflow-x-auto snap-x md:snap-none snap-mandatory px-6 pb-12 pt-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] select-none"
         >
           <div className="snap-start shrink-0 w-2 md:w-[15vw]"></div>
+          {/* 온보딩 영상 (맨 앞, 자동 재생 루프) */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ root: scrollContainerRef, once: true, margin: "0px 100px 0px 0px" }}
+            variants={{
+              hidden: { opacity: 0, y: 30, scale: 0.95 },
+              visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } }
+            }}
+            className="snap-center shrink-0 w-[240px] md:w-[280px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/10 border-[8px] border-[var(--color-surface-secondary)] bg-[var(--color-surface-secondary)]"
+          >
+            <video
+              src="/onboarding_00.mp4"
+              className="w-full h-auto object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              draggable={false}
+            />
+          </motion.div>
           {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
             <motion.div
               key={num}
@@ -218,17 +243,23 @@ export default function Home() {
                 hidden: { opacity: 0, y: 30, scale: 0.95 },
                 visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6 } }
               }}
-              className="snap-center shrink-0 w-[240px] md:w-[280px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/10 border-[8px] border-[var(--color-surface-secondary)] bg-[var(--color-surface-secondary)] relative"
+              className="snap-center shrink-0 w-[240px] md:w-[280px] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-black/10 border-[8px] border-[var(--color-surface-secondary)] bg-[var(--color-surface-secondary)]"
             >
-              {/* iPhone Notch 모방 디자인 */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[35%] h-[24px] bg-[var(--color-surface-secondary)] rounded-b-2xl z-10"></div>
               <img
-                src={`/screenshots/screenshot_0${num}.png`}
+                src={`/screenshots/${screenshotLang}/screenshot_0${num}.png`}
                 alt={`App Screenshot ${num}`}
-                className="w-full h-auto object-cover relative z-0 transition-transform duration-500 hover:scale-[1.02]"
+                className="w-full h-auto object-cover transition-transform duration-500 hover:scale-[1.02]"
                 loading="lazy"
                 decoding="async"
                 draggable={false}
+                onError={(e) => {
+                  // 해당 언어 스크린샷이 없으면 영어 폴더로 대체 (무한 루프 방지)
+                  const img = e.currentTarget;
+                  const fallbackSrc = `/screenshots/${SCREENSHOT_FALLBACK_LANG}/screenshot_0${num}.png`;
+                  if (img.getAttribute('src') !== fallbackSrc) {
+                    img.src = fallbackSrc;
+                  }
+                }}
               />
             </motion.div>
           ))}
