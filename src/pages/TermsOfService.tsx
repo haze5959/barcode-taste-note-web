@@ -22,34 +22,39 @@ export default function TermsOfService() {
       <div className="px-6 py-8 text-[var(--color-text-primary)] leading-relaxed text-[15px] break-keep">
         <h2 className="text-2xl font-extrabold mb-6">{t('terms.title')}</h2>
         <p className="mb-6 text-[14px] text-[var(--color-text-secondary)] font-medium">
-          {t('terms.effective_date', { date: '2026-04-23' })}
+          {t('terms.effective_date', { date: '2026-06-11' })}
         </p>
 
-        {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => {
+        {Array.from({ length: 12 }, (_, i) => i + 1).map((num) => {
           const titleKey = `terms.section${num}_title`;
           const descKey = `terms.section${num}_desc`;
-          
+
           if (t(titleKey) === titleKey) return null;
 
-          const hasList = t(`terms.s${num}_item1`) !== `terms.s${num}_item1`;
+          // 항목 목록을 동적으로 수집 (terms.s{num}_item{i}, 개수 제한 없음)
+          const items: string[] = [];
+          for (let i = 1; i <= 12; i++) {
+            const itemKey = `terms.s${num}_item${i}`;
+            if (t(itemKey) === itemKey) break;
+            items.push(t(itemKey));
+          }
+          const hasList = items.length > 0;
 
           return (
             <section key={num} className="mb-8">
               <h3 className="text-[17px] font-bold mb-3">{t(titleKey)}</h3>
-              
+
               {t(descKey) !== descKey && (
                 <p className={hasList ? "mb-3 text-[var(--color-text-secondary)]" : "text-[var(--color-text-secondary)]"}>
                   {t(descKey)}
                 </p>
               )}
-              
+
               {hasList && (
                 <ul className="list-disc pl-5 space-y-1.5 text-[var(--color-text-secondary)]">
-                  <li>{t(`terms.s${num}_item1`)}</li>
-                  {t(`terms.s${num}_item2`) !== `terms.s${num}_item2` && <li>{t(`terms.s${num}_item2`)}</li>}
-                  {t(`terms.s${num}_item3`) !== `terms.s${num}_item3` && <li>{t(`terms.s${num}_item3`)}</li>}
-                  {t(`terms.s${num}_item4`) !== `terms.s${num}_item4` && <li>{t(`terms.s${num}_item4`)}</li>}
-                  {t(`terms.s${num}_item5`) !== `terms.s${num}_item5` && <li>{t(`terms.s${num}_item5`)}</li>}
+                  {items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
                 </ul>
               )}
             </section>
