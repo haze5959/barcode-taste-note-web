@@ -24,7 +24,7 @@ const getLocalizedUrl = (baseUrl: string, lang: string) => {
 export function SEO({
   title,
   description,
-  image = 'https://barnote.net/icon-512.png',
+  image = 'https://barnote.net/og-image.png',
   url = 'https://barnote.net',
   type = 'website',
 }: SEOProps) {

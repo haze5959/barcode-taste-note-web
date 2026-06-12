@@ -21,7 +21,8 @@ export default function UserNoteList() {
   
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
   const [notes, setNotes] = useState<NoteInfo[]>([]);
-  const [favorites, setFavorites] = useState<ProductInfo[]>([]);
+  // null = 아직 조회 전 (스켈레톤 노출), [] = 조회 완료했으나 즐겨찾기 없음
+  const [favorites, setFavorites] = useState<ProductInfo[] | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>('notes');
   const [loading, setLoading] = useState(true);
   const [promoDialogOpen, setPromoDialogOpen] = useState(false);
@@ -48,12 +49,13 @@ export default function UserNoteList() {
   }, [userId]);
 
   const fetchFavorites = async () => {
-    if (favorites.length > 0 || !userId) return;
+    if (favorites !== null || !userId) return; // 이미 조회했으면 재요청하지 않음
     try {
       const favRes = await productsApi.fetchFavoriteProducts({ userId, page: 1 });
       setFavorites(favRes);
     } catch (error) {
       console.error('Failed to fetch favorites', error);
+      setFavorites([]); // 실패 시 빈 목록으로 처리해 무한 스켈레톤 방지
     }
   };
 
@@ -153,7 +155,12 @@ export default function UserNoteList() {
 
           {activeTab === 'favorites' && (
              <div className="flex flex-col gap-4">
-                {favorites.length === 0 && !loading ? (
+                {favorites === null ? (
+                  // 조회 전: 스켈레톤 노출
+                  <div className="grid grid-cols-2 gap-3.5">
+                    {Array.from({ length: 6 }).map((_, i) => <ProductRow key={i} info={null} />)}
+                  </div>
+                ) : favorites.length === 0 ? (
                    <div className="py-20 flex flex-col items-center justify-center text-center px-4">
                       <div className="w-16 h-16 bg-[var(--color-surface-secondary)] rounded-full flex items-center justify-center mb-5 text-2xl text-[var(--color-text-secondary)]">❤️</div>
                       <h4 className="text-[15px] font-bold text-[var(--color-text-primary)] mb-1.5">{t('user.no_fav_title')}</h4>
@@ -161,17 +168,13 @@ export default function UserNoteList() {
                     </div>
                 ) : (
                   <div className="grid grid-cols-2 gap-3.5">
-                    {loading ? (
-                      Array.from({ length: 6 }).map((_, i) => <ProductRow key={i} info={null} />)
-                    ) : (
-                      favorites.map((product) => (
-                        <ProductRow 
-                          key={product.product.id} 
-                          info={product} 
-                          onClick={() => setPromoDialogOpen(true)} 
-                        />
-                      ))
-                    )}
+                    {favorites.map((product) => (
+                      <ProductRow
+                        key={product.product.id}
+                        info={product}
+                        onClick={() => setPromoDialogOpen(true)}
+                      />
+                    ))}
                   </div>
                 )}
              </div>
