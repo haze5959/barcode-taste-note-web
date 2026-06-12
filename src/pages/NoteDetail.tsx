@@ -41,15 +41,13 @@ export default function NoteDetail() {
 
   return (
     <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative w-full">
-      <SEO title={t('note.detail_title')} description={t('note.tasting_note')} url={`https://barnote.net/note/${noteId}`} />
-      {info && (
-        <SEO
-          title={`${info.product.name} - ${t('note.tasting_note')}`}
-          description={info.note.body || `${info.product.name} ${t('note.tasting_note')}`}
-          image={(info.imageIds?.[0] || info.productImageId) ? `https://barnote.net/images/${info.imageIds?.[0] || info.productImageId}` : undefined}
-          url={`https://barnote.net/note/${noteId}`}
-        />
-      )}
+      {/* SEO는 단일 인스턴스로 렌더 (중복 시 helmet이 meta를 합치지 못해 og 태그가 2개 생김) */}
+      <SEO
+        title={info ? `⭐️${(info.note.rating / 2).toFixed(1)} - ${info.product.name}` : t('note.detail_title')}
+        description={info ? (info.note.body || `${info.product.name} ${t('note.tasting_note')}`) : t('note.tasting_note')}
+        image={info && (info.imageIds?.[0] || info.productImageId) ? `https://barnote.net/images/${info.imageIds?.[0] || info.productImageId}` : undefined}
+        url={`https://barnote.net/note/${noteId}`}
+      />
 
       {/* Header */}
       {showNavBar && (

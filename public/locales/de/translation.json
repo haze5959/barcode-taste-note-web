@@ -142,11 +142,16 @@
     "s7_item7": "Drittbegünstigter (Third-Party Beneficiary): Apple und seine Tochtergesellschaften sind Drittbegünstigte (Third-Party Beneficiary) dieser Nutzungsbedingungen und haben nach Ihrer Annahme dieser Nutzungsbedingungen das Recht, diese Nutzungsbedingungen Ihnen gegenüber durchzusetzen.",
     "section8_title": "Artikel 8 (Haftungsbeschränkung)",
     "section8_desc": "Das Unternehmen haftet nicht für die Erbringung des Dienstes, wenn es aufgrund höherer Gewalt, wie Naturkatastrophen, Wartungsarbeiten oder Ausfällen des Dienstes oder vom Nutzer zu vertretender Ursachen zur Erbringung des Dienstes nicht in der Lage ist. Soweit nicht durch geltendes Recht ausdrücklich anderweitig bestimmt, haftet das Unternehmen nicht im Zusammenhang mit der Nutzung des unentgeltlich bereitgestellten Dienstes.",
-    "section9_title": "Artikel 9 (Kontakt)",
-    "section9_desc": "Anfragen zur Nutzung des Dienstes, zu diesen Nutzungsbedingungen (EULA) oder Meldungen anstößiger Inhalte können an die nachstehenden Kontaktdaten gerichtet werden; das Unternehmen wird nach Eingang einer Meldung gemäß Artikel 6 unverzüglich antworten.",
-    "s9_item1": "E-Mail: barcodetastenote@gmail.com",
-    "section10_title": "Artikel 10 (Zuständiges Gericht)",
-    "section10_desc": "Im Falle eines Rechtsstreits im Zusammenhang mit der Nutzung des Dienstes sollen die Parteien diesen nach dem Grundsatz von Treu und Glauben durch Einigung beilegen; kann keine gütliche Einigung erzielt werden, kann die Angelegenheit vor ein zuständiges Gericht gebracht werden. Das Gericht am Sitz der Hauptniederlassung des Unternehmens hat ausschließliche Zuständigkeit."
+    "section9_title": "Artikel 9 (Nutzung von Produktdaten und Statistiken)",
+    "section9_desc": "Das Unternehmen darf Produktinformationen, die im Zuge des Betriebs des Dienstes anfallen (wie Produktbezeichnungen, Produktarten und offizielle Produktabbildungen), sowie aggregierte statistische Daten, die aus der Nutzungsaktivität der Nutzer abgeleitet werden (wie die Anzahl der Verkostungsnotizen, die Anzahl der als Favoriten markierten Produkte und Bewertungen je Produkt), für den Betrieb und die Verbesserung des Dienstes sowie für Werbe- und Marketingzwecke des Unternehmens verwenden.",
+    "s9_item1": "Die verwendeten statistischen Daten werden in einer Form aggregiert, die keine Identifizierung einzelner Nutzer ermöglicht; das Unternehmen verwendet vom Nutzer erstellte individuelle Inhalte (wie den Text von Verkostungsnotizen oder Fotos) oder personenbezogene Daten nicht ohne Einwilligung des Nutzers für Marketingzwecke.",
+    "s9_item2": "Das Unternehmen kann diese Daten als Werbematerial auf externen Kanälen veröffentlichen, einschließlich der unternehmenseigenen Website und sozialer Medien.",
+    "s9_item3": "Die Rechte des geistigen Eigentums an Produktbezeichnungen, Abbildungen und dergleichen stehen den jeweiligen Rechteinhabern zu; das Unternehmen verwendet diese ausschließlich im Rahmen der Einhaltung der geltenden Gesetze und der Rechte Dritter.",
+    "section10_title": "Artikel 10 (Kontakt)",
+    "section10_desc": "Anfragen zur Nutzung des Dienstes, zu diesen Nutzungsbedingungen (EULA) oder Meldungen anstößiger Inhalte können an die nachstehenden Kontaktdaten gerichtet werden; das Unternehmen wird nach Eingang einer Meldung gemäß Artikel 6 unverzüglich antworten.",
+    "s10_item1": "E-Mail: barcodetastenote@gmail.com",
+    "section11_title": "Artikel 11 (Zuständiges Gericht)",
+    "section11_desc": "Im Falle eines Rechtsstreits im Zusammenhang mit der Nutzung des Dienstes sollen die Parteien diesen nach dem Grundsatz von Treu und Glauben durch Einigung beilegen; kann keine gütliche Einigung erzielt werden, kann die Angelegenheit vor ein zuständiges Gericht gebracht werden. Das Gericht am Sitz der Hauptniederlassung des Unternehmens hat ausschließliche Zuständigkeit."
   },
   "mappings": {
     "product_type": {

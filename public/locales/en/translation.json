@@ -142,11 +142,16 @@
     "s7_item7": "Third-Party Beneficiary: Apple and its subsidiaries are third-party beneficiaries of these Terms and, upon your acceptance of these Terms, will have the right to enforce these Terms against you.",
     "section8_title": "Article 8 (Limitation of Liability)",
     "section8_desc": "The Company shall not be liable for the provision of the Service where it is unable to provide the Service due to force majeure, such as natural disasters, Service maintenance or failures, or causes attributable to the user. Unless otherwise specifically provided by applicable law, the Company is not liable in connection with the use of the Service that is provided free of charge.",
-    "section9_title": "Article 9 (Contact)",
-    "section9_desc": "Inquiries regarding the use of the Service, these Terms (EULA), or reports of objectionable content may be submitted to the contact below, and the Company will respond promptly in accordance with Article 6 upon receipt of a report.",
-    "s9_item1": "Email: barcodetastenote@gmail.com",
-    "section10_title": "Article 10 (Governing Court)",
-    "section10_desc": "In the event of a dispute arising in connection with the use of the Service, the parties shall resolve it through agreement in accordance with the principle of good faith; if it is not amicably resolved, the matter may be brought before a competent court. The court having jurisdiction over the location of the Company's head office shall have exclusive jurisdiction."
+    "section9_title": "Article 9 (Use of Product Data and Statistics)",
+    "section9_desc": "The Company may use product information generated in the course of operating the Service (such as product names, types, and official product images) and aggregated statistical data derived from users' activity (such as the number of tasting notes, the number of favorites, and ratings per product) for the operation and improvement of the Service and for the Company's promotional and marketing purposes.",
+    "s9_item1": "The statistical data used is aggregated in a form that cannot identify any individual user, and the Company does not use individual content created by users (such as the text of tasting notes or photos) or personal information for marketing without the user's consent.",
+    "s9_item2": "The Company may publish such data as promotional material on external channels, including its own website and social media.",
+    "s9_item3": "Intellectual property rights in product names, images, and the like belong to their respective rights holders, and the Company uses them only within the scope of compliance with applicable laws and the rights of third parties.",
+    "section10_title": "Article 10 (Contact)",
+    "section10_desc": "Inquiries regarding the use of the Service, these Terms (EULA), or reports of objectionable content may be submitted to the contact below, and the Company will respond promptly in accordance with Article 6 upon receipt of a report.",
+    "s10_item1": "Email: barcodetastenote@gmail.com",
+    "section11_title": "Article 11 (Governing Court)",
+    "section11_desc": "In the event of a dispute arising in connection with the use of the Service, the parties shall resolve it through agreement in accordance with the principle of good faith; if it is not amicably resolved, the matter may be brought before a competent court. The court having jurisdiction over the location of the Company's head office shall have exclusive jurisdiction."
   },
   "mappings": {
     "product_type": {

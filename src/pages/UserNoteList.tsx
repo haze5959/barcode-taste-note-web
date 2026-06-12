@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { usersApi } from '../lib/api/users';
 import { notesApi } from '../lib/api/notes';
 import { productsApi } from '../lib/api/products';
-import { UserInfo, NoteInfo, ProductInfo } from '../types';
+import { UserInfo, NoteInfo, ProductInfo, getImageUrl } from '../types';
 import { OQImageView } from '../components/OQImageView';
 import { NoteRow } from '../components/NoteRow';
 import { ProductRow } from '../components/ProductRow';
@@ -64,16 +64,13 @@ export default function UserNoteList() {
 
   return (
     <div className="flex flex-col h-full bg-[var(--color-background-primary)] relative w-full">
-      <SEO title={t('user.tab_notes')} description={t('user.tab_notes')} url={`https://barnote.net/user/${userId}`} />
-      
-      {userInfo && (
-        <SEO 
-          title={`${userInfo.user.nickName} - ${t('user.tab_notes')}`}
-          description={userInfo.user.intro || `${userInfo.user.nickName} ${t('user.tab_notes')}`}
-          image={userInfo.user.imageId ? `https://barnote.net/images/${userInfo.user.imageId}` : undefined}
-          url={`https://barnote.net/user/${userId}`}
-        />
-      )}
+      {/* SEO는 단일 인스턴스로 렌더 (중복 시 helmet이 meta를 합치지 못해 og 태그가 2개 생김) */}
+      <SEO
+        title={userInfo ? `${userInfo.user.nickName} - ${t('user.tab_notes')}` : t('user.tab_notes')}
+        description={userInfo ? (userInfo.user.intro || `${userInfo.user.nickName} ${t('user.tab_notes')}`) : t('user.tab_notes')}
+        image={userInfo?.user.imageId ? getImageUrl(userInfo.user.imageId, true) : undefined}
+        url={`https://barnote.net/user/${userId}`}
+      />
       
       <div className="flex-1 overflow-y-auto overflow-x-hidden p-0 w-full scrollbar-hide">
         {/* Profile Header */}

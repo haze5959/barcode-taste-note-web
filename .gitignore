@@ -32,3 +32,6 @@ dist-ssr
 
 # TypeScript
 *.tsbuildinfo
+
+# Cloudflare Worker 로컬 개발 캐시
+.wrangler

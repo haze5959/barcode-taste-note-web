@@ -142,11 +142,16 @@
     "s7_item7": "Beneficiario Terzo (Third-Party Beneficiary): Apple e le sue controllate sono beneficiari terzi (Third-Party Beneficiary) dei presenti Termini e, al momento dell'accettazione dei presenti Termini da parte dell'utente, avranno il diritto di far valere i presenti Termini nei confronti dell'utente.",
     "section8_title": "Articolo 8 (Limitazione di Responsabilità)",
     "section8_desc": "La Società non è responsabile per la fornitura del Servizio qualora non sia in grado di erogarlo a causa di forza maggiore, quali calamità naturali, manutenzione o guasti del Servizio, ovvero per cause imputabili all'utente. Salvo diversa disposizione specifica della normativa applicabile, la Società non è responsabile in relazione all'utilizzo del Servizio fornito a titolo gratuito.",
-    "section9_title": "Articolo 9 (Contatti)",
-    "section9_desc": "Le richieste relative all'utilizzo del Servizio, ai presenti Termini (EULA) o le segnalazioni di contenuti inaccettabili possono essere inviate al contatto sottoindicato; la Società risponderà tempestivamente, in conformità all'Articolo 6, al ricevimento di una segnalazione.",
-    "s9_item1": "Email: barcodetastenote@gmail.com",
-    "section10_title": "Articolo 10 (Foro Competente)",
-    "section10_desc": "In caso di controversia insorta in relazione all'utilizzo del Servizio, le parti la risolveranno mediante accordo nel rispetto del principio di buona fede; qualora non venga raggiunta una soluzione amichevole, la controversia potrà essere sottoposta a un tribunale competente. Il tribunale avente giurisdizione sulla sede legale della Società avrà competenza esclusiva."
+    "section9_title": "Articolo 9 (Utilizzo dei Dati di Prodotto e delle Statistiche)",
+    "section9_desc": "La Società può utilizzare le informazioni sui prodotti generate nel corso dell'erogazione del Servizio (quali nomi, tipologie e immagini ufficiali dei prodotti) nonché i dati statistici aggregati derivati dall'attività degli utenti (quali il numero di note di degustazione, il numero di preferiti e le valutazioni per prodotto) per l'esercizio e il miglioramento del Servizio, nonché per finalità promozionali e di marketing della Società.",
+    "s9_item1": "I dati statistici utilizzati sono aggregati in forma anonima, tale da non consentire l'identificazione di alcun utente; la Società non utilizza a fini di marketing i contenuti individuali creati dagli utenti (quali il testo delle note di degustazione o le fotografie) né le informazioni personali, senza il preventivo consenso dell'utente.",
+    "s9_item2": "La Società può pubblicare tali dati come materiale promozionale su canali esterni, inclusi il proprio sito web e i social media.",
+    "s9_item3": "I diritti di proprietà intellettuale relativi ai nomi dei prodotti, alle immagini e ad elementi analoghi appartengono ai rispettivi titolari; la Società li utilizza esclusivamente nei limiti del rispetto della normativa applicabile e dei diritti dei terzi.",
+    "section10_title": "Articolo 10 (Contatti)",
+    "section10_desc": "Le richieste relative all'utilizzo del Servizio, ai presenti Termini (EULA) o le segnalazioni di contenuti inaccettabili possono essere inviate al contatto sottoindicato; la Società risponderà tempestivamente, in conformità all'Articolo 6, al ricevimento di una segnalazione.",
+    "s10_item1": "Email: barcodetastenote@gmail.com",
+    "section11_title": "Articolo 11 (Foro Competente)",
+    "section11_desc": "In caso di controversia insorta in relazione all'utilizzo del Servizio, le parti la risolveranno mediante accordo nel rispetto del principio di buona fede; qualora non venga raggiunta una soluzione amichevole, la controversia potrà essere sottoposta a un tribunale competente. Il tribunale avente giurisdizione sulla sede legale della Società avrà competenza esclusiva."
   },
   "mappings": {
     "product_type": {

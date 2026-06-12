@@ -142,11 +142,16 @@
     "s7_item7": "Terceiro Beneficiário (Third-Party Beneficiary): A Apple e suas subsidiárias são terceiros beneficiários destes Termos e, mediante a aceitação dos presentes Termos pelo usuário, terão o direito de fazê-los cumprir contra o usuário.",
     "section8_title": "Artigo 8 (Limitação de Responsabilidade)",
     "section8_desc": "A Empresa não será responsável pela prestação do Serviço nos casos em que não consiga fornecê-lo em razão de força maior, tais como desastres naturais, manutenção ou falhas do Serviço, ou causas imputáveis ao usuário. Salvo disposição específica em contrário pela legislação aplicável, a Empresa não é responsável em conexão com o uso do Serviço fornecido gratuitamente.",
-    "section9_title": "Artigo 9 (Contato)",
-    "section9_desc": "Consultas relativas ao uso do Serviço, aos presentes Termos (EULA) ou denúncias de conteúdo questionável poderão ser enviadas ao contato abaixo, e a Empresa responderá prontamente em conformidade com o Artigo 6 após o recebimento de uma denúncia.",
-    "s9_item1": "E-mail: barcodetastenote@gmail.com",
-    "section10_title": "Artigo 10 (Foro Competente)",
-    "section10_desc": "Em caso de litígio decorrente do uso do Serviço, as partes deverão resolvê-lo por acordo, em conformidade com o princípio da boa-fé; caso não seja resolvido amigavelmente, a questão poderá ser submetida ao tribunal competente. O tribunal com jurisdição sobre a localidade da sede da Empresa terá competência exclusiva."
+    "section9_title": "Artigo 9 (Uso de Dados de Produtos e Estatísticas)",
+    "section9_desc": "A Empresa poderá utilizar as informações sobre produtos geradas no decorrer da operação do Serviço (tais como nomes de produtos, categorias e imagens oficiais dos produtos) e os dados estatísticos agregados derivados das atividades dos usuários (tais como o número de notas de degustação, o número de favoritos e as avaliações por produto) para a operação e melhoria do Serviço, bem como para fins promocionais e de marketing da Empresa.",
+    "s9_item1": "Os dados estatísticos utilizados são agregados de forma que não permitem a identificação de nenhum usuário individualmente, e a Empresa não utiliza conteúdo individual criado pelos usuários (como o texto das notas de degustação ou fotografias) nem informações pessoais para fins de marketing sem o consentimento do usuário.",
+    "s9_item2": "A Empresa poderá publicar tais dados como material promocional em canais externos, incluindo seu próprio site e redes sociais.",
+    "s9_item3": "Os direitos de propriedade intelectual sobre nomes de produtos, imagens e similares pertencem aos seus respectivos titulares, e a Empresa os utiliza apenas dentro dos limites do cumprimento da legislação aplicável e dos direitos de terceiros.",
+    "section10_title": "Artigo 10 (Contato)",
+    "section10_desc": "Consultas relativas ao uso do Serviço, aos presentes Termos (EULA) ou denúncias de conteúdo questionável poderão ser enviadas ao contato abaixo, e a Empresa responderá prontamente em conformidade com o Artigo 6 após o recebimento de uma denúncia.",
+    "s10_item1": "E-mail: barcodetastenote@gmail.com",
+    "section11_title": "Artigo 11 (Foro Competente)",
+    "section11_desc": "Em caso de litígio decorrente do uso do Serviço, as partes deverão resolvê-lo por acordo, em conformidade com o princípio da boa-fé; caso não seja resolvido amigavelmente, a questão poderá ser submetida ao tribunal competente. O tribunal com jurisdição sobre a localidade da sede da Empresa terá competência exclusiva."
   },
   "mappings": {
     "product_type": {

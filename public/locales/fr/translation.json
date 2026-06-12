@@ -142,11 +142,16 @@
     "s7_item7": "Tiers bénéficiaire (Third-Party Beneficiary) : Apple et ses filiales sont des tiers bénéficiaires des présentes Conditions et, dès lors que vous en acceptez les termes, auront le droit de les faire respecter à votre égard.",
     "section8_title": "Article 8 (Limitation de responsabilité)",
     "section8_desc": "La Société ne saurait être tenue responsable de la fourniture du Service lorsqu'elle se trouve dans l'impossibilité de le fournir en raison d'un cas de force majeure, tel que des catastrophes naturelles, des opérations de maintenance ou des pannes du Service, ou pour des causes imputables à l'utilisateur. Sauf disposition contraire expresse de la législation applicable, la Société n'engage pas sa responsabilité dans le cadre de l'utilisation du Service fourni à titre gratuit.",
-    "section9_title": "Article 9 (Contact)",
-    "section9_desc": "Les demandes relatives à l'utilisation du Service, aux présentes Conditions (EULA) ou les signalements de contenus répréhensibles peuvent être adressés au contact ci-dessous ; la Société répondra promptement conformément à l'Article 6 dès réception d'un signalement.",
-    "s9_item1": "Courriel : barcodetastenote@gmail.com",
-    "section10_title": "Article 10 (Tribunal compétent)",
-    "section10_desc": "En cas de litige survenant dans le cadre de l'utilisation du Service, les parties s'efforceront de le résoudre à l'amiable conformément au principe de bonne foi ; à défaut de règlement amiable, l'affaire pourra être portée devant un tribunal compétent. Le tribunal ayant compétence territoriale sur le lieu du siège social de la Société sera seul compétent."
+    "section9_title": "Article 9 (Utilisation des données produits et des statistiques)",
+    "section9_desc": "La Société peut utiliser les informations relatives aux produits générées dans le cadre de l'exploitation du Service (telles que les noms de produits, les types et les images officielles des produits) ainsi que les données statistiques agrégées dérivées de l'activité des utilisateurs (telles que le nombre de notes de dégustation, le nombre de favoris et les notes attribuées par produit) aux fins d'exploitation et d'amélioration du Service, ainsi qu'à des fins promotionnelles et commerciales de la Société.",
+    "s9_item1": "Les données statistiques utilisées sont agrégées sous une forme ne permettant pas d'identifier un utilisateur en particulier ; la Société n'utilise pas, à des fins commerciales, le contenu individuel créé par les utilisateurs (tel que le texte des notes de dégustation ou les photos) ni les données personnelles, sans le consentement préalable de l'utilisateur concerné.",
+    "s9_item2": "La Société peut publier ces données à titre de matériel promotionnel sur des canaux externes, notamment son propre site internet et ses réseaux sociaux.",
+    "s9_item3": "Les droits de propriété intellectuelle afférents aux noms de produits, aux images et éléments similaires appartiennent à leurs titulaires respectifs ; la Société ne les utilise que dans le respect de la législation applicable et des droits des tiers.",
+    "section10_title": "Article 10 (Contact)",
+    "section10_desc": "Les demandes relatives à l'utilisation du Service, aux présentes Conditions (EULA) ou les signalements de contenus répréhensibles peuvent être adressés au contact ci-dessous ; la Société répondra promptement conformément à l'Article 6 dès réception d'un signalement.",
+    "s10_item1": "Courriel : barcodetastenote@gmail.com",
+    "section11_title": "Article 11 (Tribunal compétent)",
+    "section11_desc": "En cas de litige survenant dans le cadre de l'utilisation du Service, les parties s'efforceront de le résoudre à l'amiable conformément au principe de bonne foi ; à défaut de règlement amiable, l'affaire pourra être portée devant un tribunal compétent. Le tribunal ayant compétence territoriale sur le lieu du siège social de la Société sera seul compétent."
   },
   "mappings": {
     "product_type": {

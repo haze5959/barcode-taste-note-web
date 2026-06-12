@@ -1,0 +1,13 @@
+# BarNote OG 메타태그 주입 Worker 설정
+# 배포: cd worker && npm install && npx wrangler deploy
+
+name = "barnote-og"
+main = "src/index.ts"
+compatibility_date = "2026-06-01"
+
+# /note/*, /user/* 경로에만 Worker를 연결한다.
+# 그 외 경로(정적 자산, 홈 등)는 Worker를 거치지 않아 기존과 완전히 동일하게 동작한다.
+routes = [
+  { pattern = "barnote.net/note/*", zone_name = "barnote.net" },
+  { pattern = "barnote.net/user/*", zone_name = "barnote.net" },
+]
