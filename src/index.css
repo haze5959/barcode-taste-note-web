@@ -3,7 +3,8 @@
 /* ============================================================
    BarNote 브랜드 컬러 토큰 (iOS 앱 에셋에서 이식)
    ============================================================ */
-@theme {
+/* static: 미사용 토큰도 tree-shaking 없이 항상 :root에 출력 → 라이트/다크 대칭 보장 */
+@theme static {
   /* Accent (브랜드 주색) */
   --color-accent: #f05a2c;
   --color-accent-secondary: #ffe0d2;
@@ -13,33 +14,35 @@
 
   /* Surface */
   --color-surface-primary: #ffffff;
-  --color-surface-secondary: #f0edea;
+  --color-surface-secondary: #f0eeea;
 
   /* Text */
-  --color-text-primary: #181820;
+  --color-text-primary: #18181c;
   --color-text-secondary: #6f6f78;
 
   /* Disabled */
-  --color-disabled-button: #dedad5;
+  --color-disabled-button: #dedbd6;
   --color-disabled-text: #7d7a74;
 
   /* Divider */
   --color-divider: #e2e2e8;
 }
 
-/* Dark mode 컬러 오버라이드 */
+/* Dark mode 컬러 오버라이드 (iOS Assets.xcassets 다크 값과 일치)
+   ⚠️ Tailwind v4는 @theme를 @media 안에 중첩하면 미디어쿼리를 무시하고 병합하므로,
+   다크 오버라이드는 반드시 일반 :root 규칙으로 작성한다. (@theme 안에 넣지 말 것) */
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root {
     --color-accent: #ff8654;
     --color-accent-secondary: #5a2c21;
     --color-background-primary: #050505;
     --color-surface-primary: #151518;
     --color-surface-secondary: #1d1d21;
     --color-text-primary: #f7f7fa;
-    --color-text-secondary: #a7a9b3;
+    --color-text-secondary: #a7a8b3;
     --color-disabled-button: #303033;
     --color-disabled-text: #b6b6bc;
-    --color-divider: #393940;
+    --color-divider: #39393f;
   }
 }
 
