@@ -38,4 +38,9 @@ jobs:
           AWS_EC2_METADATA_DISABLED: true # 불필요한 경고 메시지 방지
         run: |
           aws s3 sync ./dist s3://${{ secrets.R2_BUCKET_NAME }} \
+            --exclude ".well-known/apple-app-site-association" \
+            --endpoint-url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+
+          aws s3 cp ./dist/.well-known/apple-app-site-association s3://${{ secrets.R2_BUCKET_NAME }}/.well-known/apple-app-site-association \
             --endpoint-url https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com \
+            --content-type "application/json"

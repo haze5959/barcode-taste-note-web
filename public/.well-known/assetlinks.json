@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.oq.barnote",
+      "sha256_cert_fingerprints": [
+        "83:F5:77:F7:94:F0:9A:76:F3:B3:DA:37:3E:87:7C:93:EB:B2:CE:DC:70:B6:81:AD:4F:EA:DB:FB:D8:9B:51:E0",
+        "00:B4:0C:A8:8F:9D:EB:67:BB:EE:F4:44:09:7C:FD:19:57:C8:77:B6:69:65:F7:87:21:00:EE:10:B8:91:11:5B"
+      ]
+    }
+  }
+]

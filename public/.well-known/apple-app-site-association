@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["Z97K7ZHNKX.com.oq.barnote"],
+        "components": [
+          { "/": "/note/*", "comment": "노트 상세" },
+          { "/": "/user/*", "comment": "유저 노트 목록" }
+        ]
+      }
+    ]
+  }
+}
