@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
+import { isIOS } from '../lib/utils';
+import { APPLE_APP_URL } from '../lib/constants';
 
 interface AppPromotionDialogProps {
   open: boolean;
@@ -9,10 +11,20 @@ interface AppPromotionDialogProps {
 
 /**
  * 앱에서 더 자세한 내용 확인 가능하다는 안내 다이얼로그
- * 확인 버튼 클릭 시 랜딩 페이지로 이동
+ * 확인 버튼 클릭 시: iOS는 앱스토어로 바로 이동, 그 외 플랫폼은 onConfirm 위임(랜딩 페이지 이동)
  */
 export function AppPromotionDialog({ open, onClose, onConfirm }: AppPromotionDialogProps) {
   const { t } = useTranslation();
+
+  // 다운로드 확인 핸들러
+  // iOS는 앱스토어로 바로 이동, 그 외 플랫폼은 안드로이드 앱 미출시로 부모의 onConfirm(홈 다운로드 섹션 이동)에 위임
+  const handleConfirm = () => {
+    if (isIOS()) {
+      window.location.href = APPLE_APP_URL;
+    } else {
+      onConfirm();
+    }
+  };
 
   if (!open) return null;
 
@@ -105,7 +117,7 @@ export function AppPromotionDialog({ open, onClose, onConfirm }: AppPromotionDia
               {t('app_promo_dialog.cancel')}
             </button>
             <button
-              onClick={onConfirm}
+              onClick={handleConfirm}
               className="flex-[2] py-3 rounded-2xl text-[14px] font-bold text-white shadow-lg hover:opacity-90 active:scale-[0.98] transition-all"
               style={{ background: 'linear-gradient(135deg, #c0391a 0%, var(--color-accent) 100%)' }}
             >

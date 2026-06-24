@@ -9,6 +9,8 @@ import { SEO } from '../components/SEO';
 import { StoreDownloadButtons } from '../components/StoreDownloadButtons';
 import { useTranslation } from 'react-i18next';
 import { resolveScreenshotLang, SCREENSHOT_FALLBACK_LANG } from '../lib/i18n';
+import { isIOS } from '../lib/utils';
+import { APPLE_APP_URL } from '../lib/constants';
 
 // ==========================================
 // 애니메이션 프리셋 (Framer Motion)
@@ -147,6 +149,16 @@ export default function Home() {
     };
   }, []);
 
+  // "지금 바로 시작하기" 클릭 핸들러
+  // iOS는 앱스토어로 바로 이동, 그 외 플랫폼은 안드로이드 앱 미출시로 다운로드 섹션으로 스크롤
+  const handleStart = () => {
+    if (isIOS()) {
+      window.location.href = APPLE_APP_URL;
+    } else {
+      downloadSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const FEATURES = [
     { icon: PenTool, title: t('home.feat1_title'), desc: t('home.feat1_desc') },
     { icon: ScanBarcode, title: t('home.feat2_title'), desc: t('home.feat2_desc') },
@@ -185,7 +197,7 @@ export default function Home() {
             {t('home.hero_subtitle')}
           </motion.p>
           <motion.div variants={fadeUp} className="flex gap-4">
-            <button className="px-8 py-4 rounded-full bg-[var(--color-accent)] text-white font-bold text-lg shadow-xl shadow-[var(--color-accent)]/20 transition-all hover:scale-105 hover:shadow-2xl active:scale-95">
+            <button onClick={handleStart} className="px-8 py-4 rounded-full bg-[var(--color-accent)] text-white font-bold text-lg shadow-xl shadow-[var(--color-accent)]/20 transition-all hover:scale-105 hover:shadow-2xl active:scale-95">
               {t('home.hero_btn')}
             </button>
           </motion.div>
